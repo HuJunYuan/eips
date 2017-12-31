@@ -883,15 +883,6 @@
     </Content>
     <Content Include="Views\Home\login.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\ClassTable\detail.cshtml" />
-    <Content Include="Views\ClassTable\form.cshtml" />
-    <Content Include="Views\ClassTable\list.cshtml" />
-    <Content Include="Views\Student\detail.cshtml" />
-    <Content Include="Views\Student\form.cshtml" />
-    <Content Include="Views\Student\list.cshtml" />
-    <Content Include="Views\Teacher\detail.cshtml" />
-    <Content Include="Views\Teacher\form.cshtml" />
-    <Content Include="Views\Teacher\list.cshtml" />
     <Content Include="Views\AppCodeMaster\AppTabs.cshtml" />
     <Content Include="Views\AppCodeMaster\CodeTree.cshtml" />
     <Content Include="Views\AppCodeMaster\form.cshtml" />

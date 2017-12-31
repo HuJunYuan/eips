@@ -72,7 +72,6 @@
   <ItemGroup>
     <Compile Include="CommonConstant.cs" />
     <Compile Include="dbo\Classroom.cs" />
-    <Compile Include="dbo\ClassTable.cs" />
     <Compile Include="dbo\College.cs" />
     <Compile Include="dbo\entor.cs" />
     <Compile Include="dbo\entorToRemo.cs" />
@@ -80,8 +79,6 @@
     <Compile Include="dbo\LessonInfo.cs" />
     <Compile Include="dbo\LessonSchedule.cs" />
     <Compile Include="dbo\Remo.cs" />
-    <Compile Include="dbo\Student.cs" />
-    <Compile Include="dbo\Teacher.cs" />
     <Compile Include="pub\AppCodeMaster.cs" />
     <Compile Include="pub\AppConfig.cs" />
     <Compile Include="pub\AppConfig.partial.cs" />
