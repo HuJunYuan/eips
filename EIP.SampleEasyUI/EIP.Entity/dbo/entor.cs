@@ -44,7 +44,8 @@ namespace EIP.Entity
         /// <summary>
         /// 性别
         /// </summary>
-        public bool Sex { get; set; }
+        [MaxLength(2)]
+        public String Sex { get; set; }
 
         /// <summary>
         /// 教师等级

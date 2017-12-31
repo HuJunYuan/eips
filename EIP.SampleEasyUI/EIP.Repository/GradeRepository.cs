@@ -68,8 +68,8 @@ namespace EIP.Repository
         public List<CountManAndWoman> QueryCountManAndWoman(QueryModel model, out int totalCount)
         {
             //创建查询用sql语句
-            string sql = "select Remo.RId,Remo.Remo_id,SUM(case Sex when 'True' then 1 else 0 end) " +
-                "as manCount,SUM(case Sex when 'False' then 1 else 0 end) " +
+            string sql = "select Remo.RId,Remo.Remo_id,SUM(case Sex when 'M' then 1 else 0 end) " +
+                "as manCount,SUM(case Sex when 'W' then 1 else 0 end) " +
                 "as womanCount, SUM(1) as totalCount from Remo inner " +
                 "join Grade on Remo.RId = Grade.RId group by Remo.RId,Remo.Remo_id";
 

@@ -108,7 +108,7 @@ namespace EIP.ServiceTest
             //构造学生信息         
             string[] name = { "hjy", "yyl", "jonathan" };
             string[] stuid = { "20121", "20122", "20123" };
-            bool[] sex = { true, true, false };
+            string[] sex = { "M", "M", "W" };
             Grade[] grade = new Grade[3];
 
             //获取学生服务
@@ -359,7 +359,7 @@ namespace EIP.ServiceTest
             //构造学生信息         
             string[] name = { "hjy", "yyl", "jonathan" };
             string[] stuid = { "20121", "20122", "20123" };
-            bool[] sex = { true, true, false };
+            string[] sex = { "M" ,"M", "W" };
             Grade[] grade = new Grade[3];
 
             //获取学生服务

@@ -67,7 +67,7 @@ namespace EIP.Model.ViewModels
         /// <summary>
         /// 性别
         /// </summary>
-        public bool Sex { get; set; }
+        public String Sex { get; set; }
 
         /// <summary>
         /// 手机号
@@ -104,4 +104,5 @@ namespace EIP.Model.ViewModels
     //    /// </summary>
     //    public string SexName { get { return CodeManger.GetCodeText(CommonConstant.CODETYPE_SEXX, this.Sex); } }
     //}
+
 }
