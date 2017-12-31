@@ -1,0 +1,93 @@
+﻿@model EIP.Entity.College
+
+@{
+    Layout = "~/views/shared/_PersonCenterLayout.cshtml";
+}
+@section head{
+    <link href="/Content/PersonalCenter/CSS/table.css?v=@ViewBag.Version" rel="stylesheet" />
+}
+<div>
+    <div class="div-margin">
+        <input type="button" id="Colse" class="form-btn" onclick="closeBox();" value="关闭" />
+        
+    </div>
+    <div class="head-font">
+        <b>学院信息
+   详情</b>
+    </div>
+
+    <table id="readonly" class="tables" cellpadding="0" cellspacing="0">
+            
+                <tr>
+                    <td width="25%">
+                        <label>学院信息表编号</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.CId)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>学院编号</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.CollegeId)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>学院名</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.CollegeName)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>学院地址</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.CollegeAddress)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>备注</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Other)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>班级</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Remos)
+                    </td>
+                </tr>
+            
+    </table>
+</div>
+
+<script type="text/javascript">
+
+    mini.parse();
+
+
+    //关闭
+    function closeBox() {
+
+        window.App.CloseWindow();
+    }
+</script>

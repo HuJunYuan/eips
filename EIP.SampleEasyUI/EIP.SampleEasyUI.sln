@@ -1,0 +1,144 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_APP", "02_APP", "{55E6E7E8-A3EC-4EF2-B6D4-528FAA7BAF3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EIP.Model", "EIP.Model\EIP.Model.csproj", "{8246A830-08A8-4985-811E-70F04E7C551C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EIP.Repository", "EIP.Repository\EIP.Repository.csproj", "{2B7ED9DC-65CB-4BC9-B828-E63BCB378A4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00_Libs", "00_Libs", "{4856DA76-4733-4D83-941A-CE664BC68785}"
+	ProjectSection(SolutionItems) = preProject
+		..\00_Libs\AutoMapper.dll = ..\00_Libs\AutoMapper.dll
+		..\00_Libs\CoreLand.Framework.DevelopKit.dll = ..\00_Libs\CoreLand.Framework.DevelopKit.dll
+		..\00_Libs\CoreLand.Framework.DevelopKit.dll.config = ..\00_Libs\CoreLand.Framework.DevelopKit.dll.config
+		..\00_Libs\CoreLand.Framework.DevelopKit.pdb = ..\00_Libs\CoreLand.Framework.DevelopKit.pdb
+		..\00_Libs\CoreLand.Framework.EFProvider.dll = ..\00_Libs\CoreLand.Framework.EFProvider.dll
+		..\00_Libs\CoreLand.Framework.EFProvider.dll.config = ..\00_Libs\CoreLand.Framework.EFProvider.dll.config
+		..\00_Libs\CoreLand.Framework.EFProvider.pdb = ..\00_Libs\CoreLand.Framework.EFProvider.pdb
+		..\00_Libs\CoreLand.Framework.Infrastructure.dll = ..\00_Libs\CoreLand.Framework.Infrastructure.dll
+		..\00_Libs\CoreLand.Framework.Infrastructure.pdb = ..\00_Libs\CoreLand.Framework.Infrastructure.pdb
+		..\00_Libs\CoreLand.Framework.Log.dll = ..\00_Libs\CoreLand.Framework.Log.dll
+		..\00_Libs\CoreLand.Framework.Log.pdb = ..\00_Libs\CoreLand.Framework.Log.pdb
+		..\00_Libs\CoreLand.Framework.UnitTest.dll = ..\00_Libs\CoreLand.Framework.UnitTest.dll
+		..\00_Libs\CoreLand.Framework.UnitTest.dll.config = ..\00_Libs\CoreLand.Framework.UnitTest.dll.config
+		..\00_Libs\CoreLand.Framework.UnitTest.pdb = ..\00_Libs\CoreLand.Framework.UnitTest.pdb
+		..\00_Libs\CoreLand.Framework.WCF.dll = ..\00_Libs\CoreLand.Framework.WCF.dll
+		..\00_Libs\CoreLand.Framework.WCF.pdb = ..\00_Libs\CoreLand.Framework.WCF.pdb
+		..\00_Libs\CoreLand.Framework.Web.dll = ..\00_Libs\CoreLand.Framework.Web.dll
+		..\00_Libs\CoreLand.Framework.Web.dll.config = ..\00_Libs\CoreLand.Framework.Web.dll.config
+		..\00_Libs\CoreLand.Framework.Web.Extensions.EasyUI.dll = ..\00_Libs\CoreLand.Framework.Web.Extensions.EasyUI.dll
+		..\00_Libs\CoreLand.Framework.Web.Extensions.EasyUI.dll.config = ..\00_Libs\CoreLand.Framework.Web.Extensions.EasyUI.dll.config
+		..\00_Libs\CoreLand.Framework.Web.Extensions.EasyUI.pdb = ..\00_Libs\CoreLand.Framework.Web.Extensions.EasyUI.pdb
+		..\00_Libs\CoreLand.Framework.Web.pdb = ..\00_Libs\CoreLand.Framework.Web.pdb
+		..\00_Libs\EntityFramework.dll = ..\00_Libs\EntityFramework.dll
+		..\00_Libs\EntityFramework.Extended.dll = ..\00_Libs\EntityFramework.Extended.dll
+		..\00_Libs\EntityFramework.SqlServer.dll = ..\00_Libs\EntityFramework.SqlServer.dll
+		..\00_Libs\ICSharpCode.SharpZipLib.dll = ..\00_Libs\ICSharpCode.SharpZipLib.dll
+		..\00_Libs\log4net.dll = ..\00_Libs\log4net.dll
+		..\00_Libs\log4net.xml = ..\00_Libs\log4net.xml
+		..\00_Libs\Microsoft.Practices.ServiceLocation.dll = ..\00_Libs\Microsoft.Practices.ServiceLocation.dll
+		..\00_Libs\Microsoft.Practices.Unity.Configuration.dll = ..\00_Libs\Microsoft.Practices.Unity.Configuration.dll
+		..\00_Libs\Microsoft.Practices.Unity.dll = ..\00_Libs\Microsoft.Practices.Unity.dll
+		..\00_Libs\Microsoft.Practices.Unity.Mvc.dll = ..\00_Libs\Microsoft.Practices.Unity.Mvc.dll
+		..\00_Libs\Microsoft.Practices.Unity.RegistrationByConvention.dll = ..\00_Libs\Microsoft.Practices.Unity.RegistrationByConvention.dll
+		..\00_Libs\Microsoft.Web.Infrastructure.dll = ..\00_Libs\Microsoft.Web.Infrastructure.dll
+		..\00_Libs\Microsoft.Web.Mvc.FixedDisplayModes.dll = ..\00_Libs\Microsoft.Web.Mvc.FixedDisplayModes.dll
+		..\00_Libs\Newtonsoft.Json.dll = ..\00_Libs\Newtonsoft.Json.dll
+		..\00_Libs\NPOI.dll = ..\00_Libs\NPOI.dll
+		..\00_Libs\NPOI.OOXML.dll = ..\00_Libs\NPOI.OOXML.dll
+		..\00_Libs\NPOI.OpenXml4Net.dll = ..\00_Libs\NPOI.OpenXml4Net.dll
+		..\00_Libs\NPOI.OpenXmlFormats.dll = ..\00_Libs\NPOI.OpenXmlFormats.dll
+		..\00_Libs\Quartz.dll = ..\00_Libs\Quartz.dll
+		..\00_Libs\RazorEngine.dll = ..\00_Libs\RazorEngine.dll
+		..\00_Libs\System.Web.Helpers.dll = ..\00_Libs\System.Web.Helpers.dll
+		..\00_Libs\System.Web.Http.dll = ..\00_Libs\System.Web.Http.dll
+		..\00_Libs\System.Web.Http.WebHost.dll = ..\00_Libs\System.Web.Http.WebHost.dll
+		..\00_Libs\System.Web.Mvc.dll = ..\00_Libs\System.Web.Mvc.dll
+		..\00_Libs\System.Web.Optimization.dll = ..\00_Libs\System.Web.Optimization.dll
+		..\00_Libs\System.Web.Razor.dll = ..\00_Libs\System.Web.Razor.dll
+		..\00_Libs\System.Web.WebPages.Deployment.dll = ..\00_Libs\System.Web.WebPages.Deployment.dll
+		..\00_Libs\System.Web.WebPages.dll = ..\00_Libs\System.Web.WebPages.dll
+		..\00_Libs\System.Web.WebPages.Razor.dll = ..\00_Libs\System.Web.WebPages.Razor.dll
+		..\00_Libs\UnityConfiguration30.xsd = ..\00_Libs\UnityConfiguration30.xsd
+		..\00_Libs\WebActivatorEx.dll = ..\00_Libs\WebActivatorEx.dll
+		..\00_Libs\WebGrease.dll = ..\00_Libs\WebGrease.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_basic", "01_basic", "{E11DBF7B-6A2A-4F9B-88D9-2F846B481E41}"
+	ProjectSection(SolutionItems) = preProject
+		..\01_basic\CoreLand.Framework.DevelopKit.dll = ..\01_basic\CoreLand.Framework.DevelopKit.dll
+		..\01_basic\CoreLand.Framework.EFProvider.dll = ..\01_basic\CoreLand.Framework.EFProvider.dll
+		..\01_basic\CoreLand.Framework.Infrastructure.dll = ..\01_basic\CoreLand.Framework.Infrastructure.dll
+		..\01_basic\CoreLand.Framework.Log.dll = ..\01_basic\CoreLand.Framework.Log.dll
+		..\01_basic\CoreLand.Framework.UnitTest.dll = ..\01_basic\CoreLand.Framework.UnitTest.dll
+		..\01_basic\CoreLand.Framework.WCF.dll = ..\01_basic\CoreLand.Framework.WCF.dll
+		..\01_basic\CoreLand.Framework.Web.dll = ..\01_basic\CoreLand.Framework.Web.dll
+		..\01_basic\CoreLand.Framework.Web.Extensions.EasyUI.dll = ..\01_basic\CoreLand.Framework.Web.Extensions.EasyUI.dll
+		..\01_basic\EIP.Portal.Service.dll = ..\01_basic\EIP.Portal.Service.dll
+		..\01_basic\EIP.SystemManage.Entity.dll = ..\01_basic\EIP.SystemManage.Entity.dll
+		..\01_basic\EIP.SystemManage.Model.dll = ..\01_basic\EIP.SystemManage.Model.dll
+		..\01_basic\EIP.SystemManage.Repository.dll = ..\01_basic\EIP.SystemManage.Repository.dll
+		..\01_basic\EIP.SystemManage.Service.dll = ..\01_basic\EIP.SystemManage.Service.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh-Hans", "zh-Hans", "{F7207F94-A4EC-4F91-BEB8-0D57AEB644ED}"
+	ProjectSection(SolutionItems) = preProject
+		..\00_Libs\zh-Hans\System.Web.Mvc.xml = ..\00_Libs\zh-Hans\System.Web.Mvc.xml
+		..\00_Libs\zh-Hans\system.web.razor.xml = ..\00_Libs\zh-Hans\system.web.razor.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EIP.Web", "EIP.Web\EIP.Web.csproj", "{F2E43585-C260-4052-B115-E0BA82986700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EIP.UnitTest", "EIP.UnitTest\EIP.UnitTest.csproj", "{20FB4484-2D28-443B-901C-02E486486B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EIP.Service", "EIP.Service\EIP.Service.csproj", "{C2819C69-062A-4004-BE06-CE17034E24E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EIP.Entity", "EIP.Entity\EIP.Entity.csproj", "{7206DC7D-12BA-425B-82CD-BB3873FDC6BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8246A830-08A8-4985-811E-70F04E7C551C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8246A830-08A8-4985-811E-70F04E7C551C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8246A830-08A8-4985-811E-70F04E7C551C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8246A830-08A8-4985-811E-70F04E7C551C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B7ED9DC-65CB-4BC9-B828-E63BCB378A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7ED9DC-65CB-4BC9-B828-E63BCB378A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7ED9DC-65CB-4BC9-B828-E63BCB378A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7ED9DC-65CB-4BC9-B828-E63BCB378A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E43585-C260-4052-B115-E0BA82986700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E43585-C260-4052-B115-E0BA82986700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E43585-C260-4052-B115-E0BA82986700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E43585-C260-4052-B115-E0BA82986700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FB4484-2D28-443B-901C-02E486486B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FB4484-2D28-443B-901C-02E486486B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FB4484-2D28-443B-901C-02E486486B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FB4484-2D28-443B-901C-02E486486B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2819C69-062A-4004-BE06-CE17034E24E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2819C69-062A-4004-BE06-CE17034E24E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2819C69-062A-4004-BE06-CE17034E24E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2819C69-062A-4004-BE06-CE17034E24E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7206DC7D-12BA-425B-82CD-BB3873FDC6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7206DC7D-12BA-425B-82CD-BB3873FDC6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7206DC7D-12BA-425B-82CD-BB3873FDC6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7206DC7D-12BA-425B-82CD-BB3873FDC6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8246A830-08A8-4985-811E-70F04E7C551C} = {55E6E7E8-A3EC-4EF2-B6D4-528FAA7BAF3A}
+		{2B7ED9DC-65CB-4BC9-B828-E63BCB378A4E} = {55E6E7E8-A3EC-4EF2-B6D4-528FAA7BAF3A}
+		{F2E43585-C260-4052-B115-E0BA82986700} = {55E6E7E8-A3EC-4EF2-B6D4-528FAA7BAF3A}
+		{20FB4484-2D28-443B-901C-02E486486B04} = {55E6E7E8-A3EC-4EF2-B6D4-528FAA7BAF3A}
+		{C2819C69-062A-4004-BE06-CE17034E24E4} = {55E6E7E8-A3EC-4EF2-B6D4-528FAA7BAF3A}
+		{7206DC7D-12BA-425B-82CD-BB3873FDC6BF} = {55E6E7E8-A3EC-4EF2-B6D4-528FAA7BAF3A}
+		{F7207F94-A4EC-4F91-BEB8-0D57AEB644ED} = {4856DA76-4733-4D83-941A-CE664BC68785}
+	EndGlobalSection
+EndGlobal

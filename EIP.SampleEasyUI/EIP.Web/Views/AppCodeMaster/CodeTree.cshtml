@@ -1,0 +1,99 @@
+﻿@{
+   
+    Layout = "~/views/shared/_layout.cshtml";
+    
+}
+
+@section head{
+}
+<div class="easyui-layout" fit="true">
+    <div id="codePanel" data-options="region:'west',title:'数据字典配置',split:true" style="width:200px;">
+        <ul id="codetree" class="easyui-tree" data-options="animate:true,lines:true,dnd:false"></ul>
+    </div>
+    <div id="codeEdit" data-options="region:'center',title:'数据字典配置'" style="padding:5px;"></div>
+</div>
+<div id="codeMasterMenu" class="easyui-code" style="width:120px;">
+    <div name="add" data-options="iconCls:'icon-add'">添加</div>
+    <div id="codeMasterMenu_remove" name="remove" data-options="iconCls:'icon-remove'">删除</div>
+    <div class="menu-sep"></div>
+    <div name="refresh" data-options="iconCls:'icon-reload'">刷新</div>
+</div>
+<script>
+    var intAppid =-1;
+    $(function () {
+        $("#codePanel").bind('contextmenu', function (e) {
+            $('#codeMasterMenu').menu("disableItem",$("#codeMasterMenu_remove"));
+            e.preventDefault();
+            $('#codeMasterMenu').menu('show', {
+                left: e.pageX,
+                top: e.pageY
+            }).data("node", { id: 0, attributes: { AppId: intAppid }, target: $(this).target });
+        });
+
+        $("#codetree").tree({
+            url:'query_appCodeMaster',
+            queryParams: { appId: intAppid },
+            onClick: function (node) {
+                $(this).tree("expand", node.target);//点击文字展开节点
+                var id = 0;
+                if (node.id)
+                {
+                    id = node.id;
+                }
+                $("#codeEdit").panel("refresh", App.getUrl("/AppCodeMaster/edit?id=" + id));
+                $("#codeEdit").panel("setTitle", node.text);
+            },
+            //绑定tabs的右键菜单
+            onContextMenu: function (e, node) {
+                $('#codeMasterMenu').menu("enableItem",$("#codeMasterMenu_remove"));
+                e.preventDefault();
+                $('#codetree').tree('select', node.target);
+                $('#codeMasterMenu').menu('show', {
+                    left: e.pageX,
+                    top: e.pageY
+                }).data("node", node);
+            }
+        });
+
+        //实例化code的onClick事件
+        $("#codeMasterMenu").menu({
+            onClick: function (item) {
+                var node = $(this).data("node");
+                switch (item.name) {
+                    case "add":
+                        addMenu(node);
+                        break;
+                    case "remove":
+                        removeMenu(node);
+                        break;
+                    case "refresh":
+                        refreshMenu(node);
+                        break;
+                }
+            }
+        });
+
+    });
+
+    // 添加数据字典
+    function addMenu(node) {
+        $("#codeEdit").panel("refresh", App.getUrl("/AppCodeMaster/edit?appId=" + intAppid + "&ParentId=" + node.id));
+        $("#codeEdit").panel("setTitle", "添加数据字典");
+    }
+    //删除数据字典
+    function removeMenu(node) {
+        if (!node || node.id == 0) {
+            App.showMessageBox('@MessageManager.GetMessage("E10030")', 2);
+            return;
+        }
+        App.action("/AppCodeMaster/remove?id=" + node.id, null, function (data) {
+            $('#codetree').tree('remove', node.target);
+            $("#codeEdit").panel("clear");
+        });
+    }
+    // 刷新数据字典
+    function refreshMenu(node){
+        $('#codetree').tree('reload', node.target);
+    }
+
+</script>

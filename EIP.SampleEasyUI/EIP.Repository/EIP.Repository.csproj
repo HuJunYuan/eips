@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B7ED9DC-65CB-4BC9-B828-E63BCB378A4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EIP.Repository</RootNamespace>
+    <AssemblyName>EIP.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreLand.Framework.DevelopKit">
+      <HintPath>..\..\00_Libs\CoreLand.Framework.DevelopKit.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreLand.Framework.EFProvider">
+      <HintPath>..\..\00_Libs\CoreLand.Framework.EFProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreLand.Framework.Infrastructure">
+      <HintPath>..\..\00_Libs\CoreLand.Framework.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreLand.Framework.Log">
+      <HintPath>..\..\00_Libs\CoreLand.Framework.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCodeMasterRepository.cs" />
+    <Compile Include="AppConfigRepository.cs" />
+    <Compile Include="ClassroomRepository.cs" />
+    <Compile Include="ClassTableRepository.cs" />
+    <Compile Include="CollegeRepository.cs" />
+    <Compile Include="entorRepository.cs" />
+    <Compile Include="entorToRemoRepository.cs" />
+    <Compile Include="GradeRepository.cs" />
+    <Compile Include="LessonInfoRepository.cs" />
+    <Compile Include="LessonScheduleRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoRepository.cs" />
+    <Compile Include="StudentRepository.cs" />
+    <Compile Include="TeacherRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EIP.Entity\EIP.Entity.csproj">
+      <Project>{7206dc7d-12ba-425b-82cd-bb3873fdc6bf}</Project>
+      <Name>EIP.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EIP.Model\EIP.Model.csproj">
+      <Project>{8246a830-08a8-4985-811e-70f04e7c551c}</Project>
+      <Name>EIP.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

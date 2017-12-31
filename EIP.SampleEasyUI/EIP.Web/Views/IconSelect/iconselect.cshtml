@@ -1,0 +1,48 @@
+﻿@using Newtonsoft.Json;
+@{
+
+    Layout = "~/views/shared/_layout.cshtml";
+}
+
+@section head{
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+}
+<div id="ico-select-from" style=" width: 100%; display: block;">
+    @{
+    foreach (var item in Model)
+    {
+        @Html.CLLinkButton(new LinkButton
+           {
+               IconCls = item.IconClassName,
+               Plain = true,
+               Tooltip = item.IconClassName,
+               OnClick = "selectIco(this)"
+           })
+    }
+}
+</div>
+<script>
+    $('#ico-select-searchbox')
+       .searchbox({
+           prompt: '请输入图标class名称'
+       });
+    //单击选中 关闭对话框
+    function selectIco(e) {
+        var selectIcoClass = $(e).linkbutton('options').iconCls;//选中图标class值
+        var opt = $("#ico-select-dialog").dialog("options");
+        $(opt.parentTarget).ico("SetIconCls", selectIcoClass);
+        $("#ico-select-dialog").dialog("destroy");//销毁对话框
+    }
+    //模糊搜索图标 其他隐藏
+    function doSerachKey(Key) {
+        var icolist = $("#ico-select-from");
+        if (Key == "") {
+            icolist.find("a.easyui-linkbutton").show();
+        } else {
+            icolist.find("a.easyui-linkbutton").hide();
+            icolist.find("a.easyui-linkbutton[data-options*='" + Key + "']").show();
+        }
+    }
+
+       @Html.CLComboBox("", new ComboBox() { Label = "合同类型：", Style = "width:90%;", ParentCode = CommonConstant.CODETYPE_CONTRACTCLASS })
+</script>

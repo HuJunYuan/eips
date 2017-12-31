@@ -1,0 +1,33 @@
+﻿@model EIP.Portal.Model.HomeModel
+@{
+
+    Layout = "~/views/shared/_layout.cshtml";
+}
+
+@section head{
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+}
+
+    <div class="shortcut">
+        <p>
+            <a href="/AppCodeMaster/codeTree" target="_blank">CodeMaster配置</a>
+        </p>
+        <p>
+            <a href="/AppConfig/list" target="_blank">AppSetting配置</a>
+        </p>
+        <p>
+            <a href="~/Classroom/list" target="_blank">教室表</a>
+        </p>
+        <p>
+            <a href="~/College/list" target="_blank">学院表</a>
+        </p>
+        <p>
+            <a href="~/entor/list" target="_blank">教师表</a>
+        </p>
+        <p>
+            <a href="~/Grade/list" target="_blank">学生表</a>
+        </p>
+        <p>
+            <a href="~/Remo/list" target="_blank">班级表</a>
+        </p>
+    </div>

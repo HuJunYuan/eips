@@ -1,0 +1,1036 @@
+﻿2017-12-30 10:05:12,698 [1] INFO  HADOOP\hujunyuan -----系统启动-----
+2017-12-30 10:05:13,116 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【START】-----
+2017-12-30 10:05:13,762 [1] DEBUG HADOOP\hujunyuan Executed in     41 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-30 10:05:14,236 [1] DEBUG HADOOP\hujunyuan Executed in     91 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-30 10:05:14,265 [1] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-30 10:05:14,421 [1] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-30 10:05:14,566 [1] DEBUG HADOOP\hujunyuan Executed in    135 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-30 10:05:14,597 [1] DEBUG HADOOP\hujunyuan Executed in     16 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-30 10:05:14,605 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-30 10:05:14,615 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,618 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,622 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,632 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,640 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,645 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,650 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,655 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,661 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,667 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,739 [1] DEBUG HADOOP\hujunyuan Executed in     54 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-30 10:05:14,806 [1] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-30 10:05:14,813 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-30 10:05:14,819 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,822 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,826 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,829 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,833 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,839 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,844 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,849 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,854 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,857 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,874 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,879 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,882 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,886 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,889 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,893 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,899 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:14,905 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【END】-----
+2017-12-30 10:05:15,896 [6] DEBUG HADOOP\hujunyuan Executed in     58 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-30 10:05:15,976 [6] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:05:16,169 [6] DEBUG HADOOP\hujunyuan Executed in     44 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:05:16,184 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:05:16,189 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:05:16,524 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:05:16,837 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:04,950 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:05,910 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:06,002 [5] NOTICE HADOOP\hujunyuan 用户登录
+2017-12-30 10:06:06,129 [5] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-30 10:06:06,157 [5] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:06:06,159 [5] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-30 10:06:06,179 [5] DEBUG HADOOP\hujunyuan Executed in     16 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:06:06,182 [5] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-30 10:06:06,188 [5] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:06:06,191 [5] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-30 10:06:06,196 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:06,547 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:06,557 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:06,598 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:08,640 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:08,673 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:08,749 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:10,189 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:10,308 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:10,569 [6] DEBUG HADOOP\hujunyuan Executed in     42 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:06:10,639 [6] DEBUG HADOOP\hujunyuan Executed in     49 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:06:10,679 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:06:10,684 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:12,107 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:12,132 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:12,176 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:18,205 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:18,525 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:19,132 [6] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'0'
+2017-12-30 10:06:19,190 [6] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL:INSERT [dbo].[Classroom]([ClassroomName], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES ('hujuyuan', NULL, '2', '朱坤', '2017/12/30 10:06:19', '2', '朱坤', '2017/12/30 10:06:19', 'False') SELECT [ClassroomId] FROM [dbo].[Classroom] WHERE @@ROWCOUNT > 0 AND [ClassroomId] = scope_identity()
+2017-12-30 10:06:19,197 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.SaveClassroom() [END]
+2017-12-30 10:06:19,200 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:22,977 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:23,033 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:23,972 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:24,580 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:24,588 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:24,645 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:06:24,682 [8] DEBUG HADOOP\hujunyuan Executed in     34 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:06:24,684 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:06:24,688 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:30,575 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:30,607 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:31,779 [6] DEBUG HADOOP\hujunyuan Executed in    223 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'33'
+2017-12-30 10:06:31,804 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.Find() [END]
+2017-12-30 10:06:31,826 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:31,941 [6] DEBUG HADOOP\hujunyuan Executed in     57 ms,	SQL:SELECT      [Extent1].[LSId] AS [LSId],      [Extent1].[LIId] AS [LIId],      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[LessonTime] AS [LessonTime],      [Extent1].[MTRId] AS [MTRId],      [Extent1].[Other] AS [Other]     FROM [dbo].[LessonSchedule] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'33'
+2017-12-30 10:06:38,536 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:39,565 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:41,345 [5] DEBUG HADOOP\hujunyuan Executed in    462 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'33'
+2017-12-30 10:06:42,835 [5] DEBUG HADOOP\hujunyuan Executed in    784 ms,	SQL:UPDATE [dbo].[Classroom] SET [ClassroomName] = 'hujuyuan', [Other] = NULL, [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/30 10:06:19', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:06:41', [LogicDeleteFlag] = 'False' WHERE ([ClassroomId] = '33') 
+2017-12-30 10:06:42,965 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.SaveClassroom() [END]
+2017-12-30 10:06:42,983 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:46,233 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:46,497 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:47,224 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:47,831 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:47,839 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:06:47,886 [8] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:06:47,909 [8] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:06:47,920 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:06:47,922 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:06:53,420 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:06:53,743 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:00,398 [6] DEBUG HADOOP\hujunyuan Executed in     58 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'33'
+2017-12-30 10:07:01,355 [6] DEBUG HADOOP\hujunyuan Executed in    732 ms,	SQL:UPDATE [dbo].[Classroom] SET [LastUpdateTime] = '2017/12/30 10:07:00', [LogicDeleteFlag] = 'True' WHERE ([ClassroomId] = '33') 
+2017-12-30 10:07:01,856 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.LogicDelete() [END]
+2017-12-30 10:07:02,165 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:02,795 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:02,802 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:02,947 [6] DEBUG HADOOP\hujunyuan Executed in     74 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:07:03,097 [6] DEBUG HADOOP\hujunyuan Executed in    135 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:07:03,099 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:07:03,101 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:07,794 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:07,816 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:09,202 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:09,892 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:09,904 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:10,160 [6] DEBUG HADOOP\hujunyuan Executed in    166 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:07:10,740 [6] DEBUG HADOOP\hujunyuan Executed in    338 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:07:10,960 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:07:11,040 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:13,283 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:13,290 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:13,361 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:14,678 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:14,702 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:14,760 [6] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T 
+2017-12-30 10:07:14,788 [6] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY CollegeName ) as row_number, * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:07:14,837 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.QueryCollege() [END]
+2017-12-30 10:07:14,838 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:20,027 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:20,058 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:20,247 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:25,930 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:26,092 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:26,282 [8] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL:SELECT TOP (2)      [Extent1].[CId] AS [CId],      [Extent1].[CollegeId] AS [CollegeId],      [Extent1].[CollegeName] AS [CollegeName],      [Extent1].[CollegeAddress] AS [CollegeAddress],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[College] AS [Extent1]     WHERE [Extent1].[CId] = @'0'
+2017-12-30 10:07:26,324 [8] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:INSERT [dbo].[College]([CollegeId], [CollegeName], [CollegeAddress], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES ('32', '2433', '124', '213', '2', '朱坤', '2017/12/30 10:07:26', '2', '朱坤', '2017/12/30 10:07:26', '2433'0) SELECT [CId] FROM [dbo].[College] WHERE @@ROWCOUNT > 0 AND [CId] = scope_identity()
+2017-12-30 10:07:26,330 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.SaveCollege() [END]
+2017-12-30 10:07:26,332 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:31,546 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:31,562 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:31,722 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:32,284 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:32,347 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:32,404 [6] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T 
+2017-12-30 10:07:32,424 [6] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY CollegeName ) as row_number, * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:07:32,427 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.QueryCollege() [END]
+2017-12-30 10:07:32,429 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:35,242 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:35,396 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:35,460 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (2)      [Extent1].[CId] AS [CId],      [Extent1].[CollegeId] AS [CollegeId],      [Extent1].[CollegeName] AS [CollegeName],      [Extent1].[CollegeAddress] AS [CollegeAddress],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[College] AS [Extent1]     WHERE [Extent1].[CId] = @'7'
+2017-12-30 10:07:35,463 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.Find() [END]
+2017-12-30 10:07:35,466 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:35,563 [8] DEBUG HADOOP\hujunyuan Executed in     38 ms,	SQL:SELECT      [Extent1].[RId] AS [RId],      [Extent1].[Remo_id] AS [Remo_id],      [Extent1].[MasterNum] AS [MasterNum],      [Extent1].[CId] AS [CId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Remo] AS [Extent1]     WHERE [Extent1].[CId] = @'7'
+2017-12-30 10:07:38,380 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:38,389 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:38,444 [6] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[CId] AS [CId],      [Extent1].[CollegeId] AS [CollegeId],      [Extent1].[CollegeName] AS [CollegeName],      [Extent1].[CollegeAddress] AS [CollegeAddress],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[College] AS [Extent1]     WHERE [Extent1].[CId] = @'7'
+2017-12-30 10:07:38,469 [6] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:UPDATE [dbo].[College] SET [CollegeId] = '32', [CollegeName] = '2433', [CollegeAddress] = '124', [Other] = '213', [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/30 10:07:26', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:07:38', [LogicDeleteFlag] = '2433'0 WHERE ([CId] = '2433'1) 
+2017-12-30 10:07:38,472 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.SaveCollege() [END]
+2017-12-30 10:07:38,477 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:40,838 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:40,915 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:41,182 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:41,833 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:41,838 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:41,888 [8] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T 
+2017-12-30 10:07:41,916 [8] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY CollegeName ) as row_number, * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:07:41,919 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.QueryCollege() [END]
+2017-12-30 10:07:41,924 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:45,739 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:45,762 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:45,957 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (2)      [Extent1].[CId] AS [CId],      [Extent1].[CollegeId] AS [CollegeId],      [Extent1].[CollegeName] AS [CollegeName],      [Extent1].[CollegeAddress] AS [CollegeAddress],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[College] AS [Extent1]     WHERE [Extent1].[CId] = @'7'
+2017-12-30 10:07:45,985 [8] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:UPDATE [dbo].[College] SET [LastUpdateTime] = '2017/12/30 10:07:45', [LogicDeleteFlag] = 'True' WHERE ([CId] = '7') 
+2017-12-30 10:07:45,989 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.LogicDelete() [END]
+2017-12-30 10:07:45,996 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:46,233 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:46,266 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:46,364 [5] DEBUG HADOOP\hujunyuan Executed in     32 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T 
+2017-12-30 10:07:46,389 [5] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY CollegeName ) as row_number, * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:07:46,392 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.QueryCollege() [END]
+2017-12-30 10:07:46,395 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:49,715 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:49,740 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:49,984 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:51,364 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:51,376 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:51,510 [5] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:07:51,513 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:07:51,516 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:07:52,939 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:07:52,946 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:07:52,990 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:08:01,156 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:08:04,419 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:08:04,437 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:08:04,509 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:08:05,184 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:08:05,194 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:08:05,319 [5] DEBUG HADOOP\hujunyuan Executed in     33 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:08:05,323 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:08:05,325 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:08:07,091 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:08:07,098 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:08:07,142 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:38,795 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:38,822 [12] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:38,983 [12] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:40,183 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:40,191 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:40,274 [6] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:09:40,276 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:09:40,277 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:41,404 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:41,414 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:41,533 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:47,583 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:47,620 [12] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:47,826 [12] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'0'
+2017-12-30 10:09:47,871 [12] DEBUG HADOOP\hujunyuan Executed in     31 ms,	SQL:INSERT [dbo].[Mentor]([MentorId], [MentorName], [Sex], [MentorLevel], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES (NULL, 'sdaf', 'False', '2', 'asfd', '2', '朱坤', '2017/12/30 10:09:47', '2', '朱坤', '2017/12/30 10:09:47', 'False'0) SELECT [MId] FROM [dbo].[Mentor] WHERE @@ROWCOUNT > 0 AND [MId] = scope_identity()
+2017-12-30 10:09:47,876 [12] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Saveentor() [END]
+2017-12-30 10:09:47,878 [12] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:50,181 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:50,189 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:50,275 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:50,680 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:50,685 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:50,740 [8] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:09:50,773 [8] DEBUG HADOOP\hujunyuan Executed in     28 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:09:50,795 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:09:50,796 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:56,107 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:56,136 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:56,365 [8] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'12'
+2017-12-30 10:09:56,369 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Find() [END]
+2017-12-30 10:09:56,373 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:09:56,502 [8] DEBUG HADOOP\hujunyuan Executed in     32 ms,	SQL:SELECT      [Extent1].[MTRId] AS [MTRId],      [Extent1].[MId] AS [MId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[MentorToRemo] AS [Extent1]     WHERE [Extent1].[MId] = @'12'
+2017-12-30 10:09:59,298 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:09:59,312 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:09:59,386 [6] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'12'
+2017-12-30 10:09:59,409 [6] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:UPDATE [dbo].[Mentor] SET [MentorId] = NULL, [MentorName] = 'sdaf', [Sex] = 'False', [MentorLevel] = '2', [Other] = 'asfd', [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/30 10:09:47', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:09:59', [LogicDeleteFlag] = 'False'0 WHERE ([MId] = 'False'1) 
+2017-12-30 10:09:59,424 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Saveentor() [END]
+2017-12-30 10:09:59,425 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:02,311 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:02,382 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:02,514 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:03,150 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:03,153 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:03,202 [6] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:10:03,238 [6] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:10:03,246 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:10:03,251 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:06,499 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:06,520 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:06,673 [6] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'12'
+2017-12-30 10:10:06,706 [6] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:UPDATE [dbo].[Mentor] SET [LastUpdateTime] = '2017/12/30 10:10:06', [LogicDeleteFlag] = 'True' WHERE ([MId] = '12') 
+2017-12-30 10:10:06,709 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.LogicDelete() [END]
+2017-12-30 10:10:06,712 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:06,819 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:06,826 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:06,897 [6] DEBUG HADOOP\hujunyuan Executed in     40 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:10:06,918 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:10:06,931 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:48,562 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:48,672 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:48,810 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:50,094 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:50,106 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:50,197 [11] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:10:50,199 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:10:50,202 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:52,162 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:52,172 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:52,214 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:56,312 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:56,355 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:56,536 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'0'
+2017-12-30 10:10:56,577 [8] DEBUG HADOOP\hujunyuan Executed in     36 ms,	SQL:INSERT [dbo].[Mentor]([MentorId], [MentorName], [Sex], [MentorLevel], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES (NULL, 'asfd', 'False', '2', NULL, '2', '朱坤', '2017/12/30 10:10:56', '2', '朱坤', '2017/12/30 10:10:56', 'False') SELECT [MId] FROM [dbo].[Mentor] WHERE @@ROWCOUNT > 0 AND [MId] = scope_identity()
+2017-12-30 10:10:56,580 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Saveentor() [END]
+2017-12-30 10:10:56,582 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:59,048 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:59,054 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:59,080 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:10:59,511 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:10:59,516 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:10:59,643 [6] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:10:59,676 [6] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:10:59,678 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:10:59,685 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:11:04,264 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:11:04,288 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:11:04,463 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:11:05,734 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:11:05,741 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:11:05,843 [6] DEBUG HADOOP\hujunyuan Executed in     38 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:11:05,871 [6] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:11:05,904 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:11:05,908 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:31:39,561 [40] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:31:39,568 [40] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:31:39,750 [40] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:31:41,146 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:31:41,151 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:31:41,241 [32] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:31:41,260 [32] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:31:41,278 [32] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:31:41,281 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:31:43,497 [34] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:31:43,598 [34] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:31:43,685 [34] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:01,663 [38] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:01,817 [38] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:01,959 [38] DEBUG HADOOP\hujunyuan Executed in     34 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'0'
+2017-12-30 10:32:02,005 [38] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:INSERT [dbo].[Grade]([StudentName], [Sex], [Birthday], [Email], [Hometown], [Phone_number], [StudentId], [RId], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES ('de', 'False', '2017/12/27 10:31:51', 'dsfa', 'dfsa', 'adsf', '12341', NULL, NULL, '2', '朱坤', '2017/12/30 10:32:01', 'False'0, 'False'1, 'False'2, 'False'3) SELECT [SId] FROM [dbo].[Grade] WHERE @@ROWCOUNT > 0 AND [SId] = scope_identity()
+2017-12-30 10:32:02,011 [38] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.SaveGrade() [END]
+2017-12-30 10:32:02,013 [38] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:06,093 [37] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:06,116 [37] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:06,289 [37] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:06,929 [39] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:06,933 [39] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:06,995 [39] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:32:07,016 [39] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:32:07,020 [39] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:32:07,028 [39] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:11,492 [41] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:11,533 [41] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:11,703 [41] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'190'
+2017-12-30 10:32:11,710 [41] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.Find() [END]
+2017-12-30 10:32:11,713 [41] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:16,305 [41] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:16,343 [41] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:16,517 [41] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'190'
+2017-12-30 10:32:16,593 [41] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:UPDATE [dbo].[Grade] SET [StudentName] = 'hu', [Sex] = 'False', [Birthday] = '2017/12/27 10:31:51', [Email] = 'dsfa', [Hometown] = 'dfsa', [Phone_number] = 'adsf', [StudentId] = '12341', [RId] = NULL, [Other] = NULL, [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/30 10:32:01', [LastUpdateUserId] = 'False'0, [LastUpdateUserName] = 'False'1, [LastUpdateTime] = 'False'2, [LogicDeleteFlag] = 'False'3 WHERE ([SId] = 'False'4) 
+2017-12-30 10:32:16,616 [41] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.SaveGrade() [END]
+2017-12-30 10:32:16,618 [41] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:19,249 [41] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:19,257 [41] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:19,294 [41] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:19,712 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:19,716 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:19,766 [32] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:32:19,796 [32] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:32:19,799 [32] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:32:19,801 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:39,459 [40] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:39,468 [40] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:39,528 [40] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:32:40,982 [39] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:32:41,021 [39] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:32:41,079 [39] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:32:41,103 [39] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:32:41,105 [39] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:32:41,107 [39] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:33:23,223 [34] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:33:23,246 [34] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:33:23,397 [34] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:33:24,724 [34] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:33:24,729 [34] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:33:24,789 [34] DEBUG HADOOP\hujunyuan Executed in     28 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:33:24,814 [34] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:33:24,816 [34] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:33:24,818 [34] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:33:26,064 [35] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:33:26,071 [35] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:33:26,099 [35] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:35:10,603 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:35:10,619 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:35:10,770 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:35:11,984 [34] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:35:12,005 [34] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:35:12,069 [34] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:35:12,096 [34] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:35:12,100 [34] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:35:12,105 [34] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:35:14,277 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:35:14,305 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:35:14,466 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:36:06,859 [30] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:36:06,870 [30] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:36:06,899 [30] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:36:08,156 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:36:08,164 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:36:08,213 [29] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:36:08,241 [29] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:36:08,244 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:36:08,246 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:36:23,207 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:36:23,236 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:36:23,447 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:36:24,773 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:36:24,781 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:36:24,869 [29] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:36:24,894 [29] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:36:24,919 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:36:24,923 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:39:36,287 [36] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:39:36,297 [36] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:39:36,438 [36] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:39:37,724 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:39:37,730 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:39:37,780 [29] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:39:37,811 [29] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:39:37,824 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:39:37,826 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:39:40,150 [36] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:39:40,162 [36] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:39:40,266 [36] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:40:18,304 [39] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:40:18,314 [39] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:40:18,352 [39] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:40:19,705 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:40:19,709 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:40:19,762 [29] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:40:19,795 [29] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:40:19,798 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:40:19,801 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:40:20,360 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:40:20,367 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:40:20,401 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:40:34,595 [39] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:40:34,692 [39] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:40:34,838 [39] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:40:35,455 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:40:35,459 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:40:35,571 [29] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:40:35,600 [29] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:40:35,603 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:40:35,606 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:41:03,103 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:41:03,111 [29] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:41:03,326 [29] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:41:04,801 [39] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:41:04,806 [39] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:41:04,865 [39] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:41:04,898 [39] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:41:04,900 [39] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:41:04,904 [39] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:08,317 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:08,334 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:08,370 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:09,541 [34] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:09,549 [34] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:09,624 [34] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:44:09,659 [34] DEBUG HADOOP\hujunyuan Executed in     32 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:44:09,662 [34] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:44:09,664 [34] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:13,451 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:13,480 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:13,664 [5] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (2)      [Extent1].[RId] AS [RId],      [Extent1].[Remo_id] AS [Remo_id],      [Extent1].[MasterNum] AS [MasterNum],      [Extent1].[CId] AS [CId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Remo] AS [Extent1]     WHERE [Extent1].[RId] = @'214'
+2017-12-30 10:44:13,672 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.Find() [END]
+2017-12-30 10:44:13,674 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:18,678 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:18,699 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:18,770 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:20,069 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:20,076 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:20,145 [5] DEBUG HADOOP\hujunyuan Executed in     37 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:44:20,168 [5] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:44:20,170 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:44:20,173 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:22,532 [34] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:22,566 [34] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:22,723 [34] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:32,404 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:32,430 [6] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:32,608 [6] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'0'
+2017-12-30 10:44:32,635 [6] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:INSERT [dbo].[Mentor]([MentorId], [MentorName], [Sex], [MentorLevel], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES ('234', 'fdsa', 'False', '3', NULL, '2', '朱坤', '2017/12/30 10:44:32', '2', '朱坤', '2017/12/30 10:44:32', 'fdsa'0) SELECT [MId] FROM [dbo].[Mentor] WHERE @@ROWCOUNT > 0 AND [MId] = scope_identity()
+2017-12-30 10:44:32,638 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Saveentor() [END]
+2017-12-30 10:44:32,640 [6] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:34,715 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:34,724 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:34,751 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:44:35,198 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:44:35,203 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:44:35,254 [5] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:44:35,279 [5] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:44:35,281 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:44:35,283 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:27,041 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:27,070 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:27,124 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:28,546 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:28,550 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:28,607 [5] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:45:28,651 [5] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:45:28,654 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:45:28,656 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:31,972 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:32,019 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:32,098 [8] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'13'
+2017-12-30 10:45:32,115 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Find() [END]
+2017-12-30 10:45:32,120 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:34,801 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:34,819 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:34,911 [8] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'13'
+2017-12-30 10:45:34,934 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:UPDATE [dbo].[Mentor] SET [MentorId] = NULL, [MentorName] = 'asfd', [Sex] = 'False', [MentorLevel] = '2', [Other] = NULL, [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/30 10:10:56', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:45:34', [LogicDeleteFlag] = 'False' WHERE ([MId] = 'False'0) 
+2017-12-30 10:45:34,938 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Saveentor() [END]
+2017-12-30 10:45:34,939 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:37,504 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:37,517 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:37,695 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:38,456 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:38,461 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:38,513 [5] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:45:38,539 [5] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:45:38,553 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:45:38,556 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:44,296 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:44,314 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:44,475 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:45:45,134 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:45:45,141 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:45:45,194 [8] DEBUG HADOOP\hujunyuan Executed in     16 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:45:45,216 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:45:45,219 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:45:45,220 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:10,611 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:10,629 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:10,832 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:12,310 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:12,317 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:12,390 [32] DEBUG HADOOP\hujunyuan Executed in     31 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:47:12,415 [32] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:47:12,417 [32] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:47:12,422 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:14,559 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:14,699 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:14,766 [5] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'30'
+2017-12-30 10:47:14,769 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.Find() [END]
+2017-12-30 10:47:14,771 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:17,674 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:17,685 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:17,762 [32] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'30'
+2017-12-30 10:47:17,790 [32] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:UPDATE [dbo].[Classroom] SET [ClassroomName] = 'test1', [Other] = 'sdfsda', [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/29 14:56:29', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:47:17', [LogicDeleteFlag] = 'False' WHERE ([ClassroomId] = '30') 
+2017-12-30 10:47:17,792 [32] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.SaveClassroom() [END]
+2017-12-30 10:47:17,798 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:19,900 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:19,959 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:20,115 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:20,713 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:20,723 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:20,776 [5] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:47:20,806 [5] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:47:20,809 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:47:20,811 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:26,188 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:26,208 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:26,363 [32] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'30'
+2017-12-30 10:47:26,387 [32] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:UPDATE [dbo].[Classroom] SET [LastUpdateTime] = '2017/12/30 10:47:26', [LogicDeleteFlag] = 'True' WHERE ([ClassroomId] = '30') 
+2017-12-30 10:47:26,390 [32] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.LogicDelete() [END]
+2017-12-30 10:47:26,393 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:26,521 [32] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:26,529 [32] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:26,583 [32] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:47:26,612 [32] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:47:26,615 [32] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:47:26,617 [32] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:47:28,643 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:47:28,652 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:47:28,701 [5] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:47:28,730 [5] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:47:28,742 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:47:28,754 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:51:38,932 [1] INFO  HADOOP\hujunyuan -----系统启动-----
+2017-12-30 10:51:39,073 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【START】-----
+2017-12-30 10:51:39,765 [1] DEBUG HADOOP\hujunyuan Executed in     41 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-30 10:51:40,161 [1] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-30 10:51:40,188 [1] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-30 10:51:40,258 [1] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-30 10:51:40,278 [1] DEBUG HADOOP\hujunyuan Executed in     15 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-30 10:51:40,302 [1] DEBUG HADOOP\hujunyuan Executed in     13 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-30 10:51:40,308 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-30 10:51:40,313 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,315 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,318 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,320 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,322 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,323 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,325 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,327 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,329 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,331 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,368 [1] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-30 10:51:40,410 [1] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-30 10:51:40,415 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-30 10:51:40,418 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,420 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,422 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,425 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,428 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,431 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,432 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,440 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,444 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,447 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,448 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,450 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,452 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,454 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,456 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,458 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,460 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:40,463 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【END】-----
+2017-12-30 10:51:42,866 [5] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-30 10:51:43,089 [5] DEBUG HADOOP\hujunyuan Executed in     34 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:51:43,187 [5] DEBUG HADOOP\hujunyuan Executed in     47 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:51:43,217 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:43,276 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:51:44,209 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:51:44,319 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:51:56,319 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:51:56,536 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:51:56,595 [8] NOTICE HADOOP\hujunyuan 用户登录
+2017-12-30 10:51:56,722 [8] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-30 10:51:56,755 [8] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:51:56,757 [8] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-30 10:51:56,780 [8] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-30 10:51:56,783 [8] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-30 10:51:56,788 [8] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-30 10:51:56,791 [8] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-30 10:51:56,796 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:51:57,112 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:51:57,125 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:51:57,187 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:51:58,918 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:51:58,927 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:51:58,972 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:00,236 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:00,346 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:00,694 [7] DEBUG HADOOP\hujunyuan Executed in     36 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:52:00,733 [7] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:00,768 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:52:00,772 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:02,761 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:02,776 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:02,911 [8] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'31'
+2017-12-30 10:52:02,916 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.Find() [END]
+2017-12-30 10:52:02,919 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:05,819 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:05,969 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:06,028 [7] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'31'
+2017-12-30 10:52:06,123 [7] DEBUG HADOOP\hujunyuan Executed in     33 ms,	SQL:SELECT      [Extent1].[LSId] AS [LSId],      [Extent1].[LIId] AS [LIId],      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[LessonTime] AS [LessonTime],      [Extent1].[MTRId] AS [MTRId],      [Extent1].[Other] AS [Other]     FROM [dbo].[LessonSchedule] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'31'
+2017-12-30 10:52:06,190 [7] DEBUG HADOOP\hujunyuan Executed in     29 ms,	SQL:UPDATE [dbo].[Classroom] SET [ClassroomName] = 'test3', [Other] = 'sdfsda', [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/29 14:56:53', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:52:06', [LogicDeleteFlag] = 'False' WHERE ([ClassroomId] = '31') 
+2017-12-30 10:52:06,194 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.SaveClassroom() [END]
+2017-12-30 10:52:06,198 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:08,476 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:08,484 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:08,570 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:08,996 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:09,008 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:09,093 [5] DEBUG HADOOP\hujunyuan Executed in     16 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:52:09,114 [5] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:09,116 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:52:09,119 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:12,299 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:12,316 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:12,479 [7] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'31'
+2017-12-30 10:52:12,515 [7] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:UPDATE [dbo].[Classroom] SET [LastUpdateTime] = '2017/12/30 10:52:12', [LogicDeleteFlag] = 'True' WHERE ([ClassroomId] = '31') 
+2017-12-30 10:52:12,518 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.LogicDelete() [END]
+2017-12-30 10:52:12,520 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:12,748 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:12,753 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:12,797 [8] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:52:12,800 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:52:12,802 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:15,170 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:15,178 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:15,211 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:16,684 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:16,691 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:16,813 [8] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T 
+2017-12-30 10:52:16,841 [8] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY CollegeName ) as row_number, * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:16,875 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.QueryCollege() [END]
+2017-12-30 10:52:16,879 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:19,084 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:19,101 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:19,214 [5] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT TOP (2)      [Extent1].[CId] AS [CId],      [Extent1].[CollegeId] AS [CollegeId],      [Extent1].[CollegeName] AS [CollegeName],      [Extent1].[CollegeAddress] AS [CollegeAddress],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[College] AS [Extent1]     WHERE [Extent1].[CId] = @'6'
+2017-12-30 10:52:19,227 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.Find() [END]
+2017-12-30 10:52:19,243 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:19,365 [5] DEBUG HADOOP\hujunyuan Executed in     42 ms,	SQL:SELECT      [Extent1].[RId] AS [RId],      [Extent1].[Remo_id] AS [Remo_id],      [Extent1].[MasterNum] AS [MasterNum],      [Extent1].[CId] AS [CId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Remo] AS [Extent1]     WHERE [Extent1].[CId] = @'6'
+2017-12-30 10:52:22,791 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:22,813 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:22,946 [8] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT TOP (2)      [Extent1].[CId] AS [CId],      [Extent1].[CollegeId] AS [CollegeId],      [Extent1].[CollegeName] AS [CollegeName],      [Extent1].[CollegeAddress] AS [CollegeAddress],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[College] AS [Extent1]     WHERE [Extent1].[CId] = @'6'
+2017-12-30 10:52:22,968 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Extent1].[RId] AS [RId],      [Extent1].[Remo_id] AS [Remo_id],      [Extent1].[MasterNum] AS [MasterNum],      [Extent1].[CId] AS [CId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Remo] AS [Extent1]     WHERE [Extent1].[CId] = @'6'
+2017-12-30 10:52:22,994 [8] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:UPDATE [dbo].[College] SET [CollegeId] = '41', [CollegeName] = 'fdsa', [CollegeAddress] = 'asdf', [Other] = 'asdf', [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/29 17:07:20', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:52:22', [LogicDeleteFlag] = 'fdsa'0 WHERE ([CId] = 'fdsa'1) 
+2017-12-30 10:52:22,997 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.SaveCollege() [END]
+2017-12-30 10:52:22,999 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:24,918 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:24,932 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:25,032 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:25,542 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:25,547 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:25,595 [8] DEBUG HADOOP\hujunyuan Executed in     16 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T 
+2017-12-30 10:52:25,615 [8] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY CollegeName ) as row_number, * from dbo.College where LogicDeleteFlag=0 and CollegeName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:25,618 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.CollegeService.QueryCollege() [END]
+2017-12-30 10:52:25,624 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:28,048 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:28,061 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:28,094 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:29,570 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:29,588 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:29,646 [5] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:52:29,667 [5] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:29,701 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:52:29,703 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:31,504 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:31,513 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:31,605 [7] DEBUG HADOOP\hujunyuan Executed in     28 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'13'
+2017-12-30 10:52:31,612 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Find() [END]
+2017-12-30 10:52:31,614 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:34,776 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:34,816 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:34,912 [8] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'13'
+2017-12-30 10:52:34,967 [8] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [Extent1].[MTRId] AS [MTRId],      [Extent1].[MId] AS [MId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[MentorToRemo] AS [Extent1]     WHERE [Extent1].[MId] = @'13'
+2017-12-30 10:52:35,006 [8] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:UPDATE [dbo].[Mentor] SET [MentorId] = '322', [MentorName] = 'asfd', [Sex] = 'False', [MentorLevel] = '2', [Other] = NULL, [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/30 10:10:56', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:52:34', [LogicDeleteFlag] = 'asfd'0 WHERE ([MId] = 'asfd'1) 
+2017-12-30 10:52:35,016 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Saveentor() [END]
+2017-12-30 10:52:35,018 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:37,075 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:37,079 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:37,159 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:37,621 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:37,660 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:37,729 [5] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:52:37,751 [5] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:37,753 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:52:37,757 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:40,962 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:40,994 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:41,088 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:42,422 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:42,436 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:42,526 [5] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:52:42,551 [5] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:42,588 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:52:42,590 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:46,464 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:46,493 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:46,668 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:47,884 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:47,901 [5] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:47,988 [5] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:52:48,017 [5] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:48,047 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:52:48,049 [5] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:52,937 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:52,955 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:53,135 [8] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT TOP (2)      [Extent1].[RId] AS [RId],      [Extent1].[Remo_id] AS [Remo_id],      [Extent1].[MasterNum] AS [MasterNum],      [Extent1].[CId] AS [CId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Remo] AS [Extent1]     WHERE [Extent1].[RId] = @'214'
+2017-12-30 10:52:53,147 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.Find() [END]
+2017-12-30 10:52:53,150 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:55,326 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:55,335 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:55,391 [8] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT TOP (2)      [Extent1].[RId] AS [RId],      [Extent1].[Remo_id] AS [Remo_id],      [Extent1].[MasterNum] AS [MasterNum],      [Extent1].[CId] AS [CId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Remo] AS [Extent1]     WHERE [Extent1].[RId] = @'214'
+2017-12-30 10:52:55,455 [8] DEBUG HADOOP\hujunyuan Executed in     32 ms,	SQL:SELECT      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[RId] = @'214'
+2017-12-30 10:52:55,490 [8] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT      [Extent1].[MTRId] AS [MTRId],      [Extent1].[MId] AS [MId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[MentorToRemo] AS [Extent1]     WHERE [Extent1].[RId] = @'214'
+2017-12-30 10:52:55,525 [8] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:UPDATE [dbo].[Remo] SET [Remo_id] = '3234', [MasterNum] = NULL, [CId] = NULL, [Other] = NULL, [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/29 16:30:08', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:52:55', [LogicDeleteFlag] = 'False' WHERE ([RId] = '214') 
+2017-12-30 10:52:55,529 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.SaveRemo() [END]
+2017-12-30 10:52:55,533 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:58,121 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:58,128 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:58,168 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:52:58,782 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:52:58,810 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:52:58,861 [7] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:52:58,882 [7] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:52:58,884 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:52:58,886 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:17,466 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:17,489 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:17,651 [8] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT TOP (2)      [Extent1].[RId] AS [RId],      [Extent1].[Remo_id] AS [Remo_id],      [Extent1].[MasterNum] AS [MasterNum],      [Extent1].[CId] AS [CId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Remo] AS [Extent1]     WHERE [Extent1].[RId] = @'203'
+2017-12-30 10:53:17,687 [8] DEBUG HADOOP\hujunyuan Executed in     33 ms,	SQL:UPDATE [dbo].[Remo] SET [LastUpdateTime] = '2017/12/30 10:53:17', [LogicDeleteFlag] = 'True' WHERE ([RId] = '203') 
+2017-12-30 10:53:17,700 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.LogicDelete() [END]
+2017-12-30 10:53:17,702 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:17,839 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:17,845 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:17,961 [10] DEBUG HADOOP\hujunyuan Executed in     56 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T 
+2017-12-30 10:53:17,994 [10] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY Remo_id ) as row_number, * from dbo.Remo where LogicDeleteFlag=0 and Remo_id like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:53:18,000 [10] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RemoService.QueryRemo() [END]
+2017-12-30 10:53:18,007 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:20,425 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:20,436 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:20,471 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:20,889 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:20,896 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:20,956 [7] DEBUG HADOOP\hujunyuan Executed in     29 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:53:20,977 [7] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:53:20,980 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:53:20,984 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:24,492 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:24,501 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:24,696 [7] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'190'
+2017-12-30 10:53:24,740 [7] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:UPDATE [dbo].[Grade] SET [LastUpdateTime] = '2017/12/30 10:53:24', [LogicDeleteFlag] = 'True' WHERE ([SId] = '190') 
+2017-12-30 10:53:24,839 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.LogicDelete() [END]
+2017-12-30 10:53:24,842 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:24,944 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:24,954 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:25,002 [7] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T 
+2017-12-30 10:53:25,026 [7] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, * from dbo.Grade where LogicDeleteFlag=0 and StudentName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:53:25,035 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGrade() [END]
+2017-12-30 10:53:25,037 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:27,506 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:27,514 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:27,547 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:27,998 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:28,004 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:28,079 [7] DEBUG HADOOP\hujunyuan Executed in     37 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:53:28,101 [7] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:53:28,105 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:53:28,109 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:31,106 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:31,122 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:31,277 [10] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT TOP (2)      [Extent1].[MId] AS [MId],      [Extent1].[MentorId] AS [MentorId],      [Extent1].[MentorName] AS [MentorName],      [Extent1].[Sex] AS [Sex],      [Extent1].[MentorLevel] AS [MentorLevel],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Mentor] AS [Extent1]     WHERE [Extent1].[MId] = @'14'
+2017-12-30 10:53:31,296 [10] DEBUG HADOOP\hujunyuan Executed in     15 ms,	SQL:UPDATE [dbo].[Mentor] SET [LastUpdateTime] = '2017/12/30 10:53:31', [LogicDeleteFlag] = 'True' WHERE ([MId] = '14') 
+2017-12-30 10:53:31,300 [10] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.LogicDelete() [END]
+2017-12-30 10:53:31,301 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:31,396 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:31,401 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:31,458 [7] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T 
+2017-12-30 10:53:31,480 [7] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY MId ) as row_number, * from dbo.Mentor where LogicDeleteFlag=0 and MId like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:53:31,482 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.entorService.Queryentor() [END]
+2017-12-30 10:53:31,485 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:34,947 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:34,955 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:35,150 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:35,680 [8] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:35,687 [8] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:35,746 [8] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:53:35,749 [8] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:53:35,753 [8] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:37,290 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:37,295 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:37,321 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:47,745 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:47,778 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:47,859 [7] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'0'
+2017-12-30 10:53:47,890 [7] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:INSERT [dbo].[Classroom]([ClassroomName], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES ('考研教室', NULL, '2', '朱坤', '2017/12/30 10:53:47', '2', '朱坤', '2017/12/30 10:53:47', 'False') SELECT [ClassroomId] FROM [dbo].[Classroom] WHERE @@ROWCOUNT > 0 AND [ClassroomId] = scope_identity()
+2017-12-30 10:53:47,895 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.SaveClassroom() [END]
+2017-12-30 10:53:47,901 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:50,103 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:50,118 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:50,148 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:50,591 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:50,599 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:50,662 [7] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:53:50,688 [7] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:53:50,693 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:53:50,696 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:54,813 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:54,853 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:55,016 [10] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'34'
+2017-12-30 10:53:55,019 [10] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.Find() [END]
+2017-12-30 10:53:55,022 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:53:59,707 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:53:59,726 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:53:59,783 [10] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT TOP (2)      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[ClassroomName] AS [ClassroomName],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Classroom] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'34'
+2017-12-30 10:53:59,807 [10] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Extent1].[LSId] AS [LSId],      [Extent1].[LIId] AS [LIId],      [Extent1].[ClassroomId] AS [ClassroomId],      [Extent1].[LessonTime] AS [LessonTime],      [Extent1].[MTRId] AS [MTRId],      [Extent1].[Other] AS [Other]     FROM [dbo].[LessonSchedule] AS [Extent1]     WHERE [Extent1].[ClassroomId] = @'34'
+2017-12-30 10:53:59,837 [10] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:UPDATE [dbo].[Classroom] SET [ClassroomName] = '考研教室101', [Other] = NULL, [CreateUserId] = '2', [CreateUserName] = '朱坤', [CreateTime] = '2017/12/30 10:53:47', [LastUpdateUserId] = '2', [LastUpdateUserName] = '朱坤', [LastUpdateTime] = '2017/12/30 10:53:59', [LogicDeleteFlag] = 'False' WHERE ([ClassroomId] = '34') 
+2017-12-30 10:53:59,846 [10] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.SaveClassroom() [END]
+2017-12-30 10:53:59,849 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:01,694 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:01,705 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:01,737 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:02,365 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:02,372 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:02,473 [10] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T 
+2017-12-30 10:54:02,518 [10] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ClassroomName ) as row_number, * from dbo.Classroom where LogicDeleteFlag=0 and ClassroomName like '%' ) AS T WHERE row_number between 1 and 10
+2017-12-30 10:54:02,527 [10] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ClassroomService.QueryClassroom() [END]
+2017-12-30 10:54:02,539 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:04,626 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:04,636 [12] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:04,696 [12] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:06,311 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:06,332 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:06,417 [11] DEBUG HADOOP\hujunyuan Executed in     29 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'0' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'0') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 10:54:06,468 [11] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (9, 13, 17, 21, 25, 29, 34, 37, 97, 103, 109, 122, 126, 132, 138, 144, 156)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 10:54:06,484 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 10:54:06,488 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:08,849 [7] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:08,853 [7] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:08,900 [7] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'156' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'156') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 10:54:08,924 [7] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (157, 158)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 10:54:08,927 [7] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 10:54:08,929 [7] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:10,805 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:10,813 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:10,876 [11] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:SELECT TOP (2)      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE [Extent1].[Id] = @'157'
+2017-12-30 10:54:10,881 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.Find() [END]
+2017-12-30 10:54:10,884 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:28,937 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:28,946 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:29,107 [10] NOTICE HADOOP\hujunyuan 字典数据修改
+2017-12-30 10:54:29,191 [10] DEBUG HADOOP\hujunyuan Executed in     42 ms,	SQL:SELECT TOP (2)      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE [Extent1].[Id] = @'157'
+2017-12-30 10:54:38,369 [10] ERROR HADOOP\hujunyuan Attaching an entity of type 'EIP.Entity.AppCodeMaster' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+System.InvalidOperationException: Attaching an entity of type 'EIP.Entity.AppCodeMaster' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 CoreLand.Framework.Data.EFEntityRepository`1.Update(TEntity item)
+   在 CoreLand.Framework.Data.DefaultRepository`1.Update(TEntity item)
+   在 EIP.Service.AppCodeMasterService.SaveAppCodeMaster(AppCodeMaster model) 位置 C:\Users\hujunyuan\Desktop\实习生工程\实习生工程\实习生工程\EIP.SampleEasyUI\EIP.Service\Impl\AppCodeMasterService.cs:行号 88
+2017-12-30 10:54:40,113 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:40,150 [10] ERROR HADOOP\hujunyuan Attaching an entity of type 'EIP.Entity.AppCodeMaster' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+System.InvalidOperationException: Attaching an entity of type 'EIP.Entity.AppCodeMaster' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   在 CoreLand.Framework.Aop.ServiceRealProxy`1.Invoke(IMessage msg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 EIP.Service.IAppCodeMasterService.SaveAppCodeMaster(AppCodeMaster model)
+   在 EIP.Web.Controllers.AppCodeMasterController.Save(AppCodeMaster model) 位置 C:\Users\hujunyuan\Desktop\实习生工程\实习生工程\实习生工程\EIP.SampleEasyUI\EIP.Web\Controllers\AppCodeMasterController.cs:行号 115
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2017-12-30 10:54:44,899 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:44,906 [10] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:45,077 [10] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT TOP (2)      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE [Extent1].[Id] = @'156'
+2017-12-30 10:54:45,080 [10] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.Find() [END]
+2017-12-30 10:54:45,083 [10] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:48,654 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:48,728 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:48,784 [11] NOTICE HADOOP\hujunyuan 字典删除
+2017-12-30 10:54:48,847 [11] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'156')
+2017-12-30 10:54:48,878 [11] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:SELECT TOP (2)      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE [Extent1].[Id] = @'156'
+2017-12-30 10:54:48,942 [11] DEBUG HADOOP\hujunyuan Executed in     60 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'157')
+2017-12-30 10:54:48,976 [11] DEBUG HADOOP\hujunyuan Executed in     29 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'158')
+2017-12-30 10:54:49,006 [11] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:UPDATE [pub].[App_CodeMaster] SET [LastUpdateTime] = '2017/12/30 10:54:48', [LogicDeleteFlag] = 'True' WHERE ([Id] = '156') 
+2017-12-30 10:54:49,027 [11] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:UPDATE [pub].[App_CodeMaster] SET [LastUpdateTime] = '2017/12/30 10:54:48', [LogicDeleteFlag] = 'True' WHERE ([Id] = '157') 
+2017-12-30 10:54:49,046 [11] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:UPDATE [pub].[App_CodeMaster] SET [LastUpdateTime] = '2017/12/30 10:54:48', [LogicDeleteFlag] = 'True' WHERE ([Id] = '158') 
+2017-12-30 10:54:49,050 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.LogicDelete() [END]
+2017-12-30 10:54:49,052 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:54:53,889 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:54:53,903 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:54:54,085 [11] DEBUG HADOOP\hujunyuan Executed in     34 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'9' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'9') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 10:54:54,112 [11] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (10, 11)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 10:54:54,114 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 10:54:54,117 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:55:33,380 [14] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:55:33,395 [14] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:55:33,652 [14] DEBUG HADOOP\hujunyuan Executed in     55 ms,	SQL:SELECT TOP (2)      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE [Extent1].[Id] = @'144'
+2017-12-30 10:55:33,666 [14] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.Find() [END]
+2017-12-30 10:55:33,683 [14] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:55:35,965 [14] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:55:35,981 [14] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:55:36,012 [14] NOTICE HADOOP\hujunyuan 字典删除
+2017-12-30 10:55:36,062 [14] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'144')
+2017-12-30 10:55:36,085 [14] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT TOP (2)      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE [Extent1].[Id] = @'144'
+2017-12-30 10:55:36,105 [14] DEBUG HADOOP\hujunyuan Executed in     16 ms,	SQL:UPDATE [pub].[App_CodeMaster] SET [LastUpdateTime] = '2017/12/30 10:55:36', [LogicDeleteFlag] = 'True' WHERE ([Id] = '144') 
+2017-12-30 10:55:36,110 [14] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.LogicDelete() [END]
+2017-12-30 10:55:36,112 [14] INFO  HADOOP\hujunyuan [END]
+2017-12-30 10:56:05,974 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 10:56:05,992 [12] INFO  HADOOP\hujunyuan [START]
+2017-12-30 10:56:06,154 [12] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'138' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'138') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 10:56:06,202 [12] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (139, 140, 141)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 10:56:06,211 [12] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 10:56:06,215 [12] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:08:17,206 [16] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:08:17,224 [16] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:08:17,306 [16] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'13' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'13') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:08:17,338 [16] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (119, 14, 15, 16, 120, 121)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:08:17,341 [16] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:08:17,345 [16] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:08:19,647 [16] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:08:19,730 [16] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:08:19,795 [16] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'17' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'17') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:08:19,872 [16] DEBUG HADOOP\hujunyuan Executed in     50 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (18, 19)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:08:19,881 [16] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:08:19,884 [16] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:08:22,452 [16] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:08:22,458 [16] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:08:22,548 [16] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'21' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'21') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:08:22,629 [16] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (22, 23, 24)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:08:22,632 [16] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:08:22,634 [16] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:08:24,095 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:08:24,102 [23] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:08:24,157 [23] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'25' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'25') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:08:24,182 [23] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (26, 27, 28)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:08:24,184 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:08:24,186 [23] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:08:26,917 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:08:26,940 [23] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:08:27,021 [23] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'29' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'29') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:08:27,047 [23] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (30, 31, 32, 33)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:08:27,049 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:08:27,052 [23] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:08:29,260 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:08:29,287 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:08:29,341 [11] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'34' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'34') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:08:29,368 [11] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (35, 36)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:08:29,372 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:08:29,376 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:08:35,760 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:08:35,772 [23] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:08:35,958 [23] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'37' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'37') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:08:36,044 [23] DEBUG HADOOP\hujunyuan Executed in     80 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:08:36,047 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:08:36,050 [23] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:09:01,999 [16] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:09:02,171 [16] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:09:03,069 [16] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'122' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'122') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:09:03,095 [16] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (123, 124, 125)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:09:03,097 [16] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:09:03,103 [16] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:09:05,869 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:09:05,878 [11] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:09:05,932 [11] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'126' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'126') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:09:05,982 [11] DEBUG HADOOP\hujunyuan Executed in     44 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (127, 128, 129, 130, 131)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:09:06,336 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:09:06,753 [11] INFO  HADOOP\hujunyuan [END]
+2017-12-30 11:09:14,195 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-30 11:09:14,819 [23] INFO  HADOOP\hujunyuan [START]
+2017-12-30 11:09:15,216 [23] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:SELECT      [Project1].[Id] AS [Id],      [Project1].[C1] AS [C1],      [Project1].[C2] AS [C2],      [Project1].[AppId] AS [AppId],      [Project1].[C3] AS [C3]     FROM ( SELECT          [Extent1].[Id] AS [Id],          [Extent1].[ShowIndex] AS [ShowIndex],          [Extent1].[AppId] AS [AppId],           CAST( [Extent1].[Id] AS nvarchar(max)) AS [C1],          [Extent1].[Text] + N'(' + [Extent1].[Code] + N')' AS [C2],           CAST( @'132' AS nvarchar(max)) AS [C3]         FROM [pub].[App_CodeMaster] AS [Extent1]         WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'132') AND ([Extent1].[AppId] = @'-1')     )  AS [Project1]     ORDER BY [Project1].[ShowIndex] ASC
+2017-12-30 11:09:15,244 [23] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT      [Extent1].[Id] AS [Id],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[Code] AS [Code],      [Extent1].[Text] AS [Text],      [Extent1].[ShortText] AS [ShortText],      [Extent1].[Pinyin] AS [Pinyin],      [Extent1].[ShowIndex] AS [ShowIndex],      [Extent1].[PrepareField1] AS [PrepareField1],      [Extent1].[PrepareField2] AS [PrepareField2],      [Extent1].[PrepareField3] AS [PrepareField3],      [Extent1].[PrepareField4] AS [PrepareField4],      [Extent1].[AppId] AS [AppId],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[App_CodeMaster] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] IN (133, 134, 135, 136, 137)) AND (0 = [Extent1].[LogicDeleteFlag])
+2017-12-30 11:09:15,249 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.AppCodeMasterService.QueryAppCodeMaster() [END]
+2017-12-30 11:09:15,252 [23] INFO  HADOOP\hujunyuan [END]

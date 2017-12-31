@@ -1,0 +1,74 @@
+﻿@{
+
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+
+
+
+}
+<form id="form_Login" class="easyui-form" method="post" data-options="novalidate:true">
+
+    <div class="easyui-panel" style="width: 500px; padding: 50px 10px 50px 60px; margin: 0 auto; position: absolute; top: 50%; left: 50%; margin-top: -150px; margin-left: -200px; ">
+        <div style="margin-bottom:20px">
+            <div style=" width:80%;">
+                <input class="easyui-textbox" name="userName" prompt="请输入用户名" required="true" iconwidth="28" style="width:100%;height:34px;padding:10px;">
+            </div>
+            <div></div>
+        </div>
+        <div style="margin-bottom:20px">
+            <div style=" width: 80%; float: left;">
+                <input class="easyui-passwordbox" name="password" prompt="请输入密码" required="true" iconwidth="28" style="width:100%;height:34px;padding:10px" />
+            </div>
+            <div style="width: 15%; float: left; padding-left: 10px; padding-top: 10px; ">
+                <a href="#" style=" color:blue;" onclick="editPassword()">忘记密码?</a>
+            </div>
+            <div style="margin-top:0;height:1px;clear:both"></div>
+        </div>
+        <div style="margin-bottom:20px;padding-left:100px;">
+            <a href="#" class="easyui-linkbutton" style="width:100px;" onclick="save()" data-options="text:'登录'"></a>
+        </div>
+    </div>
+</form>
+<div id="editPassword_dialog" class="easyui-dialog" title="修改密码" style="width: 400px; height:300px; padding: 10px"
+     data-options="iconCls:'icon-edit',resizable:true,modal:true,closed:true,toolbar:'#dlg_toolbar_RoleConfirm'">
+    Loading...
+</div>
+
+<script type="text/javascript">
+ 
+    function editPassword() {
+        var logName = $("#form_Login").find("input[name='userName']").val();
+        $("#editPassword_dialog").dialog("open").dialog("refresh", App.getUrl('Login/editPassword?logName=' + logName));
+    }
+    function validate() {
+        // 验证
+        var isValid = $("#form_Login").form("enableValidation").form("validate");
+        if (!isValid) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        return true;
+    }
+
+    //保存
+    function save() {
+        
+        // 表单验证
+        if (!validate()) return;
+
+        // 表单数据提交
+        var formData = $("#form_Login").form("getData");
+        App.action(App.getUrl("Login/Login"), formData,
+            function (data) {
+                if (data == "Success") {
+                    Redirect();
+                }
+            });
+
+    }
+
+    function Redirect() {
+        window.location.href = '/Login/home';
+    }
+</script>

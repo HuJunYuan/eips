@@ -1,0 +1,3 @@
+﻿2017-12-10 23:52:20,350 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-10 23:52:20,408 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-10 23:52:20,998 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     29 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'

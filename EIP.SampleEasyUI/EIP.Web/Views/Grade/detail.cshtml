@@ -1,0 +1,152 @@
+﻿@model EIP.Entity.Grade
+
+@{
+    Layout = "~/views/shared/_PersonCenterLayout.cshtml";
+}
+@section head{
+    <link href="/Content/PersonalCenter/CSS/table.css?v=@ViewBag.Version" rel="stylesheet" />
+}
+<div>
+    <div class="div-margin">
+        <input type="button" id="Colse" class="form-btn" onclick="closeBox();" value="关闭" />
+        
+    </div>
+    <div class="head-font">
+        <b>学生信息表详情</b>
+    </div>
+
+    <table id="readonly" class="tables" cellpadding="0" cellspacing="0">
+            
+                <tr>
+                    <td width="25%">
+                        <label>学生ID</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.SId)
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">
+                        <label>学生ID</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.StudentId)
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td width="25%">
+                        <label>学生姓名
+   </label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.StudentName)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>性别</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Sex)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>生日 </label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Birthday)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>电子邮件</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Email)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>户籍所在地
+   </label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Hometown)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>电话号码</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Phone_number)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>学生学号</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.StudentId)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>所在班级ID</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.RId)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>备注
+   </label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Other)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>班级</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Remo)
+                    </td>
+                </tr>
+            
+    </table>
+</div>
+
+<script type="text/javascript">
+
+    mini.parse();
+
+
+    //关闭
+    function closeBox() {
+
+        window.App.CloseWindow();
+    }
+</script>

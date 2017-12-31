@@ -1,0 +1,69 @@
+﻿@using Newtonsoft.Json
+@model EIP.Web.Model.RoleCondition
+
+<div id="rolelist" ></div>
+<div id="rolelist_toolbar">
+    <input class="easyui-searchbox" data-options="prompt:'请输入角色名或标识',searcher:doSearch" style="width:100%">
+</div>
+
+<script language="javascript">
+    var rolelistData = [];//角色列表数据
+
+    $(function () {
+
+        ditoptions = $.extend(ditoptions,{
+            IsSingleSelect : @Model.IsSingleSelect.ToString().ToLower(), //是否为单选
+            valueField : '@Model.ValueField',
+            textField : '@Model.TextField',
+            SeletedTextFormat : '@Model.SeletedTextFormat' //选择框内显示格式
+        });
+
+        $("#rolelist").datalist({
+            fit:true,
+            lines:false,
+            border:false,
+            checkbox:true,
+            singleSelect:ditoptions.IsSingleSelect,
+            toolbar:'#rolelist_toolbar',
+            valuefield:"RoleID",
+            textfield:"DisplayName",
+            textFormatter: function (value, row, index) {
+                return String.format(ditoptions.SeletedTextFormat, row);
+            }
+        });
+
+        App.action(App.getUrl("UUCDit/query_role"),{ditIndentity:ditoptions.DitIdentity},function(data){
+            if(data){
+                rolelistData = data;
+                $("#rolelist").datalist("loadData",data);
+            }
+        });
+
+    });
+
+    function userSelect() {
+        var rows = $("#rolelist").datalist("getChecked");
+        var selectedData = $("#lstSelected").datalist("getRows");
+
+        // 单选时先清除数据
+        if (ditoptions.IsSingleSelect) selectedData = [];
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = $.extend({ id: rows[i].RoleID, text: String.format(ditoptions.SeletedTextFormat, rows[i])}, rows[i]);
+            if (isSelected(row.id, selectedData)) continue;
+            selectedData.push(row);
+        }
+        $("#lstSelected").datalist("loadData", selectedData);
+    }
+
+    function doSearch(value){
+        var data = [];
+        $.each(rolelistData,function(index,row){
+            if(row.RoleIndentity.contains(value) || row.DisplayName.contains(value)){
+                data.push(row);
+            }
+        });
+        $("#rolelist").datalist("loadData",data);
+    }
+
+</script>

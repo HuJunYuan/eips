@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+
+<table id="grid_classTable" class="easyui-datagrid" fit="true"
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_classTable',toolbar:'#grid_toolbar',onDblClickRow:doDetail,mothod:'post'">
+    <thead>
+        <tr>
+            <th data-options="field:'ck',checkbox:true"></th>
+            <th data-options="field:'ClassID',width:100">班级名字</th>
+            <th data-options="field:'ClassName',width:100">班级名字</th>
+            <th data-options="field:'Students',width:100">学生表</th>
+            <th data-options="field:'eacherClassRelationships',width:100">老师班级表关系(TeacherClassRelationship)</th>
+
+        </tr>
+    </thead>
+</table>
+
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级表名。" })
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+</div>
+
+<div id="dlg_classTable" class="easyui-dialog" title="班级表编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons'">
+    Loading...
+</div>
+
+<div id="dlg_buttons" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
+    </div>
+</div>
+
+<script>
+    function doSearch() {
+        $('#grid_classTable').datagrid('load', {
+            Key: $('#Key').val()
+        });
+    }
+
+    // 添加
+    function doAdd() {
+        $('#dlg_classTable').dialog("open").dialog('refresh', App.getUrl('/ClassTable/add'));
+    }
+
+    // 删除
+    function doDel() {
+        var row = $('#grid_classTable').datagrid('getSelected');
+        if (!row) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("ClassTable/remove"), { appId: row.AppId },
+                function () {
+                    $('#grid_classTable').datagrid('reload');
+                });
+        });
+
+
+    }
+
+    // 打开编辑状态详情
+    function doDetail() {
+        var row = $('#grid_classTable').datagrid('getSelected');
+        if (row) {
+            debugger;
+            $('#dlg_classTable').dialog("open").dialog('refresh', App.getUrl('/ClassTable/edit?classID=1'));
+        }
+
+    }
+</script>
+

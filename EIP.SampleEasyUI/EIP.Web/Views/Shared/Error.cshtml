@@ -1,0 +1,76 @@
+﻿@model CoreLand.Framework.Web.SystemErrorInfo
+
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: "微软雅黑",MicrosoftYaHei;
+            font-size: 12px;
+        }
+
+        .error-wrap {
+            width: 570px;
+            height: 220px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -285px;
+        }
+
+            .error-wrap .left-img {
+                float: left;
+            }
+
+            .error-wrap .right-font {
+                float: right;
+                display: inline;
+                margin-top: 50px;
+            }
+
+                .error-wrap .right-font img {
+                    margin-bottom: 10px;
+                }
+
+                .error-wrap .right-font p {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    color: #6e6e6e;
+                    width:280px;
+                }
+
+                    .error-wrap .right-font p.small {
+                        margin-top: 10px;
+                        font-size: 9px;
+                        color: #b76904;
+                    }
+    </style>
+    <div class="error-wrap">
+        <img src="~/Content/img/error.gif" class="left-img" />
+        <div class="right-font">
+
+            @if(!string.IsNullOrEmpty(Model.Message))
+            {
+                <p style="color:blue;">@Model.Message</p>
+            }
+            else if (Model.Exception != null)
+            {
+                <p style="color:blue;">@Model.Exception.Message</p>
+            }
+            else
+            {
+                <img src="~/Content/img/font.gif" />
+            }
+            <p>如有紧急问题，请联系EIP系统管理员</p>
+            <p>联系电话：028-88888888 </p>
+            <p class="small">发生时间：@DateTime.Now.ToStringCN() &nbsp&nbsp 
+            操作用户：@Model.UserCode &nbsp&nbsp <br />
+            浏览器版本：@Model.Browser (@Model.BrowserVersion) &nbsp&nbsp 
+            操作系统：@Model.OSName</p>
+        </div>
+    </div>
+

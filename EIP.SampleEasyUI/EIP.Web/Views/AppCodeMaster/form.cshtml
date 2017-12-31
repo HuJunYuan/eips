@@ -1,0 +1,165 @@
+﻿@model EIP.Entity.AppCodeMaster
+
+@{
+    Layout = null;
+}
+<div class="easyui-panel form-toolbar" >
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" onclick="add()">添加</a>
+    @if (Model.Id > 0)
+    {
+    <a href="#" class="easyui-linkbutton" iconcls="icon-save" onclick="save()">保存</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-cancel" onclick="del()">删除</a>
+    }
+</div>
+<form id="form_AppCodeMaster" class="easyui-form" method="post" data-options="">
+        
+    <!--主键-->
+    @Html.HiddenFor(p => p.Id)
+
+    <!--父节点ID-->
+    @Html.HiddenFor(p => p.ParentId)
+
+    <!--应用ID(AppId)-->
+    @Html.HiddenFor(p => p.AppId)
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.Code, new TextBox()
+               {
+                   Label = "编码 ：",
+                   Style = "width:100%;",
+                   ValidType = new ValidateType()
+                       {
+                           Extension = "engNum:true"
+                       }
+               })
+    </div>
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.Text, new TextBox() { Label = "名称 ：", Style = "width:100%;" })
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.ShortText, new TextBox() { Label = "略称 ：", Style = "width:100%;" })
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.Pinyin, new TextBox()
+               {
+                   Label = "拼音 ：",
+                   Style = "width:100%;",
+                   ValidType = new ValidateType()
+                       {
+                           Extension = "engNum:true"
+                       }
+               })
+    </div>
+
+
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.PrepareField1, new TextBox() { Label = "预备字段1 ：", Style = "width:100%;" })
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.PrepareField2, new TextBox() { Label = "预备字段2 ：", Style = "width:100%;" })
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.PrepareField3, new TextBox() { Label = "预备字段3 ：", Style = "width:100%;" })
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.PrepareField4, new TextBox() { Label = "预备字段4 ：", Style = "width:100%;" })
+    </div>
+        
+    <div class="form-item">
+        @Html.CLNumberSpinnerFor(p => p.ShowIndex, new NumberSpinner()
+               {
+                   Label = "显示顺序 ：",
+                   Style = "width:220px;"
+               })
+    </div>
+</form>
+<script type="text/javascript">
+
+    function validate() {
+        // 验证
+        var isValid = $("#form_AppCodeMaster").form("validate");
+        if (!isValid) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        return true;
+    }
+
+    //添加
+    function add() {
+        var id = $("#form_AppCodeMaster").find("#Id").val();
+        var parentId = $("#form_AppCodeMaster").find("#ParentId").val();//ParentId
+        if (id != "0" && parentId == "0") {
+            $("#form_AppCodeMaster").find("#ParentId").val(id);
+        }
+        $("#form_AppCodeMaster").find("#Id").val("0");
+        save();
+    }
+
+    //保存
+    function save() {
+
+        // 表单验证
+        if (!validate()) return;
+
+        // 表单数据提交
+        var formData = $("#form_AppCodeMaster").form("getData");
+        App.action(App.getUrl("/AppCodeMaster/save"), formData,
+            function (data) {
+                if (data != null) {
+                    var node = $('#codetree').tree('getSelected');
+                    if (node && node.id == data.id) {
+                        // 如果是变更节点，则更新
+                        $('#codetree').tree('update', {
+                            target: node.target,
+                            text: data.text,
+                            iconCls: data.iconCls
+                        });
+
+                    }
+                    else
+                    {
+                        // 如果是新增节点，则插入子节点
+                        if ($("#codetree").tree("getParent", node.target)) {
+                            $('#codetree').tree('insert', {
+                                after: node.target,
+                                data: [data]
+                            });
+                        } else {
+                            $('#codetree').tree('append', {
+                                parent: node.target,
+                                data: [data]
+                            });
+                        }
+                    }
+                    $("#codeEdit").panel("setTitle", data.text);
+                }
+            });
+
+    }
+
+    //删除
+    function del() {
+        var node = $('#codetree').tree('getSelected');
+        var id = $("#form_AppCodeMaster").find("#Id").val();
+        removeMenu({
+            id: id,
+            target: node ? node.target : null
+        });
+    }
+
+</script>

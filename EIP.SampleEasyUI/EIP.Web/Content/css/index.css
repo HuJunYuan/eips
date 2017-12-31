@@ -1,0 +1,439 @@
+﻿/*reset css*/
+html,
+head,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+ul,
+li,
+ol,
+dl,
+dt,
+table,
+thead,
+tbody,
+th,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol,
+dl,
+dt {
+    list-style: none;
+}
+
+/*em,
+strong,
+i,
+b,
+s {
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+body {
+    box-sizing: border-box;
+    color: #444444;
+    font-size: 14px;
+    font-family: "微软雅黑", arial, "Hiragino Sans GB", "宋体";
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+/*清除标签默认样式*/
+.com-line-style {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.center-tabs .panel-body {
+    padding: 5px;
+    *padding: 5px 0 0 5px;
+    *position: relative;
+    *left: 0;
+    *top: 0;
+    /*margin-bottom: 10px;*/
+}
+/*头部样式*/
+.header {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    height: 50px;
+    /*border-bottom: 1px solid #d3d7da;*/
+}
+
+.hd-right-nav {
+    border-right: 1px solid #e2e2e2;
+}
+
+
+    .hd-right-nav .l-btn-icon-top .l-btn-icon {
+        top: 2px;
+    }
+
+.header-right .hd-right-nav a {
+    margin-right: 10px;
+}
+
+.header-left {
+    border-bottom: 1px solid #313743;
+}
+
+    .header-left .logo, .header-left h1, .header-left span {
+        float: left;
+    }
+
+.logo {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #4c97db;
+}
+
+    .logo i {
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        margin: 6px 6px 0px 35px;
+        background: url("../img/logo.png") no-repeat 0 0;
+        background-size:contain;
+    }
+
+/*header-left 样式*/
+.header h1 {
+    font-size: 22px;
+    color: #0085d0;
+    font-weight: normal;
+    float: left;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+/*header-right 样式*/
+.header-right {
+    overflow: hidden;
+    height: 47px;
+    /*float: right;*/
+    _margin-top: 10px;
+    border: 1px solid #d3d7da;
+}
+
+.hd-right-nav {
+    float: left;
+    line-height: 30px;
+}
+
+.login {
+    float: left;
+    padding-right: 15px;
+    margin-top: 6px;
+    _margin-top: 0;
+    /*line-height: 70px;*/
+}
+
+.login-head {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 15px;
+}
+
+.login-name {
+    color: #666666;
+    font-size: 12px;
+    vertical-align: top;
+    line-height: 18px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-align:center;
+}
+
+.icon-list {
+    background: url('../img/list.png') no-repeat center center;
+}
+
+.icon-list-hui {
+    background: url('../img/list-hui.png') no-repeat center center;
+    color: #535353;
+}
+
+.icon-system {
+    background: url('../img/system.png') no-repeat center center;
+     width: 22px;
+    height: 18px;
+}
+
+.select-color {
+    color: #0085d0;
+}
+
+.icon-system-hui {
+    background: url('../img/system-hui.png') no-repeat center center;
+    width: 22px;
+    height: 18px;
+}
+/*消息样式*/
+.message {
+    display: inline-block;
+    _display: inline;
+    _zoom: 1;
+    width: 18px;
+    height: 15px;
+    position: absolute;
+    top: -4px;
+    left: 12px;
+    background: url("../img/iconlist.png") no-repeat -102px -150px;
+    _background: url("../img/iconlist-8.png") no-repeat -102px -150px;
+    color: #fff;
+    font-size: 12px;
+    font-family: "新宋体";
+    line-height: 14px;
+    text-align: center;
+}
+
+.icon-message:hover .message {
+    background: url("../img/iconlist.png") no-repeat -131px -234px;
+    _background: url("../img/iconlist-8.png") no-repeat -131px -234px;
+}
+
+.icon-message {
+    display: inline-block;
+    height: 24px;
+    width: 22px;
+    background: url('../img/message.png') no-repeat center center;
+    _height: 24px;
+    _width: 22px;
+    position: relative;
+}
+
+    .icon-message:hover {
+        background: url('../img/message-blue.png') no-repeat center center;
+        _background: url('../img/message-blue-8.png') no-repeat center center;
+    }
+
+.header-right .hd-right-nav .icon-message {
+    margin-right: 25px;
+    vertical-align: middle;
+}
+
+
+.icon-edit {
+    background: url('../img/edit.png') no-repeat center center;
+}
+
+.icon-close {
+    background: url('../img/back.png') no-repeat center center;
+}
+
+
+/*.icon-search {
+    background: url('../img/search.png') no-repeat center center;
+    padding: 6px 28px 4px 28px;
+}*/
+.hd-right-nav .l-btn {
+    color: #444;
+}
+
+.hd-right-nav .nav-active {
+    color: #0085d0 !important;
+}
+
+.hd-right-nav .l-btn:hover {
+    background: none;
+    color: #0085d0 !important;
+    border: 0;
+    padding: 1px;
+}
+
+    .hd-right-nav .l-btn:hover .icon-system-hui {
+        background: url('../img/system.png') no-repeat center center;
+    }
+ .hd-right-nav .l-btn:hover .icon-list-hui {
+    background: url('../img/list.png') no-repeat center center;
+    /*color: #535353;*/
+}
+
+/*center tabs样式修改*/
+.tabs-header {
+    border: 0;
+    background-color: #fff;
+    padding-top: 3px;
+}
+
+.center-tabs .tabs {
+    padding-left: 12px;
+    border-color: #d3d7da;
+}
+
+.tabs-panels {
+    border: 0;
+}
+
+
+
+/*.tabs LI A.tabs-inner {
+    padding: 2px 14px;
+    background-color: #0085d0;
+    border: 0;
+    padding-bottom: 1px;
+    color: #fff;
+}
+
+.tabs LI.tabs-selected A.tabs-inner {
+    background-color: #8ec31f;
+    color: #fff;
+    font-weight: normal;
+}
+
+.tabs li a.tabs-inner:hover {
+    background-color: #8ec31f;
+    color: #fff;
+}
+
+.tabs LI A.tabs-close {
+    background: url('../img/close.png') no-repeat center center;
+}
+
+.tabs li a:hover.tabs-close {
+    background-color: #FF8866;
+}*/
+
+/*左侧导航样式修改*/
+.nav-left {
+    width: 180px;
+    background-color: #313743;
+}
+
+    .nav-left .tree {
+        margin-top: 10px;
+    }
+
+    .nav-left .tree-node {
+        padding: 6px 0;
+        color: #c6cad2;
+        padding-left: 10px;
+    }
+
+    .nav-left .tree-node-selected {
+        background-color: #252a34;
+        color: #4d97db;
+        border-left: 3px solid #0085d0;
+        padding-left: 7px;
+    }
+
+    .nav-left .tree-node-hover {
+        background: #252a34;
+        color: #4d97db;
+        border-left: 3px solid #0085d0;
+        padding-left: 7px;
+    }
+
+    .nav-left .tree li div.tree-node .tree-title {
+        font-size: 14px;
+        overflow: hidden;
+    }
+
+    .nav-left .tree li ul div.tree-node .tree-title {
+        font-size: 12px;
+    }
+
+    .nav-left .tree-hit {
+        float: right;
+    }
+
+    .nav-left .tree-hit {
+        margin-right: 5px;
+    }
+
+    /*.nav-left .tree-collapsed {
+        background: url('../img/list-left.png') no-repeat center center;
+    }
+
+    .nav-left .tree-expanded {
+        background: url('../img/list-down.png') no-repeat center center;
+    }
+
+    .nav-left .tree-root-first .tree-collapsed {
+        background: url('../img/list-left.png') no-repeat center center;
+    }
+
+    .nav-left .tree-root-first .tree-expanded {
+        background: url('../img/list-down.png') no-repeat center center;
+    }
+
+    .nav-left .tree-node-last .tree-collapsed {
+        background: url('../img/list-left.png') no-repeat center center;
+    }
+
+    .nav-left .tree-node-last .tree-expanded {
+        background: url('../img/list-down.png') no-repeat center center;
+    }*/
+    .nav-left .tree-collapsed {
+        background: none;
+    }
+
+    .nav-left .tree-expanded {
+        background: none;
+    }
+
+    .nav-left .tree-root-first .tree-collapsed {
+        background: none;
+    }
+
+    .nav-left .tree-root-first .tree-expanded {
+        background: none;
+    }
+
+    .nav-left .tree-node-last .tree-collapsed {
+        background: none;
+    }
+
+    .nav-left .tree-node-last .tree-expanded {
+        background: none;
+    }
+
+
+.nav-left {
+    SCROLLBAR-FACE-COLOR: #474c55;
+    SCROLLBAR-HIGHLIGHT-COLOR: #313743;
+    SCROLLBAR-SHADOW-COLOR: #313743;
+    SCROLLBAR-3DLIGHT-COLOR: #313743;
+    SCROLLBAR-ARROW-COLOR: #313743;
+    SCROLLBAR-TRACK-COLOR: #313743;
+    SCROLLBAR-DARKSHADOW-COLOR: #313743;
+}
+
+.nav-left{
+  border:none;
+}
+

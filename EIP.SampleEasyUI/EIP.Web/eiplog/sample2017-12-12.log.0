@@ -1,0 +1,69 @@
+﻿2017-12-12 17:30:57,773 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-12 17:30:57,834 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-12 17:30:58,425 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     31 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-12 17:30:59,714 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    177 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-12 17:31:00,100 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    187 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-12 17:31:00,458 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    160 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-12 17:31:00,630 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-12 17:31:00,661 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     12 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-12 17:31:00,665 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-12 17:31:00,668 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,669 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,671 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,673 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,674 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,675 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,677 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,678 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,679 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,680 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,701 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     15 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-12 17:31:00,722 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     11 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-12 17:31:00,725 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-12 17:31:00,727 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,729 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,730 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,731 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,732 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,733 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,734 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,736 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,738 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,740 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,742 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,744 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,745 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,747 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,748 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,749 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,751 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:00,752 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-12 17:31:01,353 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-12 17:31:01,672 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-12 17:31:01,798 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-12 17:31:08,557 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-12 17:31:08,596 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-12 17:31:08,616 [5] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-12 17:31:08,974 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     22 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-12 17:31:09,077 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     21 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-12 17:31:09,100 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-12 17:31:09,135 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-12 17:31:09,148 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-12 17:31:09,153 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-12 17:31:09,158 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-12 17:31:09,161 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-12 17:31:09,307 [11] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-12 17:31:09,310 [11] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-12 17:32:46,951 [11] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-12 17:33:07,444 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-12 17:33:07,452 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-12 17:33:11,277 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-12 17:33:12,431 [11] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-12 17:33:12,438 [11] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-12 17:33:16,632 [11] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     26 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from pub.App_Config where LogicDeleteFlag=0 and ([Key] like '%' or [Value] like '%') and AppId='-1' ) AS T 
+2017-12-12 17:33:16,659 [11] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     18 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY [Key] ) as row_number, * from pub.App_Config where LogicDeleteFlag=0 and ([Key] like '%' or [Value] like '%') and AppId='-1' ) AS T WHERE row_number between 1 and 10
+2017-12-12 17:33:16,673 [11] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	EIP.Service.AppConfigService.QueryAppConfig() [END]
+2017-12-12 17:33:16,677 [11] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-12 17:33:20,598 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-12 17:33:20,606 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-12 17:33:22,074 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]

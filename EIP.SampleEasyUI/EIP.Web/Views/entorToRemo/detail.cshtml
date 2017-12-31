@@ -1,0 +1,103 @@
+﻿@model EIP.Entity.entorToRemo
+
+@{
+    Layout = "~/views/shared/_PersonCenterLayout.cshtml";
+}
+@section head{
+    <link href="/Content/PersonalCenter/CSS/table.css?v=@ViewBag.Version" rel="stylesheet" />
+}
+<div>
+    <div class="div-margin">
+        <input type="button" id="Colse" class="form-btn" onclick="closeBox();" value="关闭" />
+        
+    </div>
+    <div class="head-font">
+        <b>用来记录每个班级的任课教师详情</b>
+    </div>
+
+    <table id="readonly" class="tables" cellpadding="0" cellspacing="0">
+            
+                <tr>
+                    <td width="25%">
+                        <label>班级任课教师数据ID</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.MTRId)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>任课教师Id</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.MId)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label></label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.RId)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>备注
+   </label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Other)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>课程安排</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.LessonSchedules)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>教师</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.entor)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>班级</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Remo)
+                    </td>
+                </tr>
+            
+    </table>
+</div>
+
+<script type="text/javascript">
+
+    mini.parse();
+
+
+    //关闭
+    function closeBox() {
+
+        window.App.CloseWindow();
+    }
+</script>

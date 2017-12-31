@@ -1,0 +1,378 @@
+.icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.icon-clear{
+	background:url('icons/clear.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+.icon-filter{
+	background:url('icons/filter.png') no-repeat center center;
+}
+.icon-man{
+	background:url('icons/man.png') no-repeat center center;
+}
+.icon-lock{
+	background:url('icons/lock.png') no-repeat center center;
+}
+.icon-more{
+	background:url('icons/more.png') no-repeat center center;
+}
+
+
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-large-picture{
+	background:url('icons/large_picture.png') no-repeat center center;
+}
+.icon-large-clipart{
+	background:url('icons/large_clipart.png') no-repeat center center;
+}
+.icon-large-shapes{
+	background:url('icons/large_shapes.png') no-repeat center center;
+}
+.icon-large-smartart{
+	background:url('icons/large_smartart.png') no-repeat center center;
+}
+.icon-large-chart{
+	background:url('icons/large_chart.png') no-repeat center center;
+}
+
+
+.icon-list {
+    background: url('icons/list.png') no-repeat center center;
+}
+
+.icon-list-hui {
+    background: url('icons/list-hui.png') no-repeat center center;
+    color: #535353;
+}
+
+.icon-system {
+    background: url('icons/system.png') no-repeat center center;
+     width: 22px;
+    height: 18px;
+}
+
+
+.icon-system-hui {
+    background: url('icons/system-hui.png') no-repeat center center;
+    width: 22px;
+    height: 18px;
+}
+
+
+
+.icon-accept{background:url('icons/accept.png') no-repeat center center;}
+.icon-application{background:url('icons/application.png') no-repeat center center;}
+.icon-application_add{background:url('icons/application_add.png') no-repeat center center;}
+.icon-application_cascade{background:url('icons/application_cascade.png') no-repeat center center;}
+.icon-application_delete{background:url('icons/application_delete.png') no-repeat center center;}
+.icon-application_double{background:url('icons/application_double.png') no-repeat center center;}
+.icon-application_edit{background:url('icons/application_edit.png') no-repeat center center;}
+.icon-application_error{background:url('icons/application_error.png') no-repeat center center;}
+.icon-application_form{background:url('icons/application_form.png') no-repeat center center;}
+.icon-application_form_add{background:url('icons/application_form_add.png') no-repeat center center;}
+.icon-application_form_delete{background:url('icons/application_form_delete.png') no-repeat center center;}
+.icon-application_form_edit{background:url('icons/application_form_edit.png') no-repeat center center;}
+.icon-application_form_magnify{background:url('icons/application_form_magnify.png') no-repeat center center;}
+.icon-application_get{background:url('icons/application_get.png') no-repeat center center;}
+.icon-application_go{background:url('icons/application_go.png') no-repeat center center;}
+.icon-application_home{background:url('icons/application_home.png') no-repeat center center;}
+.icon-application_key{background:url('icons/application_key.png') no-repeat center center;}
+.icon-application_lightning{background:url('icons/application_lightning.png') no-repeat center center;}
+.icon-application_link{background:url('icons/application_link.png') no-repeat center center;}
+.icon-application_osx{background:url('icons/application_osx.png') no-repeat center center;}
+.icon-application_osx_add{background:url('icons/application_osx_add.png') no-repeat center center;}
+.icon-application_osx_cascade{background:url('icons/application_osx_cascade.png') no-repeat center center;}
+.icon-application_osx_delete{background:url('icons/application_osx_delete.png') no-repeat center center;}
+.icon-application_osx_double{background:url('icons/application_osx_double.png') no-repeat center center;}
+.icon-application_osx_error{background:url('icons/application_osx_error.png') no-repeat center center;}
+.icon-application_osx_get{background:url('icons/application_osx_get.png') no-repeat center center;}
+.icon-application_osx_go{background:url('icons/application_osx_go.png') no-repeat center center;}
+.icon-application_osx_home{background:url('icons/application_osx_home.png') no-repeat center center;}
+.icon-application_osx_key{background:url('icons/application_osx_key.png') no-repeat center center;}
+.icon-application_osx_lightning{background:url('icons/application_osx_lightning.png') no-repeat center center;}
+.icon-application_osx_link{background:url('icons/application_osx_link.png') no-repeat center center;}
+.icon-application_osx_split{background:url('icons/application_osx_split.png') no-repeat center center;}
+.icon-application_osx_start{background:url('icons/application_osx_start.png') no-repeat center center;}
+.icon-application_osx_stop{background:url('icons/application_osx_stop.png') no-repeat center center;}
+.icon-application_osx_terminal{background:url('icons/application_osx_terminal.png') no-repeat center center;}
+.icon-application_put{background:url('icons/application_put.png') no-repeat center center;}
+.icon-application_side_boxes{background:url('icons/application_side_boxes.png') no-repeat center center;}
+.icon-application_side_contract{background:url('icons/application_side_contract.png') no-repeat center center;}
+.icon-application_side_expand{background:url('icons/application_side_expand.png') no-repeat center center;}
+.icon-application_side_list{background:url('icons/application_side_list.png') no-repeat center center;}
+.icon-application_side_tree{background:url('icons/application_side_tree.png') no-repeat center center;}
+.icon-application_split{background:url('icons/application_split.png') no-repeat center center;}
+.icon-application_start{background:url('icons/application_start.png') no-repeat center center;}
+.icon-application_stop{background:url('icons/application_stop.png') no-repeat center center;}
+.icon-application_tile_horizontal{background:url('icons/application_tile_horizontal.png') no-repeat center center;}
+.icon-application_tile_vertical{background:url('icons/application_tile_vertical.png') no-repeat center center;}
+.icon-application_view_columns{background:url('icons/application_view_columns.png') no-repeat center center;}
+.icon-application_view_detail{background:url('icons/application_view_detail.png') no-repeat center center;}
+.icon-application_view_gallery{background:url('icons/application_view_gallery.png') no-repeat center center;}
+.icon-application_view_icons{background:url('icons/application_view_icons.png') no-repeat center center;}
+.icon-application_view_list{background:url('icons/application_view_list.png') no-repeat center center;}
+.icon-application_view_tile{background:url('icons/application_view_tile.png') no-repeat center center;}
+.icon-application_xp{background:url('icons/application_xp.png') no-repeat center center;}
+.icon-application_xp_terminal{background:url('icons/application_xp_terminal.png') no-repeat center center;}
+.icon-arrow_branch{background:url('icons/arrow_branch.png') no-repeat center center;}
+.icon-arrow_divide{background:url('icons/arrow_divide.png') no-repeat center center;}
+.icon-arrow_down{background:url('icons/arrow_down.png') no-repeat center center;}
+.icon-arrow_ew{background:url('icons/arrow_ew.png') no-repeat center center;}
+.icon-arrow_in{background:url('icons/arrow_in.png') no-repeat center center;}
+.icon-arrow_inout{background:url('icons/arrow_inout.png') no-repeat center center;}
+.icon-arrow_in_longer{background:url('icons/arrow_in_longer.png') no-repeat center center;}
+.icon-arrow_join{background:url('icons/arrow_join.png') no-repeat center center;}
+.icon-arrow_left{background:url('icons/arrow_left.png') no-repeat center center;}
+.icon-arrow_merge{background:url('icons/arrow_merge.png') no-repeat center center;}
+.icon-arrow_ne{background:url('icons/arrow_ne.png') no-repeat center center;}
+.icon-arrow_ns{background:url('icons/arrow_ns.png') no-repeat center center;}
+.icon-arrow_nsew{background:url('icons/arrow_nsew.png') no-repeat center center;}
+.icon-arrow_nw{background:url('icons/arrow_nw.png') no-repeat center center;}
+.icon-arrow_nw_ne_sw_se{background:url('icons/arrow_nw_ne_sw_se.png') no-repeat center center;}
+.icon-arrow_nw_se{background:url('icons/arrow_nw_se.png') no-repeat center center;}
+.icon-arrow_out{background:url('icons/arrow_out.png') no-repeat center center;}
+.icon-arrow_out_longer{background:url('icons/arrow_out_longer.png') no-repeat center center;}
+.icon-arrow_redo{background:url('icons/arrow_redo.png') no-repeat center center;}
+.icon-arrow_refresh{background:url('icons/arrow_refresh.png') no-repeat center center;}
+.icon-arrow_refresh_small{background:url('icons/arrow_refresh_small.png') no-repeat center center;}
+.icon-arrow_right{background:url('icons/arrow_right.png') no-repeat center center;}
+.icon-arrow_rotate_anticlockwise{background:url('icons/arrow_rotate_anticlockwise.png') no-repeat center center;}
+.icon-arrow_rotate_clockwise{background:url('icons/arrow_rotate_clockwise.png') no-repeat center center;}
+.icon-arrow_se{background:url('icons/arrow_se.png') no-repeat center center;}
+.icon-arrow_sw{background:url('icons/arrow_sw.png') no-repeat center center;}
+.icon-arrow_switch{background:url('icons/arrow_switch.png') no-repeat center center;}
+.icon-arrow_switch_bluegreen{background:url('icons/arrow_switch_bluegreen.png') no-repeat center center;}
+.icon-arrow_sw_ne{background:url('icons/arrow_sw_ne.png') no-repeat center center;}
+.icon-arrow_turn_left{background:url('icons/arrow_turn_left.png') no-repeat center center;}
+.icon-arrow_turn_right{background:url('icons/arrow_turn_right.png') no-repeat center center;}
+.icon-arrow_undo{background:url('icons/arrow_undo.png') no-repeat center center;}
+.icon-arrow_up{background:url('icons/arrow_up.png') no-repeat center center;}
+.icon-attach{background:url('icons/attach.png') no-repeat center center;}
+.icon-chart_bar{background:url('icons/chart_bar.png') no-repeat center center;}
+.icon-chart_bar_add{background:url('icons/chart_bar_add.png') no-repeat center center;}
+.icon-chart_bar_delete{background:url('icons/chart_bar_delete.png') no-repeat center center;}
+.icon-chart_bar_edit{background:url('icons/chart_bar_edit.png') no-repeat center center;}
+.icon-chart_bar_error{background:url('icons/chart_bar_error.png') no-repeat center center;}
+.icon-chart_bar_link{background:url('icons/chart_bar_link.png') no-repeat center center;}
+.icon-chart_curve{background:url('icons/chart_curve.png') no-repeat center center;}
+.icon-chart_curve_add{background:url('icons/chart_curve_add.png') no-repeat center center;}
+.icon-chart_curve_delete{background:url('icons/chart_curve_delete.png') no-repeat center center;}
+.icon-chart_curve_edit{background:url('icons/chart_curve_edit.png') no-repeat center center;}
+.icon-chart_curve_error{background:url('icons/chart_curve_error.png') no-repeat center center;}
+.icon-chart_curve_go{background:url('icons/chart_curve_go.png') no-repeat center center;}
+.icon-chart_curve_link{background:url('icons/chart_curve_link.png') no-repeat center center;}
+.icon-chart_line{background:url('icons/chart_line.png') no-repeat center center;}
+.icon-chart_line_add{background:url('icons/chart_line_add.png') no-repeat center center;}
+.icon-chart_line_delete{background:url('icons/chart_line_delete.png') no-repeat center center;}
+.icon-chart_line_edit{background:url('icons/chart_line_edit.png') no-repeat center center;}
+.icon-chart_line_error{background:url('icons/chart_line_error.png') no-repeat center center;}
+.icon-chart_line_link{background:url('icons/chart_line_link.png') no-repeat center center;}
+.icon-chart_organisation{background:url('icons/chart_organisation.png') no-repeat center center;}
+.icon-chart_organisation_add{background:url('icons/chart_organisation_add.png') no-repeat center center;}
+.icon-chart_organisation_delete{background:url('icons/chart_organisation_delete.png') no-repeat center center;}
+.icon-chart_org_inverted{background:url('icons/chart_org_inverted.png') no-repeat center center;}
+.icon-chart_pie{background:url('icons/chart_pie.png') no-repeat center center;}
+.icon-chart_pie_add{background:url('icons/chart_pie_add.png') no-repeat center center;}
+.icon-chart_pie_delete{background:url('icons/chart_pie_delete.png') no-repeat center center;}
+.icon-chart_pie_edit{background:url('icons/chart_pie_edit.png') no-repeat center center;}
+.icon-chart_pie_error{background:url('icons/chart_pie_error.png') no-repeat center center;}
+.icon-chart_pie_lightning{background:url('icons/chart_pie_lightning.png') no-repeat center center;}
+.icon-chart_pie_link{background:url('icons/chart_pie_link.png') no-repeat center center;}
+.icon-cog{background:url('icons/cog.png') no-repeat center center;}
+.icon-cog_add{background:url('icons/cog_add.png') no-repeat center center;}
+.icon-cog_delete{background:url('icons/cog_delete.png') no-repeat center center;}
+.icon-cog_edit{background:url('icons/cog_edit.png') no-repeat center center;}
+.icon-cog_error{background:url('icons/cog_error.png') no-repeat center center;}
+.icon-cog_go{background:url('icons/cog_go.png') no-repeat center center;}
+.icon-cog_start{background:url('icons/cog_start.png') no-repeat center center;}
+.icon-cog_stop{background:url('icons/cog_stop.png') no-repeat center center;}
+.icon-cog{background:url('icons/cog.png') no-repeat center center;}
+.icon-cog_add{background:url('icons/cog_add.png') no-repeat center center;}
+.icon-cog_delete{background:url('icons/cog_delete.png') no-repeat center center;}
+.icon-cog_edit{background:url('icons/cog_edit.png') no-repeat center center;}
+.icon-cog_error{background:url('icons/cog_error.png') no-repeat center center;}
+.icon-cog_go{background:url('icons/cog_go.png') no-repeat center center;}
+.icon-cog_start{background:url('icons/cog_start.png') no-repeat center center;}
+.icon-cog_stop{background:url('icons/cog_stop.png') no-repeat center center;}
+.icon-color{background:url('icons/color.png') no-repeat center center;}
+.icon-color_swatch{background:url('icons/color_swatch.png') no-repeat center center;}
+.icon-color_wheel{background:url('icons/color_wheel.png') no-repeat center center;}
+.icon-comment{background:url('icons/comment.png') no-repeat center center;}
+.icon-comments{background:url('icons/comments.png') no-repeat center center;}
+.icon-comments_add{background:url('icons/comments_add.png') no-repeat center center;}
+.icon-comments_delete{background:url('icons/comments_delete.png') no-repeat center center;}
+.icon-comment_add{background:url('icons/comment_add.png') no-repeat center center;}
+.icon-comment_delete{background:url('icons/comment_delete.png') no-repeat center center;}
+.icon-comment_dull{background:url('icons/comment_dull.png') no-repeat center center;}
+.icon-comment_edit{background:url('icons/comment_edit.png') no-repeat center center;}
+.icon-comment_play{background:url('icons/comment_play.png') no-repeat center center;}
+.icon-comment_record{background:url('icons/comment_record.png') no-repeat center center;}
+.icon-computer{background:url('icons/computer.png') no-repeat center center;}
+.icon-computer_add{background:url('icons/computer_add.png') no-repeat center center;}
+.icon-computer_connect{background:url('icons/computer_connect.png') no-repeat center center;}
+.icon-computer_delete{background:url('icons/computer_delete.png') no-repeat center center;}
+.icon-computer_edit{background:url('icons/computer_edit.png') no-repeat center center;}
+.icon-computer_error{background:url('icons/computer_error.png') no-repeat center center;}
+.icon-computer_go{background:url('icons/computer_go.png') no-repeat center center;}
+.icon-computer_key{background:url('icons/computer_key.png') no-repeat center center;}
+.icon-computer_link{background:url('icons/computer_link.png') no-repeat center center;}
+.icon-computer_magnify{background:url('icons/computer_magnify.png') no-repeat center center;}
+.icon-computer_off{background:url('icons/computer_off.png') no-repeat center center;}
+.icon-computer_start{background:url('icons/computer_start.png') no-repeat center center;}
+.icon-computer_stop{background:url('icons/computer_stop.png') no-repeat center center;}
+.icon-computer_wrench{background:url('icons/computer_wrench.png') no-repeat center center;}
+.icon-control_add{background:url('icons/control_add.png') no-repeat center center;}
+.icon-control_add_blue{background:url('icons/control_add_blue.png') no-repeat center center;}
+.icon-control_blank{background:url('icons/control_blank.png') no-repeat center center;}
+.icon-control_blank_blue{background:url('icons/control_blank_blue.png') no-repeat center center;}
+.icon-control_eject{background:url('icons/control_eject.png') no-repeat center center;}
+.icon-control_eject_blue{background:url('icons/control_eject_blue.png') no-repeat center center;}
+.icon-control_end{background:url('icons/control_end.png') no-repeat center center;}
+.icon-control_end_blue{background:url('icons/control_end_blue.png') no-repeat center center;}
+.icon-control_equalizer{background:url('icons/control_equalizer.png') no-repeat center center;}
+.icon-control_equalizer_blue{background:url('icons/control_equalizer_blue.png') no-repeat center center;}
+.icon-control_fastforward{background:url('icons/control_fastforward.png') no-repeat center center;}
+.icon-control_fastforward_blue{background:url('icons/control_fastforward_blue.png') no-repeat center center;}
+.icon-control_pause{background:url('icons/control_pause.png') no-repeat center center;}
+.icon-control_pause_blue{background:url('icons/control_pause_blue.png') no-repeat center center;}
+.icon-control_play{background:url('icons/control_play.png') no-repeat center center;}
+.icon-control_play_blue{background:url('icons/control_play_blue.png') no-repeat center center;}
+.icon-control_power{background:url('icons/control_power.png') no-repeat center center;}
+.icon-control_power_blue{background:url('icons/control_power_blue.png') no-repeat center center;}
+.icon-control_record{background:url('icons/control_record.png') no-repeat center center;}
+.icon-control_record_blue{background:url('icons/control_record_blue.png') no-repeat center center;}
+.icon-control_remove{background:url('icons/control_remove.png') no-repeat center center;}
+.icon-control_remove_blue{background:url('icons/control_remove_blue.png') no-repeat center center;}
+.icon-control_repeat{background:url('icons/control_repeat.png') no-repeat center center;}
+.icon-control_repeat_blue{background:url('icons/control_repeat_blue.png') no-repeat center center;}
+.icon-control_rewind{background:url('icons/control_rewind.png') no-repeat center center;}
+.icon-control_rewind_blue{background:url('icons/control_rewind_blue.png') no-repeat center center;}
+.icon-control_start{background:url('icons/control_start.png') no-repeat center center;}
+.icon-control_start_blue{background:url('icons/control_start_blue.png') no-repeat center center;}
+.icon-control_stop{background:url('icons/control_stop.png') no-repeat center center;}
+.icon-control_stop_blue{background:url('icons/control_stop_blue.png') no-repeat center center;}
+.icon-folder{background:url('icons/folder.png') no-repeat center center;}
+.icon-folder_add{background:url('icons/folder_add.png') no-repeat center center;}
+.icon-folder_bell{background:url('icons/folder_bell.png') no-repeat center center;}
+.icon-folder_bookmark{background:url('icons/folder_bookmark.png') no-repeat center center;}
+.icon-folder_brick{background:url('icons/folder_brick.png') no-repeat center center;}
+.icon-folder_bug{background:url('icons/folder_bug.png') no-repeat center center;}
+.icon-folder_camera{background:url('icons/folder_camera.png') no-repeat center center;}
+.icon-folder_connect{background:url('icons/folder_connect.png') no-repeat center center;}
+.icon-folder_database{background:url('icons/folder_database.png') no-repeat center center;}
+.icon-folder_delete{background:url('icons/folder_delete.png') no-repeat center center;}
+.icon-folder_edit{background:url('icons/folder_edit.png') no-repeat center center;}
+.icon-folder_error{background:url('icons/folder_error.png') no-repeat center center;}
+.icon-folder_explore{background:url('icons/folder_explore.png') no-repeat center center;}
+.icon-folder_feed{background:url('icons/folder_feed.png') no-repeat center center;}
+.icon-folder_film{background:url('icons/folder_film.png') no-repeat center center;}
+.icon-folder_find{background:url('icons/folder_find.png') no-repeat center center;}
+.icon-folder_font{background:url('icons/folder_font.png') no-repeat center center;}
+.icon-folder_go{background:url('icons/folder_go.png') no-repeat center center;}
+.icon-folder_heart{background:url('icons/folder_heart.png') no-repeat center center;}
+.icon-folder_home{background:url('icons/folder_home.png') no-repeat center center;}
+.icon-folder_image{background:url('icons/folder_image.png') no-repeat center center;}
+.icon-folder_key{background:url('icons/folder_key.png') no-repeat center center;}
+.icon-folder_lightbulb{background:url('icons/folder_lightbulb.png') no-repeat center center;}
+.icon-folder_link{background:url('icons/folder_link.png') no-repeat center center;}
+.icon-folder_magnify{background:url('icons/folder_magnify.png') no-repeat center center;}
+.icon-folder_page{background:url('icons/folder_page.png') no-repeat center center;}
+.icon-folder_page_white{background:url('icons/folder_page_white.png') no-repeat center center;}
+.icon-folder_palette{background:url('icons/folder_palette.png') no-repeat center center;}
+.icon-folder_picture{background:url('icons/folder_picture.png') no-repeat center center;}
+.icon-folder_star{background:url('icons/folder_star.png') no-repeat center center;}
+.icon-folder_table{background:url('icons/folder_table.png') no-repeat center center;}
+.icon-folder_up{background:url('icons/folder_up.png') no-repeat center center;}
+.icon-folder_user{background:url('icons/folder_user.png') no-repeat center center;}
+.icon-folder_wrench{background:url('icons/folder_wrench.png') no-repeat center center;}
+.icon-user{background:url('icons/user.png') no-repeat center center;}
+.icon-user_add{background:url('icons/user_add.png') no-repeat center center;}
+.icon-user_alert{background:url('icons/user_alert.png') no-repeat center center;}
+.icon-user_b{background:url('icons/user_b.png') no-repeat center center;}
+.icon-user_brown{background:url('icons/user_brown.png') no-repeat center center;}
+.icon-user_comment{background:url('icons/user_comment.png') no-repeat center center;}
+.icon-user_comment_2{background:url('icons/user_comment_2.png') no-repeat center center;}
+.icon-user_cross{background:url('icons/user_cross.png') no-repeat center center;}
+.icon-user_delete{background:url('icons/user_delete.png') no-repeat center center;}
+.icon-user_earth{background:url('icons/user_earth.png') no-repeat center center;}
+.icon-user_edit{background:url('icons/user_edit.png') no-repeat center center;}
+.icon-user_female{background:url('icons/user_female.png') no-repeat center center;}
+.icon-user_go{background:url('icons/user_go.png') no-repeat center center;}
+.icon-user_gray{background:url('icons/user_gray.png') no-repeat center center;}
+.icon-user_gray_cool{background:url('icons/user_gray_cool.png') no-repeat center center;}
+.icon-user_green{background:url('icons/user_green.png') no-repeat center center;}
+.icon-user_home{background:url('icons/user_home.png') no-repeat center center;}
+.icon-user_key{background:url('icons/user_key.png') no-repeat center center;}
+.icon-user_magnify{background:url('icons/user_magnify.png') no-repeat center center;}
+.icon-user_mature{background:url('icons/user_mature.png') no-repeat center center;}
+.icon-user_orange{background:url('icons/user_orange.png') no-repeat center center;}
+.icon-user_red{background:url('icons/user_red.png') no-repeat center center;}
+.icon-user_star{background:url('icons/user_star.png') no-repeat center center;}
+.icon-user_suit{background:url('icons/user_suit.png') no-repeat center center;}
+.icon-user_suit_black{background:url('icons/user_suit_black.png') no-repeat center center;}
+.icon-user_tick{background:url('icons/user_tick.png') no-repeat center center;}
+.icon-vcard{background:url('icons/vcard.png') no-repeat center center;}
+.icon-vcard_add{background:url('icons/vcard_add.png') no-repeat center center;}
+.icon-vcard_delete{background:url('icons/vcard_delete.png') no-repeat center center;}
+.icon-vcard_edit{background:url('icons/vcard_edit.png') no-repeat center center;}
+.icon-vcard_key{background:url('icons/vcard_key.png') no-repeat center center;}

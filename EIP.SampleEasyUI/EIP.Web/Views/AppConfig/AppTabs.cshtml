@@ -1,0 +1,40 @@
+﻿@model IList<EIP.Entity.AppDefinition> 
+@{
+   
+    Layout = "~/views/shared/_layout.cshtml";
+}
+
+@section head{
+}
+<div id="apptabs" class="easyui-tabs" data-options="tabPosition:'left',fit:true,headerWidth:120">
+    @foreach (var m in Model)
+    {
+        <text>
+            <div title="@m.AppShortName" data-options="iconCls:'@m.AppIconCls'" appid="@m.AppId" style="padding-left:10px;"></div>
+        </text>
+    }
+</div>
+
+
+<script>
+    var tab;
+    $(function () {
+        $("#apptabs").tabs({
+            onSelect: selectTab
+        });
+
+        selectTab();
+    });
+    
+    function selectTab(title, index) {
+        var tab = $('#apptabs').tabs('getSelected');
+        var content = '<iframe scrolling="auto" frameborder="0"  src="' + $.util.currentPath + '/list?appId=' + tab.attr("appid") + '" style="width:100%;height:100%;"></iframe>';
+        $("#apptabs").tabs("update", {
+            tab: tab,
+            options: {
+                content: content
+            }
+        });
+    }
+
+</script>

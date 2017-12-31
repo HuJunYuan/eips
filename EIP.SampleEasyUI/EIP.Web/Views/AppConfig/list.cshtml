@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="@Url.AutoVersioning("~/Scripts/ueditor/ueditor.all.js")"></script>
+    <script src="@Url.AutoVersioning("~/Scripts/jquery-easyui-1.5/plugins/jeasyui.extensions.richtextbox.js")"></script>
+}
+<table id="grid_appConfig" class="easyui-datagrid" fit="true"
+       data-options="
+           rownumbers:true,
+           singleSelect:false,
+           pagination:true,
+           url:'query_appConfig',
+           checkOnSelect:false,
+            ctrlSelect:true,
+           queryParams:{AppId:-1},
+           toolbar:'#grid_toolbar',
+           onDblClickRow:doDetail">
+    <thead>
+        <tr>
+            <th data-options="field:'Id',checkbox:true"></th>
+            <th data-options="field:'Key',width:200">配置项Key</th>
+            <th data-options="field:'Value',width:200">配置项值</th>
+            <th data-options="field:'Describe',width:200">描述</th>
+
+        </tr>
+    </thead>
+</table>
+
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    @Html.CLLinkButton("添加", "doAdd()", "icon-add", true)
+    @Html.CLLinkButton("删除", "doDel()", "icon-remove", true)
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入配置名" })
+    @Html.CLLinkButton("查询", "doSearch()", "icon-search", true)
+</div>
+
+<div id="dlg_appConfig" class="easyui-dialog" title="配置编辑" style="width: 600px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,toolbar:'#dlg_appConfig_buttons'">
+    Loading...
+</div>
+
+<div id="dlg_appConfig_buttons" style="padding:5px;height:auto">
+    @Html.CLLinkButton("保存", "save()", "icon-save", true)
+    @Html.CLLinkButton("关闭", "closeBox()", "icon-no", true)
+</div>
+
+<script>
+
+    var intAppid =-1;
+    function doSearch() {
+        $('#grid_appConfig').datagrid('load', {
+            Key: $('#Key').val(),
+            AppId:intAppid
+            });
+    }
+
+    // 添加
+    function doAdd() {
+        $('#dlg_appConfig').dialog("open").dialog('refresh', App.getUrl('/AppConfig/add?appId=' + intAppid));
+    }
+
+    // 删除
+    function doDel() {
+        var rows = $('#grid_appConfig').datagrid('getChecked');
+        var rowIds = [];
+        if (!rows || rows.length <= 0) {
+            App.showMessageBox('@MessageManager.GetMessage("W10061")', 0);
+            return false;
+        }
+
+        for(var i=0;i<rows.length;i++){
+            rowIds.push(rows[i].Id);
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("/AppConfig/remove"), { ids: rowIds},
+                function () {
+                    $('#grid_appConfig').datagrid('reload');
+                });
+            });
+
+
+    }
+
+    // 打开编辑状态详情
+    function doDetail() {
+        var row = $('#grid_appConfig').datagrid('getSelected');
+        if (row) {
+            $('#dlg_appConfig').dialog("open").dialog('refresh', App.getUrl('/AppConfig/edit?id=' + row.Id));
+        }
+
+    }
+</script>
+

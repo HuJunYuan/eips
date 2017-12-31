@@ -1,0 +1,103 @@
+﻿@using Newtonsoft.Json
+@model EIP.Web.Model.DitCondition
+
+<ul id="orgtree" ></ul>
+
+<script language="javascript">
+
+    $(function () {
+
+        ditoptions = $.extend(ditoptions,{
+            IsSingleSelect : @Model.IsSingleSelect.ToString().ToLower(), //是否为单选
+            CanSelectEmp : @Model.CanSelectEmp.ToString().ToLower(), //是否可选人员
+            CanSelectOrg : @Model.CanSelectOrg.ToString().ToLower(), //是否可选组织
+            OrgLevels : [@Model.OrgLevels],
+            OrgTypes : [@(string.IsNullOrEmpty(Model.OrgTypes) ? "" : string.Format("'{0}'", Model.OrgTypes.Replace(",","','")))],
+            Functions : [@(string.IsNullOrEmpty(Model.Functions) ? "" : string.Format("'{0}'", Model.Functions.Replace(",", "','")))],
+            valueField : '@Model.ValueField',
+            textField : '@Model.TextField',
+            SeletedTextFormat : '@Model.SeletedTextFormat' //选择框内显示格式
+        });
+
+        $("#orgtree").tree({
+            cascadeCheck:false,
+            animate:false,
+            lines:true,
+            url:'query_dit',
+            queryParams:{
+                id:@(Request["DptId"] == null ? "0" : Request["DptId"]),
+                RoleIndentity:'@Request["RoleIndentity"]',
+                DitIndentity:'@Request["DitIndentity"]'
+            },
+            checkbox:function(node){
+                var data = node.attributes;
+                // 可选人员
+                if (ditoptions.CanSelectEmp && node.Type == "emp"){
+                    return true;
+                }
+                // 可选组织
+                if (ditoptions.CanSelectOrg && node.Type == "org"){
+                    if(ditoptions.OrgLevels.length == 0 &&
+                        ditoptions.OrgTypes.length == 0 &&
+                        ditoptions.Functions.length == 0){
+                        return true;
+                    }
+                    if(ditoptions.OrgLevels.length > 0 && ditoptions.OrgLevels.contains(data.OrgLevel)){
+                        return true;
+                    }
+                    if(ditoptions.OrgTypes.length > 0 && ditoptions.OrgTypes.contains(data.OrgType)){
+                        return true;
+                    }
+                    if(ditoptions.Functions.length > 0 && ditoptions.Functions.contains(data.Function)){
+                        return true;
+                    }
+                }
+                return false;
+            },
+            onClick: function (node) {
+                $(this).tree("toggle", node.target);//点击文字展开节点
+            },
+            onLoadSuccess: function (node, data) {
+                if (ditoptions.IsSingleSelect) {
+                    $(this).find('span.tree-checkbox').click(function (e) {
+                        $.easyui.forEach($('#orgtree').tree("getChecked"), true, function (n) {
+                            $('#orgtree').tree("uncheck", n.target);
+                        });
+                        return true;
+                    });
+                }
+            },
+            formatter: function(node){
+                var data = node.attributes;
+                var text = node.text;
+                // 兼职
+                if(data.Parttimer){
+                    text += '<span class="parttimer">(兼)</span>';
+                }
+                // 管理职，显示职位
+                if(data.MangeLevel == 1 || data.MangeLevel == 2){
+                    text += '<span class="positionName">' + data.PositionName + '</span>';
+                }
+                return text;
+            }
+
+        });
+    });
+
+    function userSelect() {
+        //debugger
+        var nodes = $("#orgtree").tree("getChecked");
+        var selectedData = $("#lstSelected").datalist("getRows");
+
+        // 单选时先清除数据
+        if (ditoptions.IsSingleSelect) selectedData = [];
+
+        for (var i = 0; i < nodes.length; i++) {
+            var row = $.extend({ id: nodes[i].id, text: nodes[i].text}, nodes[i].attributes);
+            if (isSelected(row.id, selectedData)) continue;
+            selectedData.push(row);
+        }
+        $("#lstSelected").datalist("loadData", selectedData);
+    }
+
+</script>

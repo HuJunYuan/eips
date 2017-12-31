@@ -1,0 +1,159 @@
+﻿@model EIP.Entity.AppConfig
+
+@{
+    Layout = null;
+}
+@section head{
+
+}
+<form id="form_AppConfig" class="easyui-form" method="post" data-options="novalidate:true">
+
+    <!--配置项ID(Id)-->
+    @Html.HiddenFor(p => p.Id)
+
+    <!--应用ID(AppId)-->
+    @Html.HiddenFor(p => p.AppId)
+
+
+    <div class="form-item">
+        @if (Model.Id != 0)
+        {
+            @Html.HiddenFor(p=>p.Key)
+        @Html.CLTextBox("KeyDisable",Model.Key,
+            new TextBox()
+            {
+                Label = "配置项Key ：",
+                Style = "width:95%;",
+                Disabled = true
+            })
+        }
+        else
+        {
+        @Html.CLTextBoxFor(p => p.Key,
+            new TextBox()
+            {
+                Label = "配置项Key ：",
+                Style = "width:95%;",
+                ValidType = new ValidateType()
+                {
+                    Extension = "engNum:true"
+                }
+            })
+
+        }
+    </div>
+    @if (Model.Id == 0)
+    {
+        <div class="form-item">
+            @Html.CLComboBoxFor(p => p.ValueType, new ComboBox() { Label = "配置项类型 ：", ParentCode = "ConfigValueType", OnChange = "onValueTypeChange" })
+        </div>
+        <div class="form-item" id="ValueDiv">
+            <div id="Value"></div>
+        </div>
+    }
+    else
+    {
+    <div class="form-item">
+        @Html.HiddenFor(p=>p.ValueType)
+        @switch (Model.ValueType)
+        {
+            case "numic":
+                @Html.CLNumberBoxFor(p => p.Value, new NumberBox { Label = "配置项值"})
+                break;
+            case "bool":
+                @Html.CLSwitchButtonFor(p => p.Value, new SwitchButton { Label = "配置项值"})
+                break;
+            case "string":
+                @Html.CLTextBoxFor(p => p.Value, new TextBox() { Label = "配置项值 ：", Style = "width:95%;" })
+                break;
+            case "text":
+                @Html.CLTextBox("Value", Server.HtmlEncode(Model.Value), new TextBox() { Label = "配置项值 ：", Style = "width:95%;height:100px;", Multiline = true })
+                break;
+            case "richtext":
+                @Html.CLRichTextBoxFor(p => p.Value, new RichTextBox() { ToolbarType=ToolbarType.MiniToolbars })
+                break;
+        }
+    </div>
+    }
+
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.Describe, new TextBox() { Label = "描述 ：", Multiline = true, Style = "width:95%;height:100px;" })
+    </div>
+
+</form>
+<script type="text/javascript">
+
+    function validate() {
+        // 验证
+        var isValid = $("#form_AppConfig").form("enableValidation").form("validate");
+        if (!isValid) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        return true;
+    }
+
+    //保存
+    function save() {
+
+        // 表单验证
+        if (!validate()) return;
+
+        // 表单数据提交
+        var formData = $("#form_AppConfig").form("getData");
+        App.action(App.getUrl("/AppConfig/save"), formData,
+            function (data) {
+                if (data != null) {
+                    $('#dlg_appConfig').dialog("close");
+                    $('#grid_appConfig').datagrid('reload');
+                }
+            });
+
+    }
+
+    function onValueTypeChange(newValue, oldValue) {
+
+        if (oldValue == "richtext") $("#Value").richtextbox("destroy");
+
+        switch (newValue) {
+            case "numic":
+                $("#ValueDiv").empty().append('<div id="Value" name="Value"></div>');
+                $("#Value").numberbox({
+                    required: true, label: '配置项值'
+                });
+                break;
+            case "bool":
+                $("#ValueDiv").empty().append('<div id="Value" name="Value"></div>');
+                $("#Value").switchbutton({
+                    label: '配置项值', value: 'True'
+                });
+                break;
+            case "string":
+                $("#ValueDiv").empty().append('<div id="Value" name="Value" style = "width:95%;"></div>');
+                $("#Value").textbox({
+                    required: true, validType: { maxLength: [2000] }, label: '配置项值 ：'
+                });
+                break;
+            case "text":
+                $("#ValueDiv").empty().append('<div id="Value" name="Value" style = "width:95%;height:100px;"></div>');
+                $("#Value").textbox({
+                    required: true, validType: { maxLength: [2000] }, label: '配置项值 ：', multiline: true
+                });
+                break;
+            case "richtext":
+                $("#ValueDiv").empty().append('<div><textarea id="Value" name="Value" style = "width:95%;"></textarea></div>');
+                $("#Value").richtextbox({
+                    required: true, label: '配置项值 ：', toolbarType: 3, maximumWords: 2000
+                });
+                break;
+        }
+    }
+
+    //关闭
+    function closeBox() {
+
+        $('#dlg_appConfig').dialog("close");
+    }
+</script>

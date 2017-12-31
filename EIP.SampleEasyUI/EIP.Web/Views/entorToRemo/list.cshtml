@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+
+<table id="grid_entorToRemo" class="easyui-datagrid" fit="true"
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_entorToRemo',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
+    <thead>
+        <tr>
+            <th data-options="field:'ck',checkbox:true"></th>
+            <th data-options="field:'MId',width:100">任课教师Id</th>
+            <th data-options="field:'RId',width:100"></th>
+            <th data-options="field:'Other',width:100">备注
+   </th>
+            <th data-options="field:'LessonSchedules',width:100">课程安排</th>
+            <th data-options="field:'entor',width:100">教师</th>
+            <th data-options="field:'Remo',width:100">班级</th>
+
+        </tr>
+    </thead>
+</table>
+
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入用来记录每个班级的任课教师名。" })
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+</div>
+
+<div id="dlg_entorToRemo" class="easyui-dialog" title="用来记录每个班级的任课教师编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons'">
+    Loading...
+</div>
+
+<div id="dlg_buttons" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
+    </div>
+</div>
+
+<script>
+    function doSearch() {
+        $('#grid_entorToRemo').datagrid('load', {
+            Key: $('#Key').val()
+        });
+    }
+
+    // 添加
+    function doAdd() {
+        $('#dlg_entorToRemo').dialog("open").dialog('refresh', App.getUrl('entorToRemo/add'));
+    }
+
+    // 删除
+    function doDel() {
+        var row = $('#grid_entorToRemo').datagrid('getSelected');
+        if (!row) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("entorToRemo/remove"), { appId: row.AppId },
+                function () {
+                    $('#grid_entorToRemo').datagrid('reload');
+                });
+        });
+
+
+    }
+
+    // 打开编辑状态详情
+    function doDetail() {
+        var row = $('#grid_entorToRemo').datagrid('getSelected');
+        if (row) {
+            $('#dlg_entorToRemo').dialog("open").dialog('refresh', App.getUrl('entorToRemo/edit?appId=' + row.AppId));
+        }
+
+    }
+</script>
+

@@ -1,0 +1,869 @@
+﻿2017-12-07 16:40:02,700 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:40:02,782 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:40:03,421 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     34 ms,	SQL:IF db_id(N'test') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'test'
+2017-12-07 16:40:04,728 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    187 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 16:40:05,037 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    144 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 16:40:05,435 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    170 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 16:40:05,742 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    116 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 16:40:16,273 [1] ERROR LAPTOP-AOTGKK2S\thh-pc E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。
+CoreLand.Framework.CLSystemException: E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。 ---> System.Data.SqlClient.SqlException: 找不到存储过程 'pub.UP_AppSettingAll'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Data.EFSqlRepository.ExceuteProcedure[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingByAppIndentity(String appIndentity)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll()
+2017-12-07 16:40:48,315 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:40:48,376 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:40:48,962 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     24 ms,	SQL:IF db_id(N'test') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'test'
+2017-12-07 16:40:50,236 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    179 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 16:40:50,538 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    151 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 16:40:50,906 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    156 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 16:40:51,162 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    108 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 16:41:12,041 [1] ERROR LAPTOP-AOTGKK2S\thh-pc E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。
+CoreLand.Framework.CLSystemException: E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。 ---> System.Data.SqlClient.SqlException: 找不到存储过程 'pub.UP_AppSettingAll'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Data.EFSqlRepository.ExceuteProcedure[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingByAppIndentity(String appIndentity)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll()
+2017-12-07 16:42:07,501 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:42:07,567 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:42:08,134 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     25 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-07 16:42:09,550 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    159 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 16:42:09,824 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    139 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 16:42:10,245 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    175 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 16:42:10,448 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     18 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 16:42:10,487 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     10 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-07 16:42:10,491 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-07 16:42:10,495 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,496 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,498 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,500 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,503 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,504 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,505 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,507 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,508 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,538 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     22 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-07 16:42:10,563 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     12 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-07 16:42:10,568 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-07 16:42:10,571 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,573 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,575 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,578 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,579 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,582 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,585 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,587 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,590 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,592 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,594 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,596 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,601 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,602 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,603 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:42:10,604 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 16:42:11,176 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:42:27,761 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:42:27,772 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:42:29,609 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:42:31,679 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:42:36,644 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:42:37,933 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:44:42,059 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:44:42,120 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:44:42,712 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     23 ms,	SQL:IF db_id(N'test') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'test'
+2017-12-07 16:44:43,972 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    178 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 16:44:44,268 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    146 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 16:44:44,655 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    166 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 16:44:44,914 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    105 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 16:44:51,891 [1] ERROR LAPTOP-AOTGKK2S\thh-pc E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。
+CoreLand.Framework.CLSystemException: E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。 ---> System.Data.SqlClient.SqlException: 找不到存储过程 'pub.UP_AppSettingAll'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Data.EFSqlRepository.ExceuteProcedure[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingByAppIndentity(String appIndentity)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll()
+2017-12-07 16:45:17,723 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:45:17,780 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:45:18,393 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     22 ms,	SQL:IF db_id(N'test') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'test'
+2017-12-07 16:45:19,745 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    167 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 16:45:20,044 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    152 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 16:45:20,459 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    149 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 16:45:20,707 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    100 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 16:45:24,622 [1] ERROR LAPTOP-AOTGKK2S\thh-pc E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。
+CoreLand.Framework.CLSystemException: E00070 仓储接口方法（ISqlRepository.LoadEntitiesBySql）调用时，必须参数未设定。请检查系统异常日志。 ---> System.Data.SqlClient.SqlException: 找不到存储过程 'pub.UP_AppSettingAll'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Data.EFSqlRepository.LoadEntitiesBySql[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Data.EFSqlRepository.ExceuteProcedure[T](String sql, Object[] sqlParams)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingByAppIndentity(String appIndentity)
+   在 CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll()
+2017-12-07 16:47:14,487 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:47:14,555 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:47:14,669 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 16:47:15,357 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:47:22,326 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:47:22,335 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:47:24,215 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:48:19,533 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:48:19,592 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:48:19,706 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 16:48:20,454 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:48:24,758 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:48:29,592 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:48:29,604 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:48:31,249 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:48:33,186 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:54:42,183 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:54:42,242 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:54:42,359 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 16:54:43,042 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:54:49,105 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:54:49,115 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:54:50,824 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:54:52,427 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:54:56,791 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:54:56,855 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:54:56,870 [6] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 16:54:59,996 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    203 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 16:55:00,213 [6] ERROR LAPTOP-AOTGKK2S\thh-pc An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 对象名 'pub.UUC_Employee' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   在 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   在 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   在 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 CoreLand.Framework.Service.DefaultMembershipService.FindBy(String loginName)
+   在 CoreLand.Framework.Service.DefaultMembershipService.ValidateUser(String loginName, String password)
+2017-12-07 16:55:00,293 [6] ERROR LAPTOP-AOTGKK2S\thh-pc An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 对象名 'pub.UUC_Employee' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Aop.ServiceRealProxy`1.Invoke(IMessage msg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 CoreLand.Framework.Service.IMembershipService.ValidateUser(String loginName, String password)
+   在 CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser(String userNameOrEmail, String password)
+2017-12-07 16:55:58,321 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:55:58,392 [6] ERROR LAPTOP-AOTGKK2S\thh-pc An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 对象名 'pub.UUC_Employee' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Aop.ServiceRealProxy`1.Invoke(IMessage msg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 CoreLand.Framework.Authentication.IAuthenticationService.ValidateUser(String userNameOrEmail, String password)
+   在 EIP.Web.Controllers.LoginController.Login(String userName, String password) 位置 e:\眸一笑\实习生工程\EIP.SampleEasyUI\EIP.Web\Controllers\LoginController.cs:行号 34
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2017-12-07 16:56:04,979 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:56:04,989 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:56:05,021 [6] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 16:56:06,637 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    190 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 16:56:06,842 [6] ERROR LAPTOP-AOTGKK2S\thh-pc An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 对象名 'pub.UUC_Employee' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   在 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   在 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   在 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 CoreLand.Framework.Service.DefaultMembershipService.FindBy(String loginName)
+   在 CoreLand.Framework.Service.DefaultMembershipService.ValidateUser(String loginName, String password)
+2017-12-07 16:56:06,907 [6] ERROR LAPTOP-AOTGKK2S\thh-pc An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 对象名 'pub.UUC_Employee' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Aop.ServiceRealProxy`1.Invoke(IMessage msg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 CoreLand.Framework.Service.IMembershipService.ValidateUser(String loginName, String password)
+   在 CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser(String userNameOrEmail, String password)
+2017-12-07 16:56:08,722 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:56:08,785 [6] ERROR LAPTOP-AOTGKK2S\thh-pc An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 对象名 'pub.UUC_Employee' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CoreLand.Framework.Aop.ServiceRealProxy`1.Invoke(IMessage msg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 CoreLand.Framework.Authentication.IAuthenticationService.ValidateUser(String userNameOrEmail, String password)
+   在 EIP.Web.Controllers.LoginController.Login(String userName, String password) 位置 e:\眸一笑\实习生工程\EIP.SampleEasyUI\EIP.Web\Controllers\LoginController.cs:行号 34
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2017-12-07 16:57:25,625 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 16:57:25,681 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 16:57:25,796 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 16:57:26,479 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:57:32,242 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:57:32,252 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:57:33,800 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:57:35,377 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:57:39,758 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:57:39,783 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 16:57:39,801 [5] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 16:57:42,939 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     32 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 16:57:43,043 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     24 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 16:57:43,069 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 16:57:43,102 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 16:57:43,114 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 16:57:43,118 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 16:57:43,124 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 16:57:43,127 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 16:57:43,218 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:58:33,119 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 16:59:53,120 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:30:14,904 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 17:30:14,969 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 17:30:15,560 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     40 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-07 17:30:16,884 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    176 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 17:30:17,163 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    146 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 17:30:17,514 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    140 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 17:30:17,674 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 17:30:17,703 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     11 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-07 17:30:17,707 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-07 17:30:17,710 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,712 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,713 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,715 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,716 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,718 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,719 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,721 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,723 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,743 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     15 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-07 17:30:17,765 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     11 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-07 17:30:17,768 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-07 17:30:17,771 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,772 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,774 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,776 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,778 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,780 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,782 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,783 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,786 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,788 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,790 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,791 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,794 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,796 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,799 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:17,801 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 17:30:18,643 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     26 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:30:18,643 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     10 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:30:18,765 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     43 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:30:18,766 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     44 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:30:18,850 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     25 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:30:18,850 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     11 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:30:18,865 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:18,865 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:18,867 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:30:18,869 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:30:19,212 [7] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:30:24,003 [7] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:30:25,707 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:30:29,744 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:30:29,766 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:30:29,790 [6] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 17:30:31,328 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     20 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:30:31,349 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:30:31,351 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 17:30:31,375 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     22 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:30:31,377 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 17:30:31,380 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:30:31,382 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 17:30:31,384 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:30:31,472 [10] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:31:11,147 [11] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:31:11,154 [11] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:31:15,757 [11] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:31:15,830 [11] ERROR LAPTOP-AOTGKK2S\thh-pc E00040 服务接口（EIP.SystemManage.Service.IAppCodeMasterService）实例化时，发生错误。请检查构造函数参数设置或依赖注入容器是否注入服务。
+CoreLand.Framework.ServiceInitException: E00040 服务接口（EIP.SystemManage.Service.IAppCodeMasterService）实例化时，发生错误。请检查构造函数参数设置或依赖注入容器是否注入服务。
+   在 CoreLand.Framework.Service.DefaultServiceFactory.CreateService[T](Boolean noException, Boolean noProxy)
+   在 CoreLand.Framework.Service.DefaultServiceFactory.CreateService[T]()
+   在 CoreLand.Framework.Web.BaseController.GetService[TService]()
+   在 EIP.Web.Controllers.AppCodeMasterController.QueryAppCodeMaster(Nullable`1 id, Nullable`1 appId) 位置 e:\眸一笑\实习生工程\EIP.SampleEasyUI\EIP.Web\Controllers\AppCodeMasterController.cs:行号 59
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2017-12-07 17:31:15,872 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:41:50,225 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 17:41:50,282 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 17:41:50,987 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     32 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-07 17:41:52,281 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    159 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 17:41:52,579 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    155 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 17:41:52,938 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    145 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 17:41:53,093 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     14 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 17:41:53,125 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     10 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-07 17:41:53,129 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-07 17:41:53,132 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,134 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,137 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,139 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,140 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,142 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,144 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,145 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,147 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,170 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-07 17:41:53,190 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     10 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-07 17:41:53,194 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-07 17:41:53,196 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,198 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,200 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,202 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,204 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,206 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,207 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,209 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,210 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,212 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,213 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,214 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,215 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,217 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,218 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:53,219 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 17:41:54,048 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     20 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:41:54,146 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     14 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:41:54,200 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     15 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:41:54,213 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:41:54,216 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:41:54,545 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:41:57,579 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:41:59,277 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:42:05,388 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:42:05,412 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:42:05,428 [5] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 17:42:09,535 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     26 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:42:09,555 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:42:09,557 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 17:42:09,575 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     15 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:42:09,577 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 17:42:09,580 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:42:09,583 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 17:42:09,586 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:42:09,697 [8] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:42:57,301 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:43:04,079 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:43:04,084 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:43:04,105 [5] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 17:43:05,634 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     22 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:43:05,662 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     26 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:43:05,665 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 17:43:05,684 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:43:05,687 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 17:43:05,689 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:43:05,691 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 17:43:05,695 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:43:05,727 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:43:14,343 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:43:45,785 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:45:30,741 [14] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:45:30,750 [14] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:45:35,780 [14] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:45:37,018 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:00,135 [21] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:00,140 [21] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:46:01,888 [21] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:46:03,077 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:09,188 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:09,193 [15] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:46:09,209 [15] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 17:46:10,678 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     22 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:46:10,704 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     22 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:46:10,706 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 17:46:10,724 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     15 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:46:10,727 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 17:46:10,734 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:46:10,736 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 17:46:10,738 [15] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:46:48,946 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:50,089 [14] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:52,241 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:56,566 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:46:56,570 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:46:56,596 [5] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 17:46:57,942 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     29 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:46:57,964 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     19 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:46:57,967 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 17:46:57,988 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     18 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:46:57,991 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 17:46:57,993 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:46:57,995 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 17:46:57,999 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:46:58,034 [15] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:47:06,519 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:47:06,525 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:47:06,617 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:47:07,408 [14] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:47:07,417 [14] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:48:04,735 [14] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:48:04,829 [24] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:48:04,895 [14] ERROR LAPTOP-AOTGKK2S\thh-pc E00040 服务接口（EIP.Service.IClassTableService）实例化时，发生错误。请检查构造函数参数设置或依赖注入容器是否注入服务。
+CoreLand.Framework.ServiceInitException: E00040 服务接口（EIP.Service.IClassTableService）实例化时，发生错误。请检查构造函数参数设置或依赖注入容器是否注入服务。
+   在 CoreLand.Framework.Service.DefaultServiceFactory.CreateService[T](Boolean noException, Boolean noProxy)
+   在 CoreLand.Framework.Service.DefaultServiceFactory.CreateService[T]()
+   在 CoreLand.Framework.Web.BaseController.GetService[TService]()
+   在 EIP.Web.Controllers.ClassTableController.QueryClassTable(QueryModel model) 位置 e:\眸一笑\实习生工程\EIP.SampleEasyUI\EIP.Web\Controllers\ClassTableController.cs:行号 45
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2017-12-07 17:48:23,841 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:48:23,846 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:48:23,862 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:48:23,990 [24] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:48:23,995 [24] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:48:29,810 [24] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:48:29,825 [23] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:48:29,922 [24] ERROR LAPTOP-AOTGKK2S\thh-pc E00040 服务接口（EIP.Service.IClassTableService）实例化时，发生错误。请检查构造函数参数设置或依赖注入容器是否注入服务。
+CoreLand.Framework.ServiceInitException: E00040 服务接口（EIP.Service.IClassTableService）实例化时，发生错误。请检查构造函数参数设置或依赖注入容器是否注入服务。
+   在 CoreLand.Framework.Service.DefaultServiceFactory.CreateService[T](Boolean noException, Boolean noProxy)
+   在 CoreLand.Framework.Service.DefaultServiceFactory.CreateService[T]()
+   在 CoreLand.Framework.Web.BaseController.GetService[TService]()
+   在 EIP.Web.Controllers.ClassTableController.QueryClassTable(QueryModel model) 位置 e:\眸一笑\实习生工程\EIP.SampleEasyUI\EIP.Web\Controllers\ClassTableController.cs:行号 45
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2017-12-07 17:50:19,819 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 17:50:19,876 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 17:50:20,454 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     30 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-07 17:50:21,745 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    160 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 17:50:22,020 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    133 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 17:50:22,381 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    137 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 17:50:22,551 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     16 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 17:50:22,587 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     13 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-07 17:50:22,591 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-07 17:50:22,599 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,601 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,603 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,605 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,607 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,609 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,614 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,616 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,618 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,642 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-07 17:50:22,664 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     11 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-07 17:50:22,668 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-07 17:50:22,670 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,672 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,674 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,675 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,680 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,682 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,684 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,685 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,687 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,689 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,691 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,692 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,695 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,697 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,699 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:22,701 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 17:50:23,571 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     19 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:50:23,672 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:50:23,725 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     12 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:50:23,740 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:23,743 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:50:24,105 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:50:27,517 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:50:29,184 [9] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:50:34,221 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:50:34,244 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:50:34,266 [6] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 17:50:36,269 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     20 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:50:36,292 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     20 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:50:36,294 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 17:50:36,313 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     17 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:50:36,315 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 17:50:36,319 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:50:36,322 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 17:50:36,325 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:50:36,413 [8] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:50:36,419 [8] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:50:36,505 [8] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:50:37,222 [9] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:50:37,231 [9] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:50:37,464 [9] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    178 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ClassTable where LogicDeleteFlag=0 and TODO like '%' ) AS T 
+2017-12-07 17:50:37,600 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:53:41,132 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----系统启动-----
+2017-12-07 17:53:41,197 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【START】-----
+2017-12-07 17:53:41,803 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     27 ms,	SQL:IF db_id(N'EIP_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'EIP_SYS'
+2017-12-07 17:53:43,188 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    185 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2017-12-07 17:53:43,488 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    148 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2017-12-07 17:53:43,862 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    157 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2017-12-07 17:53:44,026 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     16 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2017-12-07 17:53:44,057 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     11 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2017-12-07 17:53:44,061 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2017-12-07 17:53:44,064 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,067 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,069 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,070 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,072 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,074 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,076 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,077 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,079 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,103 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     16 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2017-12-07 17:53:44,125 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     10 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2017-12-07 17:53:44,129 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2017-12-07 17:53:44,133 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,135 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,137 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,139 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,141 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,145 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,148 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,150 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,152 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,153 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,155 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,156 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,158 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,161 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,163 [1] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:44,165 [1] INFO  LAPTOP-AOTGKK2S\thh-pc -----配置信息初始化【END】-----
+2017-12-07 17:53:45,005 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     21 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:53:45,104 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     13 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:53:45,160 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     14 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:53:45,173 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:53:45,176 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:53:45,498 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:55:49,009 [10] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:55:49,178 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:55:50,998 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:55:57,801 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:55:57,824 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:55:57,844 [5] NOTICE LAPTOP-AOTGKK2S\thh-pc 用户登录
+2017-12-07 17:56:06,316 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     23 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2017-12-07 17:56:06,339 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     21 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:56:06,341 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2017-12-07 17:56:06,363 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in     20 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2017-12-07 17:56:06,366 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2017-12-07 17:56:06,369 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2017-12-07 17:56:06,371 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2017-12-07 17:56:06,374 [5] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:56:06,479 [7] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:56:06,485 [7] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:56:06,567 [7] INFO  LAPTOP-AOTGKK2S\thh-pc [END]
+2017-12-07 17:56:07,338 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2017-12-07 17:56:07,347 [6] INFO  LAPTOP-AOTGKK2S\thh-pc [START]
+2017-12-07 17:56:07,591 [6] DEBUG LAPTOP-AOTGKK2S\thh-pc Executed in    185 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ClassTable where LogicDeleteFlag=0 and TODO like '%' ) AS T 
+2017-12-07 17:56:07,691 [5] DEBUG LAPTOP-AOTGKK2S\thh-pc 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]

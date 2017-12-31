@@ -1,0 +1,85 @@
+﻿@using Newtonsoft.Json
+@model EIP.Web.Model.UUCDitConfigContition
+
+@{
+    ViewBag.Title = "Dit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head{
+    <style type="text/css">
+        .parttimer {
+            color: blue;
+        }
+        .positionName {
+            font-weight:bold;
+            color: #f5ab77;
+            margin-left:10px;
+        }
+    </style>
+}
+
+
+<div class="easyui-layout" style="width:540px;height:400px;">
+    <div data-options="region:'east',title:'已选择项',split:false,collapsible:false,iconCls:'icon-ok',border:false" style="width:200px;">
+        <ul id="lstSelected"></ul>
+    </div>
+    <div data-options="region:'west',title:'@Model.DitName',split:false,collapsible:false,border:false" style="width:300px;">
+        @switch (Model.DitType)
+        {
+            case "dit":
+                @Html.Partial("~/views/uucdit/Dit_orgtree.cshtml", Model.DitConditions);
+                break;
+            case "role":
+                @Html.Partial("~/views/uucdit/Dit_rolelist.cshtml", Model.RoleConditions);
+                break;
+            case "grp":
+                @Html.Partial("~/views/uucdit/Dit_grouplist.cshtml", Model.GroupCoditions);
+                break;
+        }
+    </div>
+    <div data-options="region:'center',border:false" style="padding:5px;background:#eee;text-align:center;padding-top:200px;">
+        <a href="#" class="easyui-linkbutton" onclick="userSelect()" style="width:30px;">&gt;</a>
+    </div>
+</div>
+
+<script language="javascript">
+    var ditoptions = {
+        DitIdentity: '@Model.DitIdentity', //人员树标识
+        DitName: '@Model.DitName'//人员树名
+    };
+
+    $(function () {
+        if (window.parent) {
+            window.parent.GetUUCDitSelected = function() {
+                return $("#lstSelected").datalist("getRows");
+            }
+            window.parent.GetUUCDitOptions = function () {
+                return ditoptions;
+            }
+        }
+
+    });
+
+
+    function isSelected(id,rows) {
+        for (var j = 0; j < rows.length; j++) {
+            if (id == rows[j].id) return true;
+        }
+        return false;
+    }
+
+    $("#lstSelected").datalist({
+        fit:true,
+        lines:false,
+        border:false,
+        valuefield:"id",
+        textfield:"text",
+        textFormatter: function (value, row, index) {
+            return String.format(ditoptions.SeletedTextFormat, row);
+        },
+        onClickRow: function (index, row) {
+            $(this).datalist("deleteRow", index);
+        }
+    });
+</script>

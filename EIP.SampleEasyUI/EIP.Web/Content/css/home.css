@@ -1,0 +1,331 @@
+﻿
+.search-text .mini-buttonedit{
+    height:31px;
+}
+.search-text .mini-buttonedit-border {
+    border: 1px solid #dcdcdc;
+    height:27px;
+}
+.mini-buttonedit-focus .mini-buttonedit-border{
+    border-color:#0085d0 !important;
+}
+
+
+
+/***嵌入home(首页)页面样式***/
+.shortcut {
+    /*width:100%;*/
+    overflow: hidden;
+    *margin-bottom:1.2em;
+}
+
+/***待采编、已办、草稿、积分 快捷方式***/
+/*待采编、已办、草稿、积分公用样式*/
+.div-kj {
+    float: left;
+    /*width: 238px;*/
+    /*_width: 230px;*/
+    width:21.5%;
+    min-height: 58px;
+    background-color: #3ea8e4;
+    margin-right: 2%;
+    margin-bottom: 1.2em;
+    border-radius: 4px;
+    /*position: relative;*/
+    padding: 1% 1%;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+.div-kj:hover{
+    background-color:#42b1f0 ;
+}
+.kj-right {
+    float: right;
+    margin-right: 2em;
+    margin-top: 0.5em;
+}
+
+.kj-left {
+    float: left;
+    /*margin: 8px 26px;*/
+   margin-left:2em;
+   margin-top:5px;
+   vertical-align:middle;
+   
+}
+
+.div-kj b {
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+    font-weight:normal;
+}
+
+.div-kj span {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    display:inline-block;
+    margin-top:6px;
+}
+
+/*公用图片样式*/
+.kj-img {
+    /*position: absolute;*/
+    display:inline-block;
+    width: 42px;
+    height: 46px;
+    background: url("../img/iconlist.png") no-repeat 0 -173px;
+    _background: url("../img/iconlist-8.png") no-repeat 0 -173px;
+    vertical-align:middle;
+}
+
+/*待采编、已办、草稿、积分自有样式*/
+/*已办*/
+.div-yb {
+    background-color: #e64499;
+}
+.div-yb:hover {
+    background-color: #f649a4;
+}
+.yb-img {
+    background-position: -86px -172px;
+}
+
+/*草稿*/
+.div-cg {
+    background-color: #90c129;
+}
+.div-cg:hover{
+    background-color: #9bcf2d;
+}
+
+.cg-img {
+    background-position: -44px -172px;
+}
+
+/*积分*/
+.div-jf {
+    background-color: #ffa23f;
+    margin-right: 0;
+    padding-right: 0;
+}
+.div-jf:hover {
+    background-color: #ffab3f;
+}
+
+/*不可用样式*/
+.div-disable {
+    background-color: #949494;
+    cursor:none;
+}
+.div-disable:hover {
+    background-color: #949494;
+}
+
+/*积分文字样式*/
+.jf-txt {
+    margin-left: 0.8em;
+    margin-top: -2px;
+    _margin-top:-10px;
+}
+.integral-txt{
+    display: block;
+    margin-bottom: 4px;
+    *margin-bottom: 8px;
+}
+.integral-txt span{
+    vertical-align: middle;
+}
+
+.jf-txt span {
+    margin-right: 0.8em;
+}
+
+.jf-img {
+    background-position: 0 -220px;
+}
+
+/***待采编、已办、积分 列表 图片***/
+/*待采编、待办公用样式*/
+.panel-integral{
+    width:100%;
+    overflow: hidden;
+    *margin-top:2em;
+}
+.panel-dcb, .panel-db, .panel-complate {
+    width: 100%;
+    height:212px;
+    *height: 224px;
+    _height:240px;
+    /*position: relative;
+    border:1px solid #DCDCDC !important;*/
+}
+.panel-left .mini-panel-border{
+    border:0;
+
+}
+.panel-left .panel-body{
+    padding:10px;
+    *padding:10px 0 0 10px;
+}
+.panel-dcb{
+    /*margin-bottom:16px;*/
+}
+/*虚线*/
+.separator-bottom {
+    float: left;
+    border: 0;
+    border-bottom: dashed 1px #e5e5e5;
+    height: 1px;
+    width:100%;
+    margin-bottom: 8px;
+    /**margin-bottom: 10px;*/
+    /*_margin-bottom: 4px;*/
+    overflow: hidden;
+}
+
+.panel-content {
+    /*padding-left: 1.5em;*/
+    /**padding-left:1em;*/
+}
+
+.panel-content {
+    float: left;
+    width:97%;
+    *width:auto;
+    margin: 4px 0 8px 0;
+    /*_margin: 8px 0 8px 0;*/
+    /*overflow: hidden;*/
+    /*border:1px solid red;*/
+}
+
+.panel-content span {
+    color: #8ec31f;
+    margin-right: 0.6em;
+    float: left;
+}
+
+.panel-content a {
+    color: #333333;
+    float: left;
+    /*width: 268px;*/
+    max-width:60%;
+    /*_width:expression(this.offsetWidth > 60% ? '60%' : 'auto');*/ 
+    _width:330px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.panel-content a:hover {
+    color: #0085d0;
+}
+
+.panel-content b {
+    float: right;
+    color: #949494;
+    margin-right: 3em;
+    font-weight:normal;
+}
+
+.panel-left, .panel-right {
+    float: left;
+    width:48%;
+}
+.panel-left{
+    width:49%;
+    _width:48%;
+    /**width:48%;*/
+}
+.panel-right {
+    border: 1px solid #e2e7eb;
+    height: auto;
+    margin-left: 2%;
+    _margin-left:1%;
+    position: relative;
+}
+
+.panel-right .separator-bottom {
+    /*margin-top: -5px;*/
+}
+
+/*待办 自有样式*/
+.panel-db {
+    /*margin: 16px 0;*/
+}
+
+/*已办 自有样式*/
+.panel-complate {
+    margin-top: 20px;
+}
+
+/*个人积分*/
+.person-type, .person-month {
+    /*width: 530px;*/
+    width:100%;
+    height: 270px;
+    /*_height: 309px;*/
+    _height:284px;
+}
+
+.person-month {
+    margin-top: 10px;
+    height:278px;
+    *height:272px;
+    _height:280px;
+}
+
+/*more样式*/
+.more-font {
+    position: absolute;
+    color: #949494;
+    font-size: 12px;
+    right: 36px;
+}
+
+
+
+/*个人积分月份选择控件样式*/
+.select-month {
+    width: 100px;
+    height:31px;
+    position: absolute;
+    z-index: 11111;
+    top: 52%;
+    right: 2%;
+}
+
+
+/*修改panel样式*/
+.panel-left .panel-header{
+   border-color:#e2e7eb;
+   /*position:static;*/
+   
+}
+.panel-left .panel-body{
+    border-color:#e2e7eb;
+}
+.panel-left .panel-tool A{
+    width:auto;
+    color:#949494;
+    font-size:12px;
+    margin-right:4em;
+    *margin-right:2em;
+}
+.panel-left .panel-tool A:hover{
+    color:#444;
+    background-color:#fff;
+}
+
+.panel-left .panel-header .panel-title{
+    margin:8px 4px 6px;
+    font-size:16px;
+    color:#444444;
+    font-weight:normal;
+    border-left:2px solid #0085d0;
+    padding-left:6px;
+}

@@ -1,0 +1,90 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+
+<table id="grid_grade" class="easyui-datagrid" fit="true"
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_grade',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
+    <thead>
+        <tr>
+            <th data-options="field:'ck',checkbox:true"></th>
+            <th data-options="field:'SId',width:100,hidden:true">SId</th>
+            <th data-options="field:'StudentId',width:100">学生学号</th>
+            <th data-options="field:'StudentName',width:100">学生姓名</th>
+            <th data-options="field:'RId',width:100">所在班级ID</th>
+            <th data-options="field:'Sex',width:100">性别</th>
+            <th data-options="field:'Birthday',width:100">生日 </th>
+            <th data-options="field:'Email',width:100">电子邮件</th>
+            <th data-options="field:'Hometown',width:100">
+                户籍所在地
+            </th>
+            <th data-options="field:'Phone_number',width:100">电话号码</th>
+            <th data-options="field:'Other',width:100">
+                备注
+
+        </tr>
+    </thead>
+</table>
+
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入学生信息表名。" })
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+</div>
+
+<div id="dlg_grade" class="easyui-dialog" title="学生信息表编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons'">
+    Loading...
+</div>
+
+<div id="dlg_buttons" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
+    </div>
+</div>
+
+<script>
+    function doSearch() {
+        $('#grid_grade').datagrid('load', {
+            Key: $('#Key').val()
+        });
+    }
+
+    // 添加
+    function doAdd() {
+        $('#dlg_grade').dialog("open").dialog('refresh', App.getUrl('/Grade/add'));
+    }
+
+    // 删除
+    function doDel() {
+        var row = $('#grid_grade').datagrid('getSelected');
+        if (!row) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("/Grade/remove"), { SId: row.SId },
+                function () {
+                    $('#grid_grade').datagrid('reload');
+                });
+        });
+
+
+    }
+
+    // 打开编辑状态详情
+    function doDetail() {
+        var row = $('#grid_grade').datagrid('getSelected');
+        if (row) {
+            $('#dlg_grade').dialog("open").dialog('refresh', App.getUrl('/Grade/edit?SId=' + row.SId));
+        }
+
+    }
+</script>
+

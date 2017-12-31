@@ -1,0 +1,72 @@
+﻿@model EIP.Entity.LessonInfo
+
+@{
+    Layout = null;
+}
+@section head{
+}
+<form id="form_LessonInfo" class="easyui-form" method="post" data-options="">
+        
+            <!--用来识别课程信息-->
+            @Html.HiddenFor(p => p.LIId)    
+        
+            <!--课程编号-->
+            @Html.HiddenFor(p => p.LessonId)    
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.LessonName, new TextBox() { Label = "课程名字 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.category, new TextBox() { Label = " ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.Other, new TextBox() { Label = "备注信息 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.LessonSchedules, new TextBox() { Label = "课程安排 ：", Style = "width:90%;" })
+            </div>
+
+</form>
+<script type="text/javascript">
+
+    function validate() {
+        // 验证
+        var isValid = $("#form_LessonInfo").form("validate");
+        if (!isValid) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        return true;
+    }
+
+    //保存
+    function save() {
+
+        // 表单验证
+        if (!validate()) return;
+
+        // 表单数据提交
+        var formData = $("#form_LessonInfo").form("getData");
+        App.action(App.getUrl("LessonInfo/save"), formData,
+            function (data) {
+                //todo
+            });
+
+    }
+
+    //关闭
+    function closeBox() {
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
+            function () {
+                window.App.CloseWindow();
+            });
+    }
+</script>
