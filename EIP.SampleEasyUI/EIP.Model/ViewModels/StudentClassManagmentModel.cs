@@ -105,4 +105,11 @@ namespace EIP.Model.ViewModels
     //    public string SexName { get { return CodeManger.GetCodeText(CommonConstant.CODETYPE_SEXX, this.Sex); } }
     //}
 
+    public class GradeViewModel:Grade
+    {
+        /// <summary>
+        /// 性别中文名
+        /// </summary>
+        public string SexName { get { return CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, this.Sex); } }
+    }
 }

@@ -21,7 +21,7 @@
 
 
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.Sex, new TextBox() { Label = "性别 ：", Style = "width:90%;" })
+        @Html.CLComboBoxFor(p => p.Sex, new ComboBox() { Label = "性别 ：", ParentCode = CommonConstant.CODETYPE_SEX })
     </div>
 
 
