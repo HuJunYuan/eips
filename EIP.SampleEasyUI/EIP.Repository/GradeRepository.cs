@@ -89,6 +89,36 @@ namespace EIP.Repository
         }
 
         /// <summary>
+        /// 根据班级模糊查询男生女生人数，班级总人数
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        public List<CountManAndWoman> QueryCountManAndWomanUseLike(QueryModel model, out int totalCount)
+        {
+            var searchKey = (string.IsNullOrEmpty(model.Key) ? "%" : "%" + model.Key.Trim() + "%");
+            //创建查询用sql语句
+            string sql = "select * from (select Remo.RId,Remo.Remo_id,SUM(case Sex when 'M' then 1 else 0 end) " +
+                "as manCount,SUM(case Sex when 'W' then 1 else 0 end) " +
+                "as womanCount, SUM(1) as totalCount from Remo inner " +
+                "join Grade on Remo.RId = Grade.RId group by Remo.RId,Remo.Remo_id) as T where cast(T.Remo_id as varchar(20)) like @p0";
+
+            //分页查询排序字段
+            model.SortField = string.IsNullOrEmpty(model.SortField) ? "T.Remo_id" : model.SortField;
+
+            var grades = this.LoadPageEntitiesBySql<CountManAndWoman>(
+                       model.PageIndex,
+                       model.PageSize,
+                       out totalCount,
+                       sql,
+                       model.SortField + " " + model.SortOrder,
+                       searchKey
+                       ).ToList();
+
+            return grades;
+        }
+
+        /// <summary>
         /// 用存储过程查询男生女生人数，班级总人数
         /// </summary>
         /// <param name="model">翻页查询基本条件</param>

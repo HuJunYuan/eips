@@ -194,6 +194,7 @@
     <Compile Include="Controllers\LessonInfoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\IconSelectController.cs" />
+    <Compile Include="Controllers\CountManAndWomanController.cs" />
     <Compile Include="Controllers\RemoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -914,6 +915,7 @@
     <Content Include="Views\Remo\detail.cshtml" />
     <Content Include="Views\Remo\form.cshtml" />
     <Content Include="Views\Remo\list.cshtml" />
+    <Content Include="Views\CountManAndWoman\list.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

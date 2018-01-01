@@ -80,6 +80,18 @@ namespace EIP.Service
             return gradeRepository.QueryCountManAndWoman(model, out totalCount);
         }
 
+
+        /// <summary>
+        /// 根据班级模糊查询男生女生人数，班级总人数
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        public List<CountManAndWoman> QueryCountManAndWomanUseLike(QueryModel model, out int totalCount)
+        {
+            return gradeRepository.QueryCountManAndWomanUseLike(model, out totalCount);
+        }
+
         /// <summary>
         /// 用存储过程查询男生女生人数，班级总人数
         /// </summary>
