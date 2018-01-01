@@ -54,6 +54,26 @@ namespace EIP.Web.Controllers
         }
 
         /// <summary>
+        /// 通过姓名查询教师列表
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("query_entor_by_name")]
+        public JsonResult QueryentorByName(QueryModel model)
+        {
+            var result = new QueryResultModel();
+            int totalCount = 0;
+
+            var entorService = this.GetService<IentorService>();
+            result.Data = entorService.QueryentorByName(model, out totalCount);
+            result.Total = totalCount;
+
+
+            /// var s=  CodeManger.GetCodeText(CommonConstant.CODETYPE_SEXX,"0");
+
+            return Json(result);
+        }
+
+        /// <summary>
         /// 教师新增视图
         /// </summary>
         /// <returns></returns>

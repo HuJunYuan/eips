@@ -6,7 +6,7 @@
 }
 
 <table id="grid_entor" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_entor',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_entor_by_name',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
@@ -25,7 +25,7 @@
 <div id="grid_toolbar" style="padding:5px;height:auto">
     <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
     <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
-    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入教师名。" })
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入教师名" })
     <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
 </div>
 
