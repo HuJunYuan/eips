@@ -12,7 +12,7 @@ using System.Text;
 using CoreLand.Framework.Service;
 using EIP.Model;
 using EIP.Entity;
-
+using EIP.Model.ViewModels;
 namespace EIP.Service
 {
     /// <summary>
@@ -28,6 +28,17 @@ namespace EIP.Service
         /// <param name="totalCount">整体查询结果件数</param>
         /// <returns></returns>
         List<entor> Queryentor(QueryModel model, out int totalCount);
+
+
+
+
+        /// <summary>
+        /// 查询教师并且使用数据字典修改性别
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        List<entorViewModel> QueryentorUseCodeManager(QueryModel model, out int totalCount);
 
 
         /// <summary>

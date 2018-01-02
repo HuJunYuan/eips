@@ -64,11 +64,8 @@ namespace EIP.Web.Controllers
             int totalCount = 0;
 
             var entorService = this.GetService<IentorService>();
-            result.Data = entorService.QueryentorByName(model, out totalCount);
+            result.Data = entorService.QueryentorUseCodeManager(model, out totalCount);
             result.Total = totalCount;
-
-
-            /// var s=  CodeManger.GetCodeText(CommonConstant.CODETYPE_SEXX,"0");
 
             return Json(result);
         }

@@ -14,7 +14,7 @@ using System.Linq.Expressions;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-
+using EIP.Model.ViewModels;
 using Newtonsoft.Json;
 using AutoMapper;
 
@@ -67,6 +67,29 @@ namespace EIP.Service
         {
             return entorRepository.Queryentor(model, out totalCount);
         }
+
+        /// <summary>
+        /// 查询教师并且使用数据字典修改性别
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        public List<entorViewModel> QueryentorUseCodeManager(QueryModel model, out int totalCount)
+        {
+            var entorList = entorRepository.QueryentorByName(model, out totalCount);
+
+            List<entorViewModel> list = new List<entorViewModel>();
+
+            foreach(var item in entorList)
+            {
+                entorViewModel mvm = new entorViewModel();
+                Mapper.Map<entor, entorViewModel>(item, mvm);
+                mvm.SexName = CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, item.Sex);
+                list.Add(mvm);
+            }
+            return list;
+        }
+
 
         /// <summary>
         /// 查询姓名查询教师
@@ -133,6 +156,7 @@ namespace EIP.Service
             else flag = false;
             return flag;
         }
+
 
         #endregion
 

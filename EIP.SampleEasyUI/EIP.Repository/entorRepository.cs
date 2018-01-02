@@ -17,7 +17,7 @@ using CoreLand.Framework.Data;
 using CoreLand.Framework.Code;
 using EIP.Model;
 using EIP.Entity;
-
+using EIP.Model.ViewModels;
 namespace EIP.Repository
 {
     /// <summary>
@@ -57,6 +57,7 @@ namespace EIP.Repository
 
             return entors;
         }
+
 
         /// <summary>
         /// 通过姓名查询教师

@@ -64,6 +64,9 @@ namespace EIP.Service.AutoMapper.Profiles
             CreateMap<College, College>();
             CreateMap<entor, entor>();
 
+            CreateMap<entor, entorViewModel>()
+                .ForMember(des => des.SexName, map => map.Ignore());
+
 
 
 
