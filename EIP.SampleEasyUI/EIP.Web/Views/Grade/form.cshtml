@@ -78,7 +78,7 @@
         App.action(App.getUrl("/Grade/save"), formData,
             function (data) {
                 $('#dlg_grade').dialog("close");
-                $('#grid_grade').dialog("reload"); 
+                $('#grid_grade').datagrid('reload');
             });
 
     }
@@ -88,7 +88,7 @@
         window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
             function () {
                 $('#dlg_grade').dialog("close");
-                $('#grid_grade').dialog('reload');
+                $('#grid_grade').datagrid('reload');
             });
     }
 </script>
