@@ -67,6 +67,9 @@ namespace EIP.Service.AutoMapper.Profiles
             CreateMap<entor, entorViewModel>()
                 .ForMember(des => des.SexName, map => map.Ignore());
 
+            CreateMap<Grade, GradeViewModel>()
+                .ForMember(des => des.SexName, map => map.Ignore());
+
 
 
 

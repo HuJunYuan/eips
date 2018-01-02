@@ -43,7 +43,7 @@ namespace EIP.Web.Controllers
             int totalCount = 0;
 
             var gradeService = this.GetService<IGradeService>();
-            result.Data = gradeService.QueryGrade(model, out totalCount);
+            result.Data = gradeService.QueryGradeUseCodeManager(model, out totalCount);
             result.Total = totalCount;
 
             return Json(result);

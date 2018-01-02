@@ -30,6 +30,16 @@ namespace EIP.Service
         /// <returns></returns>
         List<Grade> QueryGrade(QueryModel model, out int totalCount);
 
+
+        /// <summary>
+        /// 查询学生信息表,使用数据字典
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+      List<GradeViewModel> QueryGradeUseCodeManager(QueryModel model, out int totalCount);
+
+
         /// <summary>
         /// 处理学生信息表
         /// 根据 id 编号判断是否是添加还是更新，然后调用相应的方法进行处理

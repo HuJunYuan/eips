@@ -70,6 +70,29 @@ namespace EIP.Service
         }
 
         /// <summary>
+        /// 查询学生信息表,使用数据字典
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        public List<GradeViewModel> QueryGradeUseCodeManager(QueryModel model, out int totalCount)
+        {
+            List<Grade> grades = gradeRepository.QueryGrade(model, out totalCount);
+
+            List<GradeViewModel> gradeviewmodel = new List<GradeViewModel>();
+
+            foreach(var item in grades)
+            {
+                GradeViewModel gvm = new GradeViewModel();
+                Mapper.Map<Grade, GradeViewModel>(item, gvm);
+                gvm.SexName = CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, item.Sex);
+                gradeviewmodel.Add(gvm);
+            }
+
+            return gradeviewmodel;
+        }
+
+        /// <summary>
         /// 查询男生女生人数，班级总人数
         /// </summary>
         /// <param name="model">翻页查询基本条件</param>
