@@ -143,7 +143,7 @@ namespace EIP.Web.Controllers
 
             if (entorService.Saveentor(model)>0)
             {
-                ShowMessage("I10010", MessageFuncOption.CloseBrowserWindow);
+                ShowMessage("I10010");
             }
             return Json(null);
         }

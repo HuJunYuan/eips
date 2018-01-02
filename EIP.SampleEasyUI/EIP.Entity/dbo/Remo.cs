@@ -33,8 +33,8 @@ namespace EIP.Entity
         /// <summary>
         /// 班级代码编号
         /// </summary>
-        [Required]
-        public int Remo_id { get; set; }
+        [MaxLength(20)]
+        public string Remo_id { get; set; }
     
         /// <summary>
         /// 班主任编号

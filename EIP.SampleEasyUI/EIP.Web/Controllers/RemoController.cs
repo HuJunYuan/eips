@@ -122,7 +122,7 @@ namespace EIP.Web.Controllers
 
             if (remoService.SaveRemo(model)>0)
             {
-                ShowMessage("I10010", MessageFuncOption.CloseBrowserWindow);
+                ShowMessage("I10010");
             }
             return Json(null);
         }

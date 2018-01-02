@@ -101,7 +101,7 @@ namespace EIP.Repository
             string sql = "select * from (select Remo.RId,Remo.Remo_id,SUM(case Sex when 'M' then 1 else 0 end) " +
                 "as manCount,SUM(case Sex when 'W' then 1 else 0 end) " +
                 "as womanCount, SUM(1) as totalCount from Remo inner " +
-                "join Grade on Remo.RId = Grade.RId group by Remo.RId,Remo.Remo_id) as T where cast(T.Remo_id as varchar(20)) like @p0";
+                "join Grade on Remo.RId = Grade.RId group by Remo.RId,Remo.Remo_id) as T where T.Remo_id  like @p0";
 
             //分页查询排序字段
             model.SortField = string.IsNullOrEmpty(model.SortField) ? "T.Remo_id" : model.SortField;

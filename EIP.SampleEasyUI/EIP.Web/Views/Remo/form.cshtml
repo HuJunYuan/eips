@@ -11,12 +11,14 @@
     @Html.HiddenFor(p => p.RId)
 
 
-    <div class="form-item">
+    <!--
+        <div class="form-item">
         @Html.CLTextBoxFor(p => p.CId, new TextBox() { Label = "所属学院代码 ：", Style = "width:90%;" })
     </div>
+        -->
 
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.Remo_id, new TextBox() { Label = "班级代码 ：", Style = "width:90%;" })
+        @Html.CLTextBoxFor(p => p.Remo_id, new TextBox() { Label = "班级名 ：", Style = "width:90%;" })
     </div>
 
 
@@ -52,7 +54,7 @@
         var formData = $("#form_Remo").form("getData");
         App.action(App.getUrl("/Remo/save"), formData,
             function (data) {
-                //todo
+                $('#grid_remo').datagrid('reload');
             });
 
     }
@@ -62,7 +64,8 @@
 
         window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
             function () {
-                window.App.CloseWindow();
+                $('#dlg_remo').dialog("close");
+                $('#grid_remo').datagrid('reload');
             });
     }
 </script>

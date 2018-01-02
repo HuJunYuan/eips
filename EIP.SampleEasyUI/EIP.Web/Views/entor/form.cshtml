@@ -58,7 +58,8 @@
         var formData = $("#form_entor").form("getData");
         App.action(App.getUrl("/entor/save"), formData,
             function (data) {
-                //todo
+                $('#grid_entor').datagrid('reload');
+                $('#dlg_entor').dialog("close");
             });
 
     }
@@ -68,7 +69,8 @@
 
         window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
             function () {
-                window.App.CloseWindow();
+                $('#grid_entor').datagrid('reload');
+                $('#dlg_entor').dialog("close");
             });
     }
 </script>

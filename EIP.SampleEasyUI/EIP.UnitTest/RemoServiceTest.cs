@@ -56,7 +56,7 @@ namespace EIP.ServiceTest
 
             //插入数据
             Remo remo = new Remo();
-            remo.Remo_id = 1001011 ;
+            remo.Remo_id = "1001011" ;
             service.SaveRemo(remo);
             service.ServiceContext.Commit();
             Assert.IsTrue(remo.RId > 0);
@@ -87,16 +87,16 @@ namespace EIP.ServiceTest
         {
             Remo model = new Remo();
             service.SaveRemo(model);
-            model.Remo_id = 1001;
+            model.Remo_id = "1001";
 			service.ServiceContext.Commit();
             Assert.IsTrue(model.RId > 0);
 
             Remo model1 = new Remo();
             model1.RId = model.RId;
-            model1.Remo_id = 1002;
+            model1.Remo_id = "1002";
             service.SaveRemo(model1);
             service.ServiceContext.Commit();
-            Assert.IsTrue(model1.Remo_id==1002);
+            Assert.IsTrue(model1.Remo_id=="1002");
 
             service.Delete<Remo>(model1.RId);
         }
@@ -126,7 +126,7 @@ namespace EIP.ServiceTest
         {
             //创建一个新的班级
             Remo oldRremoModel = new Remo();
-            oldRremoModel.Remo_id = 1002;
+            oldRremoModel.Remo_id = "1002";
             service.SaveRemo(oldRremoModel);
             service.ServiceContext.Commit();
             Assert.IsTrue(oldRremoModel.RId > 0);
@@ -134,10 +134,10 @@ namespace EIP.ServiceTest
             //更新班级信息
             Remo newRremoModel = new Remo();
             newRremoModel.RId = oldRremoModel.RId;
-            newRremoModel.Remo_id = 1003;
+            newRremoModel.Remo_id = "1003";
             service.SaveRemo(newRremoModel);
             service.ServiceContext.Commit();
-            Assert.IsTrue(newRremoModel.Remo_id == 1003);
+            Assert.IsTrue(newRremoModel.Remo_id == "1003");
 
             //创建一个旧的教师信息
             entor oldMentor = new entor();
@@ -226,7 +226,7 @@ namespace EIP.ServiceTest
         {
             //创建一个新的班级
             Remo oldRremoModel = new Remo();
-            oldRremoModel.Remo_id = 1002;
+            oldRremoModel.Remo_id = "1002";
             service.SaveRemo(oldRremoModel);
             service.ServiceContext.Commit();
             Assert.IsTrue(oldRremoModel.RId > 0);
@@ -234,10 +234,10 @@ namespace EIP.ServiceTest
             //更新班级信息
             Remo newRremoModel = new Remo();
             newRremoModel.RId = oldRremoModel.RId;
-            newRremoModel.Remo_id = 1003;
+            newRremoModel.Remo_id = "1003";
             service.SaveRemo(newRremoModel);
             service.ServiceContext.Commit();
-            Assert.IsTrue(newRremoModel.Remo_id == 1003);
+            Assert.IsTrue(newRremoModel.Remo_id == "1003");
 
             //创建一个旧的教师信息
             entor oldMentor = new entor();

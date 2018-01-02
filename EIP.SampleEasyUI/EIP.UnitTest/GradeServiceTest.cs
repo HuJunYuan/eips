@@ -95,13 +95,13 @@ namespace EIP.ServiceTest
 
             //创建一个班级
             Remo remoModel = new Remo();
-            remoModel.Remo_id = 10010;
+            remoModel.Remo_id = "10010";
             var remoService = this.GetService<IRemoService>();
             remoService.SaveRemo(remoModel);
             remoService.ServiceContext.Commit();
 
             //更新班级信息
-            remoModel.Remo_id = 10011;
+            remoModel.Remo_id = "10011";
             remoService.SaveRemo(remoModel);
             remoService.ServiceContext.Commit();
 
@@ -346,13 +346,13 @@ namespace EIP.ServiceTest
 
             //创建一个班级
             Remo remoModel = new Remo();
-            remoModel.Remo_id = 10010;
+            remoModel.Remo_id = "10010";
             var remoService = this.GetService<IRemoService>();
             remoService.SaveRemo(remoModel);
             remoService.ServiceContext.Commit();
 
             //更新班级信息
-            remoModel.Remo_id = 10011;
+            remoModel.Remo_id = "10011";
             remoService.SaveRemo(remoModel);
             remoService.ServiceContext.Commit();
 

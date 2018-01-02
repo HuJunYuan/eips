@@ -12,12 +12,12 @@ namespace EIP.Model.ViewModels
         /// <summary>
         /// 班级表标识ID
         /// </summary>
-       public int Rid { get; set; }
+        public int Rid { get; set; }
 
         /// <summary>
-        /// 班级ID
+        /// 班级名字
         /// </summary>
-        public int Remo_id { get; set; }
+        public string Remo_id { get; set; }
 
         ///<summary>
         ///男生人数

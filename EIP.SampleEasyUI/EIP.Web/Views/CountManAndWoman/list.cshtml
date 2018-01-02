@@ -11,7 +11,7 @@
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
             <th data-options="field:'RId',width:100,hidden:true">RId</th>
-            <th data-options="field:'Remo_id',width:100">班级代码</th>
+            <th data-options="field:'Remo_id',width:100">班级名称</th>
             <th data-options="field:'manCount',width:100">男生人数</th>
             <th data-options="field:'womanCount',width:100">女生人数</th>
             <th data-options="field:'totalCount',width:100">总人数</th>
@@ -20,7 +20,7 @@
 </table>
 
 <div id="grid_toolbar" style="padding:5px;height:auto">
-    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级代码" })
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级名称" , })
     <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
 </div>
 
@@ -31,6 +31,7 @@
 
 
 <script>
+
     function doSearch() {
         $('#grid_count_man_and_woman').datagrid('load', {
             Key: $('#Key').val()
