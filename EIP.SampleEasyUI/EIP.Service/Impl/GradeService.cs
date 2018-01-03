@@ -77,18 +77,20 @@ namespace EIP.Service
         /// <returns></returns>
         public List<GradeViewModel> QueryGradeUseCodeManager(QueryModel model, out int totalCount)
         {
-            List<Grade> grades = gradeRepository.QueryGrade(model, out totalCount);
+            //使用数据字典把男女性别替换
+            //List<Grade> grades = gradeRepository.QueryGrade(model, out totalCount);
 
-            List<GradeViewModel> gradeviewmodel = new List<GradeViewModel>();
+            //List<GradeViewModel> gradeviewmodel = new List<GradeViewModel>();
 
-            foreach(var item in grades)
-            {
-                GradeViewModel gvm = new GradeViewModel();
-                Mapper.Map<Grade, GradeViewModel>(item, gvm);
-                gvm.SexName = CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, item.Sex);
-                gradeviewmodel.Add(gvm);
-            }
+            // foreach(var item in grades)
+            // {
+            //     GradeViewModel gvm = new GradeViewModel();
+            //     Mapper.Map<Grade, GradeViewModel>(item, gvm);
+            //     gvm.SexName = CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, item.Sex);
+            //     gradeviewmodel.Add(gvm);
+            // }
 
+            List<GradeViewModel> gradeviewmodel = gradeRepository.QueryGradeWithRemo_id(model, out totalCount);
             return gradeviewmodel;
         }
 

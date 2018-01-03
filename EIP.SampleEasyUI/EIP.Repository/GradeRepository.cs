@@ -60,6 +60,32 @@ namespace EIP.Repository
         }
 
         /// <summary>
+        /// 查询学生信息表带班级名
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        public List<GradeViewModel> QueryGradeWithRemo_id(QueryModel model, out int totalCount)
+        {
+            //查询数据
+            var searchKey = (string.IsNullOrEmpty(model.Key) ? "%" : "%" + model.Key.Trim() + "%");
+            string sql = "select Grade.*,Remo_id from dbo.Grade,Remo where dbo.Grade.LogicDeleteFlag=0 and Remo.RId = Grade.RId and Grade.StudentName like @p0 ";
+
+            //分页查询必须要有排序字段
+            model.SortField = string.IsNullOrEmpty(model.SortField) ? "SId" : model.SortField;
+
+            var grades = this.LoadPageEntitiesBySql<GradeViewModel>(
+                       model.PageIndex,
+                       model.PageSize,
+                       out totalCount,
+                       sql,
+                       model.SortField + " " + model.SortOrder,
+                       searchKey
+                       ).ToList();
+
+            return grades;
+        }
+        /// <summary>
         /// 查询男生女生人数，班级总人数
         /// </summary>
         /// <param name="model">翻页查询基本条件</param>

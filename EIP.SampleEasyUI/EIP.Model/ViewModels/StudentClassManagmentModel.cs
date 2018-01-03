@@ -110,7 +110,13 @@ namespace EIP.Model.ViewModels
         /// <summary>
         /// 性别中文名
         /// </summary>
-        public string SexName;
+        public string SexName { get { return CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, this.Sex); } }
+
+        ///<summary>
+        ///所在班级名字
+        /// </summary>
+        ///
+        public string Remo_id { get; set; }
     }
     public class entorViewModel : entor
     {
