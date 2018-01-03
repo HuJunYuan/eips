@@ -82,5 +82,13 @@ namespace EIP.Service
         /// <returns>处理是否成功</returns>
         bool LogicDeleteMentorToRemo(entorToRemo model);
 
+        /// <summary>
+        /// 多行删除班级信息
+        ///    
+        /// 根据 id 编号判断是否存在这条数据，根据相应的结果进行处理
+        /// </summary>
+        /// <param name="model">信息    信息</param>
+        /// <returns>处理是否成功</returns>
+        void MultiLineRemove(int[] ids);
     }
 }

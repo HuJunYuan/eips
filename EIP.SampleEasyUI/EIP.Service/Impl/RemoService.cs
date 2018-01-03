@@ -127,6 +127,32 @@ namespace EIP.Service
             return flag;
         }
 
+        /// <summary>
+        /// 多行删除班级信息
+        ///    
+        /// 根据 id 编号判断是否存在这条数据，根据相应的结果进行处理
+        /// </summary>
+        /// <param name="model">信息    信息</param>
+        public void MultiLineRemove(int[] ids)
+        {
+            foreach(var id in ids)
+            {
+                // 检查是否存在这条数据
+                var entity = this.Find<Remo>(id);
+
+                //如果存在执行删除操作，否则不执行
+                if (entity != null)
+                {
+                    var remoService = GetService<IRemoService>();
+                    //执行删除操作
+                    remoService.LogicDelete<Remo>(id);
+                    ServiceContext.Commit();
+                }
+            }
+           
+        }
+
+        
 
         #endregion
 
@@ -182,6 +208,7 @@ namespace EIP.Service
             return flag;
         }
 
+       
         /// <summary>
         /// 修改班级任课教师信息
         /// 根据 id 编号调用相应的方法进行处理

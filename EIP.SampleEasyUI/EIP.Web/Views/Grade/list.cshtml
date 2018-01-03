@@ -6,7 +6,7 @@
 }
 
 <table id="grid_grade" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_grade',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
+       data-options="rownumbers:true,pagination:true,url:'query_grade',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
@@ -58,17 +58,55 @@
         $('#dlg_grade').dialog("open").dialog('refresh', App.getUrl('/Grade/add'));
     }
 
-    // 删除
+    @*// 删除
     function doDel() {
-        var row = $('#grid_grade').datagrid('getSelected');
-        if (!row) {
+        debugger;
+        var rows = $('#grid_grade').datagrid('getChecked');
+        if (!rows) {
             App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
             return false;
         }
 
+        //获取庶删除的ID
+        var ids = new Array();
+        for (var i = 0; i < rows.length;i++)
+        {
+            ids.push(rows[i].SId);
+        }
+        bathremove
         window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
             function () {
                 App.action(App.getUrl("/Grade/remove"), { SId: row.SId },
+                function () {
+                    $('#grid_grade').datagrid('reload');
+                });
+        });
+
+
+    }*@
+
+
+
+
+        // 删除
+    function doDel() {
+        debugger;
+        var rows = $('#grid_grade').datagrid('getChecked');
+        if (!rows) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        //获取要删除的ID
+        var ids = new Array();
+        for (var i = 0; i < rows.length;i++)
+        {
+            ids.push(rows[i].SId);
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("/Grade/bathremove"), ids,
                 function () {
                     $('#grid_grade').datagrid('reload');
                 });

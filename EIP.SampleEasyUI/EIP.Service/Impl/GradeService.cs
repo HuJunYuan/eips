@@ -255,6 +255,18 @@ namespace EIP.Service
 
             return flag;
         }
+
+
+
+        public void Bathremove(int[] ids)
+        {
+            var gradeservice = this.GetService<IGradeService>();
+
+            foreach (var id in ids)
+            {
+                gradeservice.LogicDelete<Grade>(id);
+            }
+        }
         #endregion
 
         #region private method

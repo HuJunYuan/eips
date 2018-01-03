@@ -143,5 +143,15 @@ namespace EIP.Web.Controllers
 
             return Json(null);
         }
+
+        [ActionName("bathremove")]
+        public JsonResult Bathremove(int[] ids)
+        {
+            var gradeService = this.GetService<IGradeService>();
+            gradeService.Bathremove(ids);
+         
+            ShowMessage("I10030");
+            return Json(null);
+        }
     }
 }

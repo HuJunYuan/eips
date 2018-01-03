@@ -143,5 +143,21 @@ namespace EIP.Web.Controllers
 
             return Json(null);
         }
+
+        /// 多行删除班级
+        /// </summary>
+        /// <param name="rId">班级ID</param>
+        /// <returns>返回操作结果</returns>
+        [ActionName("multi_line_remove")]
+        public JsonResult MultiLineRemove(int[] ids)
+        {
+            var remoService = this.GetService<IRemoService>();
+            remoService.MultiLineRemove(ids);
+            ShowMessage("I10030");
+            return Json(null);
+        }
+
+
+        
     }
 }

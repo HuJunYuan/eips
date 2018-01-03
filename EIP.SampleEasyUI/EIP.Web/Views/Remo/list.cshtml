@@ -6,7 +6,7 @@
 }
 
 <table id="grid_remo" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_remo',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
+       data-options="rownumbers:true,pagination:true,url:'query_remo',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
@@ -14,9 +14,7 @@
             <th data-options="field:'Remo_id',width:100">班级名</th>
             <th data-options="field:'MasterNum',width:100">班主任教师代码</th>
             <!--<th data-options="field:'CId',width:100">所属学院代码</th>-->
-            <th data-options="field:'Other',width:100">
-                备注
-            </th>
+            <th data-options="field:'Other',width:100">备注</th>
         </tr>
     </thead>
 </table>
@@ -52,7 +50,7 @@
         $('#dlg_remo').dialog("open").dialog('refresh', App.getUrl('/Remo/add'));
     }
 
-    // 删除
+    @*// 删除
     function doDel() {
         var row = $('#grid_remo').datagrid('getSelected');
         if (!row) {
@@ -63,6 +61,31 @@
         window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
             function () {
                 App.action(App.getUrl("/Remo/remove"), { RId: row.RId },
+                function () {
+                    $('#grid_remo').datagrid('reload');
+                });
+        });
+
+
+    }*@
+
+    // 多行删除
+    function doDel() {
+        var rows = $('#grid_remo').datagrid('getChecked');
+        if (!rows) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        
+        var ids = new Array();
+        for (var i = 0; i < rows.length; i++)
+        {
+            ids.push(rows[i].RId);
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("/Remo/multi_line_remove"), ids,
                 function () {
                     $('#grid_remo').datagrid('reload');
                 });
