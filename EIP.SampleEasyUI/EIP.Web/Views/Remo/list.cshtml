@@ -11,7 +11,7 @@
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
             <th data-options="field:'RId',width:100">班级编号</th>
-            <th data-options="field:'Remo_id',width:100">班级名</th>
+            <th data-options="field:'Remo_id',width:100">班级名称</th>
             <th data-options="field:'MasterNum',width:100">班主任教师代码</th>
             <!--<th data-options="field:'CId',width:100">所属学院代码</th>-->
             <th data-options="field:'Other',width:100">备注</th>
@@ -22,7 +22,7 @@
 <div id="grid_toolbar" style="padding:5px;height:auto">
     <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
     <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
-    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级代码" })
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级名称" })
     <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
 </div>
 
@@ -90,7 +90,6 @@
                     $('#grid_remo').datagrid('reload');
                 });
         });
-
 
     }
 

@@ -22,17 +22,14 @@
     </div>
 
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.RId, new TextBox() { Label = "所在班级编号：", Style = "width:90%;" })
+        @*@Html.CLTextBoxFor(p => p.RId, new TextBox() { Label = "所在班级编号：", Style = "width:90%;" })*@
+        @HtmlCLComboBoxFor(p => p.Remo_id, new ComboBox() { Label = "所在班级名称：", Style = "width:90%"})
     </div>
 
     <div class="form-item">
         @Html.CLComboBoxFor(p => p.Sex, new ComboBox() { Label = "学生性别 ：", ParentCode = CommonConstant.CODETYPE_SEX })
     </div>
 
-
-    <div class="form-item">
-        @Html.CLDatetimeBoxFor(p => p.Birthday, new DatetimeBox() { Label = "生日  ：", Style = "width:90%;" })
-    </div>
 
 
     <div class="form-item">

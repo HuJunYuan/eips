@@ -79,7 +79,7 @@ namespace EIP.Web.Controllers
             catch (CLApplicationException ex)
             {
                 //修改时若发生异常则提示异常信息，并关闭修改界面
-                this.ShowAppErrorMessage(ex.Message, MessageFuncOption.CloseBrowserWindow);
+                this.ShowAppErrorMessage(ex.Message);
             }
 
             return View("~/views/grade/form.cshtml", entity);
@@ -104,7 +104,7 @@ namespace EIP.Web.Controllers
             catch (CLApplicationException ex)
             {
                 //修改时若发生异常则提示异常信息，并关闭修改界面
-                this.ShowAppErrorMessage(ex.Message, MessageFuncOption.CloseBrowserWindow);
+                this.ShowAppErrorMessage(ex.Message);
             }
 
             return View("~/views/grade/detail.cshtml", entity);
