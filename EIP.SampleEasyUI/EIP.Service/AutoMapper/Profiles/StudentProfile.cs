@@ -70,6 +70,9 @@ namespace EIP.Service.AutoMapper.Profiles
             CreateMap<Grade, GradeViewModel>()
                 .ForMember(des => des.SexName, map => map.Ignore());
 
+            //CreateMap<Student, StudentViewModel>()
+            //     .ForMember(viewStu => viewStu.Sex, stu => stu.MapFrom(sou => CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, sou.Sex)))
+
 
 
 
