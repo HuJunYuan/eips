@@ -6,12 +6,12 @@
 }
 
 <table id="grid_remo" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,pagination:true,url:'query_remo',toolbar:'#grid_toolbar',onClickRow:doDetail">
+       data-options="rownumbers:true,pagination:true,url:'query_remo',toolbar:'#grid_toolbar',onDblClickRow:doDetail,onClickRow:doSingleDetail">
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
             <th data-options="field:'RId',width:100">班级编号</th>
-            <th data-options="field:'Remo_id',width:100">班级名称</th>
+            <th data-options="field:'Remo_id',width:100,editor:{type:'text'}">班级名称</th>
             <th data-options="field:'MasterNum',width:100">班主任教师代码</th>
             <!--<th data-options="field:'CId',width:100">所属学院代码</th>-->
             <th data-options="field:'Other',width:100">备注</th>
@@ -69,6 +69,8 @@
 
     }*@
 
+
+
     // 多行删除
     function doDel() {
         var rows = $('#grid_remo').datagrid('getChecked');
@@ -76,7 +78,7 @@
             App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
             return false;
         }
-        
+
         var ids = new Array();
         for (var i = 0; i < rows.length; i++)
         {
@@ -93,13 +95,41 @@
 
     }
 
-    // 打开编辑状态详情
+    // 打开编辑状态详情 
     function doDetail() {
         var row = $('#grid_remo').datagrid('getSelected');
         if (row) {
             $('#dlg_remo').dialog("open").dialog('refresh', App.getUrl('/Remo/edit?RId=' + row.RId));
         }
 
+    }
+
+    //打开单个项目的编辑 beginEdit
+    var rowIndexs = -1;
+    var editData
+    function doSingleDetail(rowIndex, field, value) {
+        $('#grid_remo').datagrid('beginEdit', rowIndex);
+        if (rowIndexs != -1) {
+            endEdit();
+            debugger;
+        }
+        rowIndexs = rowIndex;
+    }
+
+    function endEdit() {
+        $('#grid_remo').datagrid('endEdit', rowIndexs);
+        onAfterEdit();
+        
+    }
+
+    function onAfterEdit() {
+        debugger;
+        editData = $('#grid_remo').datagrid('getRows')[rowIndexs];
+        App.action(App.getUrl("/Remo/save"), editData,
+            function (data) {
+                $('#grid_remo').datagrid('reload');
+                rowIndexs = -1;
+            });
     }
 </script>
 
