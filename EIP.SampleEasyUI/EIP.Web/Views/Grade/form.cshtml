@@ -18,32 +18,35 @@
         @Html.CLTextBoxFor(p => p.StudentName, new TextBox() { Label = "学生姓名：", Style = "width:90%;" })
     </div>
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.StudentId, new TextBox() { Label = "学生学号：", Style = "width:90%;" })
+        @Html.CLTextBoxFor(p => p.StudentId, new TextBox() { Label = "学生学号：", Style = "width:90%;", ValidType = new ValidateType() { Extension = "maxLenth:10" } })
     </div>
 
     <div class="form-item">
-        @*@Html.CLTextBoxFor(p => p.RId, new TextBox() { Label = "所在班级编号：", Style = "width:90%;" })*@
-        @HtmlCLComboBoxFor(p => p.Remo_id, new ComboBox() { Label = "所在班级名称：", Style = "width:90%"})
+        @Html.CLTextBoxFor(p => p.RId, new TextBox() { Label = "所在班级编号：", Style = "width:90%;" })
+        @*@HtmlCLComboBoxFor(p => p.Remo_id, new ComboBox() { Label = "所在班级名称：", Style = "width:90%" })*@
     </div>
 
     <div class="form-item">
         @Html.CLComboBoxFor(p => p.Sex, new ComboBox() { Label = "学生性别 ：", ParentCode = CommonConstant.CODETYPE_SEX })
     </div>
 
-
-
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.Email, new TextBox() { Label = "电子邮件 ：", Style = "width:90%;" })
+        @Html.CLDatetimeBoxFor(p => p.Birthday, new DatetimeBox() { Label = "生日  ：", Style = "width:90%;" })
     </div>
 
 
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.Hometown, new TextBox() { Label = "户籍所在地：", Style = "width:90%;" })
+        @Html.CLTextBoxFor(p => p.Email, new TextBox() { Label = "电子邮件 ：", Style = "width:90%;", ValidType = new ValidateType() { Email = true } })
     </div>
 
 
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.Phone_number, new TextBox() { Label = "电话号码 ：", Style = "width:90%;" })
+        @Html.CLTextBoxFor(p => p.Hometown, new TextBox() { Label = "户籍所在地：", Style = "width:90%;", ValidType = new ValidateType() { Extension = "existChinese:true" } })
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.Phone_number, new TextBox() { Label = "手机号码 ：", Style = "width:90%;", ValidType = new ValidateType() { Extension = "mobile:true" } })
     </div>
 
 
@@ -66,7 +69,6 @@
 
     //保存
     function save() {
-
         // 表单验证
         if (!validate()) return;
 

@@ -18,12 +18,12 @@
         -->
 
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.Remo_id, new TextBox() { Label = "班级名称 ：", Style = "width:90%;" })
+        @Html.CLTextBoxFor(p => p.Remo_id, new TextBox() { Label = "班级名称 ：", Style = "width:90%;", ValidType = new ValidateType() { MaxLength = 10 } })
     </div>
 
 
     <div class="form-item">
-        @Html.CLTextBoxFor(p => p.MasterNum, new TextBox() { Label = "班主任代码 ：", Style = "width:90%;" })
+        @Html.CLTextBoxFor(p => p.MasterNum, new TextBox() { Label = "班主任代码 ：", Style = "width:90%;", ValidType = new ValidateType() { MaxLength = 20 } })
     </div>
 
 

@@ -69,7 +69,7 @@ namespace EIP.Repository
         {
             //查询数据
             var searchKey = (string.IsNullOrEmpty(model.Key) ? "%" : "%" + model.Key.Trim() + "%");
-            string sql = "select Grade.*,Remo_id from dbo.Grade,Remo where dbo.Grade.LogicDeleteFlag=0 and Remo.RId = Grade.RId and Grade.StudentName like @p0 ";
+            string sql = "select Grade.*,Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag=0  and Grade.StudentName like @p0 ";
 
             //分页查询必须要有排序字段
             model.SortField = string.IsNullOrEmpty(model.SortField) ? "SId" : model.SortField;
