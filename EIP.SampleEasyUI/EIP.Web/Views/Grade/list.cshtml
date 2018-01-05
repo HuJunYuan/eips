@@ -5,7 +5,7 @@
 @section head{
 }
 
-<table id="grid_grade" class="easyui-datagrid" fit="true"
+@*<table id="grid_grade" class="easyui-datagrid" fit="true"
        data-options="rownumbers:true,pagination:true,url:'query_grade',toolbar:'#grid_toolbar',onClickRow:doDetail">
     <thead>
         <tr>
@@ -26,7 +26,9 @@
 
         </tr>
     </thead>
-</table>
+</table>*@
+
+<table id="grid_grade" class="easyui-datagrid" fit="true"></table>
 
 <div id="grid_toolbar" style="padding:5px;height:auto">
     <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
@@ -55,6 +57,34 @@
 </div>
 
 <script>
+    //生成表格
+    $('#grid_grade').datagrid({
+        url: 'query_grade',
+        rownumbers: true,
+        pagination: true,
+        toolbar: '#grid_toolbar',
+        onClickRow: doDetail,
+        columns: [[
+            { field:'ck', checkbox:true},
+            {field:'SId', width:100, hidden:true,title:'SId'},
+            {field:'StudentId', width:100,title:'学生学号'},
+            {field: 'StudentName', width: 100, title:'学生姓名'},
+            {field: 'RId', width: 100, hidden: true, title:'所在班级编号'},
+            {field: 'Remo_id', width: 100,title:'所在班级'},
+            {field: 'SexName', width: 100, title:'性别'},
+            {field: 'Sex', width: 100, hidden: true,title:'性别'},
+            {field: 'Birthday', width: 100, formatter: formDate,title:'出生日期'},
+            {field: 'Email', width: 100,title:'电子邮件'},
+            {field: 'Hometown', width: 100,title:'户籍所在地'},
+            {field: 'Phone_number', width: 100,title:'电话号码'},
+            { field: 'Other', width: 100,title:'备注'}
+        ]]
+    });
+
+
+
+
+
     function formDate(value, row, index)
     {
         return Date.format(value, "yyyy年MM月dd日");
