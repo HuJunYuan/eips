@@ -11,13 +11,13 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
 using System.Data;
-
 using CoreLand.Framework;
 using CoreLand.Framework.Data;
 using CoreLand.Framework.Code;
 using EIP.Model;
 using EIP.Entity;
 using EIP.Model.ViewModels;
+using System.Text.RegularExpressions;
 namespace EIP.Repository
 {
     /// <summary>
@@ -71,7 +71,7 @@ namespace EIP.Repository
             var searchKey = (string.IsNullOrEmpty(model.Key) ? "StudentName?%" :  model.Key.Trim() );
             string[] str = searchKey.Split('?');
             str[1] = '%' + str[1]+'%';
-            if (str[1] == "%%%")
+            if (Regex.IsMatch(str[1],"(%{2,}?)"))
                 str[1] = "%";
 
             //去除特殊字符
@@ -168,7 +168,7 @@ namespace EIP.Repository
         }
         public static string EncodeStr(string str)
         {
-            str = str.Replace("’", "'");
+            str = str.Replace("'", "’");
             str = str.Replace("<", "");
             str = str.Replace(">", "");
             str = str.Replace("\n", "");
@@ -176,7 +176,12 @@ namespace EIP.Repository
             str = str.Replace("\\", "");
             str = str.Replace("@", "");
             str = str.Replace("&", "");
-
+            str = str.Replace("=", "");
+            str = str.Replace("-", "");
+            str = str.Replace("+", "");
+            str = str.Replace("|", "");
+            str = str.Replace("$", "");
+            str = str.Replace("!", "");
             return str;
         }
     }
