@@ -73,6 +73,9 @@ namespace EIP.Repository
             str[1] = '%' + str[1]+'%';
             if (str[1] == "%%%")
                 str[1] = "%";
+
+            //去除特殊字符
+            str[0] = EncodeStr(str[0]);
             searchKey = str[1];
             string sql = "select Grade.*,Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag=0  and Grade."+str[0]+ " like "+"@p0";
 
@@ -162,6 +165,19 @@ namespace EIP.Repository
             var list = this.ExceuteProcedure<CountManAndWoman>("[dbo].[COUNT_MEN_AND_WOMAN]", model.PageIndex,model.PageSize).ToList();
             totalCount = this.ExceuteProcedure<CountManAndWoman>("[dbo].[GET_TOTALCOUNT]").ToList().Count();
             return list;
+        }
+        public static string EncodeStr(string str)
+        {
+            str = str.Replace("’", "'");
+            str = str.Replace("<", "");
+            str = str.Replace(">", "");
+            str = str.Replace("\n", "");
+            str = str.Replace("%", "");
+            str = str.Replace("\\", "");
+            str = str.Replace("@", "");
+            str = str.Replace("&", "");
+
+            return str;
         }
     }
 }
