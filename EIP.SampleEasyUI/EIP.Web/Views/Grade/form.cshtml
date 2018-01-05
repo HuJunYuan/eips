@@ -23,8 +23,9 @@
 
     <div class="form-item">
         @Html.CLTextBoxFor(p => p.RId, new TextBox() { Label = "所在班级编号：", Style = "width:90%;" })
-        @*@HtmlCLComboBoxFor(p => p.Remo_id, new ComboBox() { Label = "所在班级名称：", Style = "width:90%" })*@
+        <a id="RIdbox" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-application_cascade'" onclick="clickRemo()"></a>
     </div>
+
 
     <div class="form-item">
         @Html.CLComboBoxFor(p => p.Sex, new ComboBox() { Label = "学生性别 ：", ParentCode = CommonConstant.CODETYPE_SEX })
@@ -55,6 +56,17 @@
     </div>
 
 </form>
+
+<div id="dlg_selectRemo" class="easyui-dialog" title="班级表选择" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons_remo'">
+</div>
+
+<div id="dlg_buttons_remo" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="RemoSave()">确定</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="RemoCloseBox()">关闭</a>
+    </div>
+</div>
 <script type="text/javascript">
 
     function validate() {
@@ -89,5 +101,9 @@
                 $('#dlg_grade').dialog("close");
                 $('#grid_grade').datagrid('reload');
             });
+    }
+
+    function clickRemo() {
+        $('#dlg_selectRemo').dialog("open").dialog('refresh', App.getUrl('/Grade/selectRemo'));
     }
 </script>

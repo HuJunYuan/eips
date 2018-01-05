@@ -33,6 +33,13 @@
     <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
     @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入学生姓名" })
     <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+
+    <input id="SearchBatch" class="easyui-searchbox" style="width:300px" data-options="searcher:searchSelect,prompt:'Please Input Value',menu:'#mm'"/>
+    <div id="mm" style="width:120px">
+        <div data-options="name:'StudentName',iconCls:'icon-ok'">学生姓名</div>
+        <div data-options="name:'StudentId'">学生学号</div>
+    </div>
+
 </div>
 
 <div id="dlg_grade" class="easyui-dialog" title="学生信息表编辑" style="width: 400px; height: 400px; padding: 10px"
@@ -56,7 +63,7 @@
 
     function doSearch() {
         $('#grid_grade').datagrid('load', {
-            Key: $('#Key').val()
+            Key: 'StudentName?'+$('#Key').val()
         });
     }
 
@@ -93,6 +100,13 @@
     }*@
 
 
+    function searchSelect(value, name) {
+        alert(value + ":" + name)
+
+        $('#grid_grade').datagrid('load', {
+            Key: name+'?'+value
+        });
+    }
 
 
         // 删除

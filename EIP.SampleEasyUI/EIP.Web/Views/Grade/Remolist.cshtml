@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+
+<table id="grid_remo" class="easyui-datagrid" fit="true"
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'/Remo/query_remo',toolbar:'#grid_toolbar'">
+    <thead>
+        <tr>
+            <th data-options="field:'ck',checkbox:true"></th>
+            <th data-options="field:'RId',width:100">班级编号</th>
+            <th data-options="field:'Remo_id',width:100">班级名称</th>
+        </tr>
+    </thead>
+</table>
+
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级名称" })
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+</div>
+
+
+<script>
+    function doSearch() {
+        $('#grid_remo').datagrid('load', {
+            Key: $('#Key').val()
+        });
+    }
+    function RemoSave() {
+        debugger;
+        var row = $('#grid_remo').datagrid('getSelected');
+        $("#RId").textbox("setText", row.RId);
+        $("input[name='RId']").val(row.RId);
+        $('#dlg_selectRemo').dialog("close");
+    }
+    function RemoCloseBox() {
+        $('#dlg_selectRemo').dialog("close");
+    }
+</script>
+

@@ -49,6 +49,18 @@ namespace EIP.Web.Controllers
             return Json(result);
         }
 
+
+        /// <summary>
+        /// 班级信息表列表
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("selectRemo")]
+        public ActionResult selectRemo()
+        {
+            return View("~/views/grade/Remolist.cshtml");
+        }
+
+
         /// <summary>
         /// 学生信息表新增视图
         /// </summary>

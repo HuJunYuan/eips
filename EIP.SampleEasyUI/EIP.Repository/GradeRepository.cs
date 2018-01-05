@@ -68,8 +68,13 @@ namespace EIP.Repository
         public List<GradeViewModel> QueryGradeWithRemo_id(QueryModel model, out int totalCount)
         {
             //查询数据
-            var searchKey = (string.IsNullOrEmpty(model.Key) ? "%" : "%" + model.Key.Trim() + "%");
-            string sql = "select Grade.*,Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag=0  and Grade.StudentName like @p0 ";
+            var searchKey = (string.IsNullOrEmpty(model.Key) ? "StudentName?%" :  model.Key.Trim() );
+            string[] str = searchKey.Split('?');
+            str[1] = '%' + str[1]+'%';
+            if (str[1] == "%%%")
+                str[1] = "%";
+            searchKey = str[1];
+            string sql = "select Grade.*,Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag=0  and Grade."+str[0]+ " like "+"@p0";
 
             //分页查询必须要有排序字段
             model.SortField = string.IsNullOrEmpty(model.SortField) ? "SId" : model.SortField;
