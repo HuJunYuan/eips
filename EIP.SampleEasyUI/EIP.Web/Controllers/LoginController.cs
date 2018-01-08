@@ -38,6 +38,8 @@ namespace EIP.Web.Controllers
 
             return View("~/Views/Home/Index.cshtml");
         }
+
+
         [OperationLog("用户登录")]
         public JsonResult Login(string userName, string password)
         {

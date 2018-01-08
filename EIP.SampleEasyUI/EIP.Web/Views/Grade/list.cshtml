@@ -30,7 +30,7 @@
 
 <table id="grid_grade" class="easyui-datagrid" fit="true"></table>
 
-<div id="grid_toolbar" style="padding:5px;height:auto">
+<div id="grid_gradetoolbar" style="padding:5px;height:auto">
     <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
     <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
     @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入学生姓名" })
@@ -59,10 +59,10 @@
 <script>
     //生成表格
     $('#grid_grade').datagrid({
-        url: 'query_grade',
+        url: '/Grade/query_grade',
         rownumbers: true,
         pagination: true,
-        toolbar: '#grid_toolbar',
+        toolbar: '#grid_gradetoolbar',
         onClickRow: doDetail,
         columns: [[
             { field:'ck', checkbox:true},

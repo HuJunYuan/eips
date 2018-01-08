@@ -6,7 +6,7 @@
 }
 
 <table id="grid_remo" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,pagination:true,url:'query_remo',toolbar:'#grid_toolbar',onDblClickRow:doDetail,onClickRow:doSingleDetail">
+       data-options="rownumbers:true,pagination:true,url:'/Remo/query_remo',toolbar:'#grid_remotoolbar',onDblClickRow:doDetail,onClickRow:doSingleDetail">
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
@@ -19,7 +19,7 @@
     </thead>
 </table>
 
-<div id="grid_toolbar" style="padding:5px;height:auto">
+<div id="grid_remotoolbar" style="padding:5px;height:auto">
     <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
     <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
     @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级名称" })

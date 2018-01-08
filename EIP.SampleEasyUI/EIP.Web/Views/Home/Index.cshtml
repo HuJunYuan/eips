@@ -8,29 +8,46 @@
     <link href="~/Content/css/index.css" rel="stylesheet" />
 }
 
-    <div class="shortcut">
-        <p>
-            <a href="/AppCodeMaster/codeTree" target="_blank">CodeMaster配置</a>
-        </p>
-        <p>
-            <a href="/AppConfig/list" target="_blank">AppSetting配置</a>
-        </p>
-        <p>
-            <a href="/CountManAndWoman/list" target="_blank">CountManAndWoman</a>
-        </p>
-        <!--<p>
+<div class="shortcut">
+    <p>
+        <a href="/AppCodeMaster/codeTree" target="_blank">CodeMaster配置</a>
+    </p>
+    <p>
+        <a href="/AppConfig/list" target="_blank">AppSetting配置</a>
+    </p>
+    <p>
+        <a href="/CountManAndWoman/list" target="_blank">CountManAndWoman</a>
+    </p>
+    <!--<p>
         <a href="~/Classroom/list" target="_blank">教室表</a>
     </p>
     <p>
         <a href="~/College/list" target="_blank">学院表</a>
     </p>-->
-        <p>
-            <a href="~/entor/list" target="_blank">教师表</a>
-        </p>
-        <p>
-            <a href="~/Grade/list" target="_blank">学生表</a>
-        </p>
-        <p>
-            <a href="~/Remo/list" target="_blank">班级表</a>
-        </p>
+    <p>
+        <a href="~/entor/list" target="_blank">教师表</a>
+    </p>
+    <p>
+        <a href="~/Grade/list" target="_blank">学生表</a>
+    </p>
+    <p>
+        <a href="~/Remo/list" target="_blank">班级表</a>
+    </p>
+</div>
+
+<div id="tabs" class="easyui-tabs" style="width:1000px;height:500px;">
+    <div title="学生" data-options="href:'/Grade/list'">
+        <a href="#" width="100%" onclick="doselect()"></a>
     </div>
+    <div title="教师"  data-options="href:'/entor/list'">
+        <a href="#" width="100%" onclick="doselect()"></a>
+    </div>
+    <div title="班级" data-options="href:'/Remo/list'">
+        <a href="#" width="100%" onclick="doselect()"></a>
+    </div>
+</div>
+
+<script>
+
+    
+</script>
