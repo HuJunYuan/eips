@@ -30,8 +30,8 @@
     }
     function RemoSave() {
         var row = $('#grid_remo').datagrid('getSelected');
-        $("#RId").textbox("setText", row.RId);
-        $("input[name='RId']").val(row.RId);
+        $("#RIdSelected").text("setText", row.RId);
+        $("input[name='RIdSelected']").val(row.RId);
         $('#dlg_selectRemo').dialog("close");
     }
     function RemoCloseBox() {

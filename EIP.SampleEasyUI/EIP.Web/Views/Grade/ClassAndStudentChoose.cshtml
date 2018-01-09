@@ -1,0 +1,166 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+<div id="classChoose" style="width:100%; height:80px;">
+    <span style="font:200">选择班级:&nbsp;&nbsp;</span><input type="text" name="RIdSelected" />
+
+    <a href="#" class="easyui-linkbutton" iconcls="icon-application_cascade" onclick="doSelectClass()"></a>
+
+</div>
+
+<div style="width: 100%; height: 300px;">
+    <div id="studentSelect" style="width:43%;height:400px;float:left;border:1px groove lightblue;">
+        <table id="grid_select_grade" class="easyui-datagrid" fit="true"
+               data-options="rownumbers:true,pagination:true,url:'/Grade/query_grade'">
+            <thead>
+                <tr>
+                    <th data-options="field:'ck',checkbox:true"></th>
+                    <th data-options="field:'SId',width:100,hidden:true">SId</th>
+                    <th data-options="field:'StudentId',width:100">学生学号</th>
+                    <th data-options="field:'StudentName',width:100">学生姓名</th>
+                    <th data-options="field:'RId',width:100,hidden:true">所在班级编号</th>
+                    <th data-options="field:'Remo_id',width:100,hidden:true">所在班级</th>
+                    <th data-options="field:'SexName',width:100,hidden:true">性别</th>
+                    <th data-options="field:'Sex',width:100,hidden:true">性别</th>
+                    <th data-options="field:'Birthday',width:100,formatter:formDate,hidden:true">出生日期</th>
+                    <th data-options="field:'Email',width:100,hidden:true">电子邮件</th>
+                    <th data-options="field:'Hometown',width:100,hidden:true">户籍所在地</th>
+                    <th data-options="field:'Phone_number',width:100,hidden:true">电话号码</th>
+                    <th data-options="field:'Other',width:100,hidden:true">备注
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="chooseButton" style="width:10%;height:400px;float:left; ">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-arrow_right" plain="true" style="position:relative;left:20px; top:120px;" onclick="doAddSelect()">添加</a><br/>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="doDelSelect()" style="position:relative;left:20px;top:130px;">删除</a>
+    </div>
+
+    <div id="Stuselected" style="width:43%;height:400px;float:left;border:1px groove lightblue;">
+        <table id="grid_grade_selected" class="easyui-datagrid" fit="true"
+               data-options="rownumbers:true,pagination:true">
+            <thead>
+                <tr>
+                    <th data-options="field:'ck',checkbox:true"></th>
+                    <th data-options="field:'SId',width:100,hidden:true">SId</th>
+                    <th data-options="field:'StudentId',width:100">学生学号</th>
+                    <th data-options="field:'StudentName',width:100">学生姓名</th>
+                    <th data-options="field:'RId',width:100,hidden:true">所在班级编号</th>
+                    <th data-options="field:'Remo_id',width:100">所在班级</th>
+                    <th data-options="field:'SexName',width:100,hidden:true">性别</th>
+                    <th data-options="field:'Sex',width:100,hidden:true">性别</th>
+                    <th data-options="field:'Birthday',width:100,formatter:formDate,hidden:true">出生日期</th>
+                    <th data-options="field:'Email',width:100,hidden:true">电子邮件</th>
+                    <th data-options="field:'Hometown',width:100,hidden:true">户籍所在地</th>
+                    <th data-options="field:'Phone_number',width:100,hidden:true">电话号码</th>
+                    <th data-options="field:'Other',width:100,hidden:true">备注
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div id="dlg_selectRemo" class="easyui-dialog" title="班级表选择" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons_remo'">
+</div>
+
+<div id="dlg_buttons_remo" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="RemoSave()">确定</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="RemoCloseBox()">关闭</a>
+    </div>
+</div>
+
+<script>
+    //添加学生数据到右表
+    function doAddSelect() {
+        var rows = $('#grid_select_grade').datagrid('getChecked');
+        debugger;
+        if (!rows) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        //验证有无重复数据
+        var hadrows = $('#grid_grade_selected').datagrid("getRows");
+        for (var i = 0; i < rows.length; i++) {
+            for (var j = 0; j < hadrows.length; j++) {
+                if (rows[i].SId == hadrows[j].SId) {
+                    rows[i].SId = -1;
+                }
+            }
+        }
+
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i].SId != -1) {
+                $('#grid_grade_selected').datagrid("appendRow", {
+                    SId: rows[i].SId,
+                    StudentId: rows[i].StudentId,
+                    StudentName: rows[i].StudentName,
+                    RId: rows[i].RId,
+                    Remo_id: rows[i].Remo_id,
+                    SexName: rows[i].SexName,
+                    Sex: rows[i].Sex,
+                    Birthday: rows[i].Birthday,
+                    Email: rows[i].Email,
+                    Hometown: rows[i].Hometown,
+                    Phone_number: rows[i].Phone_number,
+                    Other: rows[i].Other
+                }
+                )
+            };
+
+        }
+        $('#grid_select_grade').datagrid('reload');
+    }
+
+    //删除右表选择的数据
+    function doDelSelect() {
+        var rows = $('#grid_grade_selected').datagrid('getChecked');
+        if (!rows) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        for (var j = rows.length; j >= 0; j--){
+            var row = $('#grid_grade_selected').datagrid('getSelected');
+            if (row) {
+                var rowIndex = $('#grid_grade_selected').datagrid('getRowIndex', row);
+                $('#grid_grade_selected').datagrid('deleteRow', rowIndex);
+                $('#grid_grade_selected').datagrid('reload');
+            }
+        }
+    }
+
+
+    //打开班级选择页面
+    function doSelectClass() {
+        $('#dlg_selectRemo').dialog("open").dialog('refresh', App.getUrl('/Grade/selectRemoForClassAndStudent'));
+    }
+
+    //保存编辑
+    //保存
+    function saveClassAndStudentsList() {
+
+        // 表单数据提交
+        var rows = $('#grid_grade_selected').datagrid("getRows");
+        if ($(" input[ name='RIdSelected' ] ").val() != '') {
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].RId = $(" input[ name='RIdSelected' ] ").val();
+                App.action(App.getUrl("/Grade/save"), rows[i]);
+            }
+        }
+        $('#dlg_selectClassAndStudents').dialog("close");
+        $('#grid_grade').datagrid('reload');
+    }
+    //关闭页面
+    function closeClassAndStudentsList() {
+        $('#dlg_selectClassAndStudents').dialog("close");
+    }
+
+
+</script>
+

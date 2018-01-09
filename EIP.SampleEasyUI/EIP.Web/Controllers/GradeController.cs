@@ -60,6 +60,26 @@ namespace EIP.Web.Controllers
             return View("~/views/grade/Remolist.cshtml");
         }
 
+        /// <summary>
+        /// 班级信息表列表for学生和班级
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("selectRemoForClassAndStudent")]
+        public ActionResult selectRemoForClassAndStudent()
+        {
+            return View("~/views/grade/RemolistForClassAndStuChoose.cshtml");
+        }
+        
+
+        /// <summary>
+        /// 班级学生信息表列表
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("ClassAndStudentChoose")]
+        public ActionResult ClassAndStudentChoose()
+        {
+            return View("~/views/grade/ClassAndStudentChoose.cshtml");
+        }
 
         /// <summary>
         /// 学生信息表新增视图
@@ -134,7 +154,7 @@ namespace EIP.Web.Controllers
 
             if (gradeService.SaveGrade(model)>0)
             {
-                ShowMessage("I10010");
+                //ShowMessage("I10010");
             }
             return Json(null);
         }

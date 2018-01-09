@@ -6,27 +6,27 @@
 }
 
 @*<table id="grid_grade" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,pagination:true,url:'query_grade',toolbar:'#grid_toolbar',onClickRow:doDetail">
-    <thead>
-        <tr>
-            <th data-options="field:'ck',checkbox:true"></th>
-            <th data-options="field:'SId',width:100,hidden:true">SId</th>
-            <th data-options="field:'StudentId',width:100">学生学号</th>
-            <th data-options="field:'StudentName',width:100">学生姓名</th>
-            <th data-options="field:'RId',width:100,hidden:true">所在班级编号</th>
-            <th data-options="field:'Remo_id',width:100">所在班级</th>
-            <th data-options="field:'SexName',width:100">性别</th>
-            <th data-options="field:'Sex',width:100,hidden:true">性别</th>
-            <th data-options="field:'Birthday',width:100,formatter:formDate">出生日期</th>
-            <th data-options="field:'Email',width:100">电子邮件</th>
-            <th data-options="field:'Hometown',width:100">户籍所在地</th>
-            <th data-options="field:'Phone_number',width:100">电话号码</th>
-            <th data-options="field:'Other',width:100">
-                备注
+           data-options="rownumbers:true,pagination:true,url:'query_grade',toolbar:'#grid_toolbar',onClickRow:doDetail">
+        <thead>
+            <tr>
+                <th data-options="field:'ck',checkbox:true"></th>
+                <th data-options="field:'SId',width:100,hidden:true">SId</th>
+                <th data-options="field:'StudentId',width:100">学生学号</th>
+                <th data-options="field:'StudentName',width:100">学生姓名</th>
+                <th data-options="field:'RId',width:100,hidden:true">所在班级编号</th>
+                <th data-options="field:'Remo_id',width:100">所在班级</th>
+                <th data-options="field:'SexName',width:100">性别</th>
+                <th data-options="field:'Sex',width:100,hidden:true">性别</th>
+                <th data-options="field:'Birthday',width:100,formatter:formDate">出生日期</th>
+                <th data-options="field:'Email',width:100">电子邮件</th>
+                <th data-options="field:'Hometown',width:100">户籍所在地</th>
+                <th data-options="field:'Phone_number',width:100">电话号码</th>
+                <th data-options="field:'Other',width:100">
+                    备注
 
-        </tr>
-    </thead>
-</table>*@
+            </tr>
+        </thead>
+    </table>*@
 
 <table id="grid_grade" class="easyui-datagrid" fit="true"></table>
 
@@ -36,12 +36,12 @@
     @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入学生姓名" })
     <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
 
-    <input id="SearchBatch" class="easyui-searchbox" style="width:300px" data-options="searcher:searchSelect,prompt:'Please Input Value',menu:'#mm'"/>
+    <input id="SearchBatch" class="easyui-searchbox" style="width:300px" data-options="searcher:searchSelect,prompt:'Please Input Value',menu:'#mm'" />
     <div id="mm" style="width:120px">
         <div data-options="name:'StudentName',iconCls:'icon-ok'">学生姓名</div>
         <div data-options="name:'StudentId'">学生学号</div>
     </div>
-
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doTurnToClassAndStudentChoose()">打开班级学生列表编辑</a>
 </div>
 
 <div id="dlg_grade" class="easyui-dialog" title="学生信息表编辑" style="width: 400px; height: 400px; padding: 10px"
@@ -53,6 +53,18 @@
     <div style="margin-bottom:5px">
         <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
         <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
+    </div>
+</div>
+
+
+<div id="dlg_selectClassAndStudents" class="easyui-dialog" title="编辑班级学生信息表" style="width: 1000px; height: 480px; padding: 5px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons_ClassAndStudents'">
+</div>
+
+<div id="dlg_buttons_ClassAndStudents" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="saveClassAndStudentsList()">确定</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeClassAndStudentsList()">关闭</a>
     </div>
 </div>
 
@@ -90,6 +102,9 @@
         return Date.format(value, "yyyy年MM月dd日");
     }
 
+    function doTurnToClassAndStudentChoose() {
+        $('#dlg_selectClassAndStudents').dialog("open").dialog('refresh', App.getUrl('/Grade/ClassAndStudentChoose'));
+    }
 
     function doSearch() {
         $('#grid_grade').datagrid('load', {
