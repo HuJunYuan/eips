@@ -180,12 +180,8 @@
     }
 
     // 打开编辑状态详情
-    function doDetail() {
-        var row = $('#grid_grade').datagrid('getSelected');
-        if (row) {
-            $('#dlg_grade').dialog("open").dialog('refresh', App.getUrl('/Grade/edit?SId=' + row.SId));
-        }
-
+    function doDetail(rowIndex, rowData) {
+            $('#dlg_grade').dialog("open").dialog('refresh', App.getUrl('/Grade/edit?SId=' + rowData.SId));
     }
 </script>
 
