@@ -24,6 +24,7 @@
     <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
     @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入班级名称" })
     <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doTurntoAddClassAndStu()">批量添加班级学生</a>
 </div>
 
 <div id="dlg_remo" class="easyui-dialog" title="班级编辑" style="width: 400px; height: 400px; padding: 10px"
@@ -38,6 +39,18 @@
     </div>
 </div>
 
+
+<div id="dlg_addClassAndStudentsPage" class="easyui-dialog" title="批量添加班级和学生" style="width: 1000px; height: 600px; padding: 5px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_addClassAndStudentsPageButtons'">
+    Loading...
+</div>
+
+<div id="dlg_addClassAndStudentsPageButtons" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="saveAddClassAndStuBox()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeAddClassAndStuBox()">关闭</a>
+    </div>
+</div>
 <script>
     function doSearch() {
         $('#grid_remo').datagrid('load', {
@@ -48,6 +61,12 @@
     // 添加
     function doAdd() {
         $('#dlg_remo').dialog("open").dialog('refresh', App.getUrl('/Remo/add'));
+    }
+
+    //跳转到批量添加班级学生
+    function doTurntoAddClassAndStu() {
+        
+        $('#dlg_addClassAndStudentsPage').dialog("open").dialog('refresh', App.getUrl('/Remo/openAddClassAndStudents'));
     }
 
     @*// 删除
@@ -95,7 +114,7 @@
 
     }
 
-    // 打开编辑状态详情 
+    // 打开编辑状态详情
     function doDetail() {
         var row = $('#grid_remo').datagrid('getSelected');
         if (row) {
@@ -119,7 +138,7 @@
     function endEdit() {
         $('#grid_remo').datagrid('endEdit', rowIndexs);
         onAfterEdit();
-        
+
     }
 
     function onAfterEdit() {
@@ -131,5 +150,7 @@
                 rowIndexs = -1;
             });
     }
+
+    
 </script>
 

@@ -919,6 +919,7 @@
     <Content Include="Views\Grade\Remolist.cshtml" />
     <Content Include="Views\Grade\ClassAndStudentChoose.cshtml" />
     <Content Include="Views\Grade\RemolistForClassAndStuChoose.cshtml" />
+    <Content Include="Views\Remo\AddClassAndStudents.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

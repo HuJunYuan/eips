@@ -1,0 +1,162 @@
+﻿@using CoreLand.Framework.Code;
+@using Newtonsoft.Json;
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+<head>
+    <title>test</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        #nav {
+            width: 100%;
+            height: 10%;
+            background: lightblue;
+            margin: 0 auto;
+        }
+
+        #editButtonBar {
+            width: 100%;
+            height: 5%;
+            background: yellowgreen;
+            margin: 0 auto;
+        }
+
+        #infoTable {
+            width: 100%;
+            height: 80%;
+            background: orange;
+            margin: 0 auto;
+        }
+
+        #nav p {
+            position: relative;
+            left: 38%;
+            top: 30%;
+        }
+
+        #editButtonBar a {
+            position: relative;
+            left: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <p>请输入班级名：<input type="text" name="RemoName" id="RemoName" /></p>
+    </div>
+    <div id="editButtonBar">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="addNewRow()">添加新行</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doDelSelect()">删除选定行</a>
+    </div>
+    <div id="infoTable">
+        <table id="grid_infoTable" class="easyui-datagrid" fit="true" data-options="rownumbers:true,onClickRow:doSingleDetail">
+            <thead>
+                <tr>
+                    <th data-options="field:'ck',checkbox:true"></th>
+                    <th data-options="field:'SId',width:100,hidden:true">SId</th>
+                    <th data-options="field:'StudentId',width:100,editor:{type:'text'}">学生学号</th>
+                    <th data-options="field:'StudentName',width:100,editor:{type:'text'}">学生姓名</th>
+                    <th data-options="field:'RId',width:100,hidden:true">所在班级编号</th>
+                    <th data-options="field:'Sex',width:100,editor:{type:'combobox',options:{
+                          required:true,
+                             valueField:'Code' ,
+                                textField:'Text',
+                                data:sexData
+                        }}">性别</th>
+                    <th data-options="field:'Birthday',width:100,editor:{type:'datetimebox',options:{required:true}}">出生日期</th>
+                    <th data-options="field:'Email',width:100,editor:{type:'text'}">电子邮件</th>
+                    <th data-options="field:'Hometown',width:100,editor:{type:'text'}">户籍所在地</th>
+                    <th data-options="field:'Phone_number',width:100,editor:{type:'text'}">电话号码</th>
+                    <th data-options="field:'Other',width:100,editor:{type:'text'}">备注
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+
+<script>
+
+       var sexData = JSON.parse('@Html.Raw(JsonConvert.SerializeObject(CodeManger.GetCodes(CommonConstant.CODETYPE_SEX)))');
+    //添加新行
+    function addNewRow() {
+        $('#grid_infoTable').datagrid("appendRow", {
+            SId: '',
+            StudentId: '',
+            StudentName: '',
+            RId: '',
+            Sex: '',
+            Birthday: '',
+            Email: '',
+            Hometown: '',
+            Phone_number: '',
+            Other: ''
+        }
+        )
+    }
+
+    //删除选中行
+     //删除右表选择的数据
+    function doDelSelect() {
+        var rows = $('#grid_infoTable').datagrid('getChecked');
+        if (!rows) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        for (var j = rows.length; j >= 0; j--){
+            var row = $('#grid_infoTable').datagrid('getSelected');
+            if (row) {
+                var rowIndex = $('#grid_infoTable').datagrid('getRowIndex', row);
+                $('#grid_infoTable').datagrid('deleteRow', rowIndex);
+                $('#grid_infoTable').datagrid('reload');
+            }
+        }
+    }
+
+    //关闭批量添加班级学生页面
+    function closeAddClassAndStuBox() {
+         window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
+            function () {
+                $('#dlg_addClassAndStudentsPage').dialog("close");
+                $('#grid_remo').datagrid('reload');
+            });
+    }
+    //保存添加的班级和学生列表
+    function saveAddClassAndStuBox() {
+
+    }
+
+    //打开单个项目的编辑 beginEdit
+    var rowIndexs = -1;
+    var editData
+    debugger;
+    function doSingleDetail(rowIndex, field, value) {
+        $('#grid_infoTable').datagrid('beginEdit', rowIndex);
+        if (rowIndexs != -1) {
+            endEdit();
+        }
+        rowIndexs = rowIndex;
+    }
+
+    function endEdit() {
+        $('#grid_infoTable').datagrid('endEdit', rowIndexs);
+        //rowIndexs = -1;
+    }
+
+    
+    function saveAddClassAndStuBox() {
+        debugger;
+        var students = $('#grid_infoTable').datagrid('getRows');
+        var remoName = $('#RemoName').val();
+
+        App.action(App.getUrl("/Remo/addClassAndStudents"), { stuList: students, className:remoName});
+
+    }
+
+</script>
+

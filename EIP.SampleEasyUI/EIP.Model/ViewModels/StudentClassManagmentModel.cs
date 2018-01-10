@@ -18,7 +18,7 @@ namespace EIP.Model.ViewModels
        /// <summary>
        /// 班级代码
        /// </summary>
-       public int Remo_id { get; set; }
+       public string Remo_id { get; set; }
 
         ///<summary>
         ///班主任编号

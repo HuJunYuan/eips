@@ -17,6 +17,7 @@ using CoreLand.Framework.Web;
 using EIP.Entity;
 using EIP.Model;
 using EIP.Service;
+using EIP.Model.ViewModels;
 
 namespace EIP.Web.Controllers
 {
@@ -31,7 +32,17 @@ namespace EIP.Web.Controllers
         {
             return View("~/views/remo/list.cshtml");
         }
+        
 
+        /// <summary>
+        /// 打开批量添加班级学生页面
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("openAddClassAndStudents")]
+        public ActionResult openAddClassAndStudents()
+        {
+            return View("~/views/remo/AddClassAndStudents.cshtml");
+        }
         /// <summary>
         /// 查询班级列表
         /// </summary>
@@ -121,6 +132,27 @@ namespace EIP.Web.Controllers
             var remoService = this.GetService<IRemoService>();
 
             if (remoService.SaveRemo(model)>0)
+            {
+                ShowMessage("I10010");
+            }
+            return Json(null);
+        }
+        
+        /// <summary>
+        /// 新增学生和班级
+        /// </summary>
+        /// <param name="model">班级视图模型</param>
+        /// <returns></returns>
+        [ActionName("addClassAndStudents")]
+        public JsonResult AddClassAndStudents(List<StudentManagmentModel> stuList,string className)
+        {
+            var gradeService = this.GetService<IGradeService>();
+            StudentClassManagmentModel model = new StudentClassManagmentModel();
+            model.Grades = stuList;
+            model.Remo_id = className;
+            model.CId = 0;
+            string result;
+            if (gradeService.SaveClassAndStudents(model,out result))
             {
                 ShowMessage("I10010");
             }
