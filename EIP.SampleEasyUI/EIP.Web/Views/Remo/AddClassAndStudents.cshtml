@@ -60,8 +60,8 @@
                 <tr>
                     <th data-options="field:'ck',checkbox:true"></th>
                     <th data-options="field:'SId',width:100,hidden:true">SId</th>
-                    <th data-options="field:'StudentId',width:100,editor:{type:'text'}">学生学号</th>
-                    <th data-options="field:'StudentName',width:100,editor:{type:'text'}">学生姓名</th>
+                    <th data-options="field:'StudentId',width:100,editor:{type:'text',options:{required:true}}">学生学号</th>
+                    <th data-options="field:'StudentName',width:100,editor:{type:'text',options:{required:true}}">学生姓名</th>
                     <th data-options="field:'RId',width:100,hidden:true">所在班级编号</th>
                     <th data-options="field:'Sex',width:100,editor:{type:'combobox',options:{
                           required:true,
@@ -145,15 +145,19 @@
 
     function endEdit() {
         $('#grid_infoTable').datagrid('endEdit', rowIndexs);
-        //rowIndexs = -1;
+        debugger;
+        
     }
 
-    
+
     function saveAddClassAndStuBox() {
-        debugger;
+        endEdit();
         var students = $('#grid_infoTable').datagrid('getRows');
         var remoName = $('#RemoName').val();
+        if (remoName == "") {
+            remoName = "未定义";
 
+        }
         App.action(App.getUrl("/Remo/addClassAndStudents"), { stuList: students, className:remoName});
 
     }
