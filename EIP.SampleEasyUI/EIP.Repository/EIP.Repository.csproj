@@ -60,6 +60,7 @@
     <Compile Include="GradeRepository.cs" />
     <Compile Include="LessonInfoRepository.cs" />
     <Compile Include="LessonScheduleRepository.cs" />
+    <Compile Include="LocalRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoRepository.cs" />
   </ItemGroup>

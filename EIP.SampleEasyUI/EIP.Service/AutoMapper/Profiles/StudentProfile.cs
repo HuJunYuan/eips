@@ -71,6 +71,7 @@ namespace EIP.Service.AutoMapper.Profiles
                 .ForMember(des => des.SexName, map => map.Ignore())
                 .ForMember(des => des.Remo_id, map => map.Ignore());
 
+            CreateMap<Local, Local>();
             //CreateMap<Student, StudentViewModel>()
             //     .ForMember(viewStu => viewStu.Sex, stu => stu.MapFrom(sou => CodeManger.GetCodeText(CommonConstant.CODETYPE_SEX, sou.Sex)))
 

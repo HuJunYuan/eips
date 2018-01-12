@@ -222,7 +222,7 @@ namespace EIP.ServiceTest
             //创建一个StudentClassManagementModel实例
             StudentClassManagmentModel model = new StudentClassManagmentModel();
             model.Grades = new List<StudentManagmentModel>();
-            model.Remo_id = 1001;
+            model.Remo_id = "1001";
             model.CId = 0;
 
             //构造学生信息字典
@@ -264,7 +264,7 @@ namespace EIP.ServiceTest
             model1 = model;
             model1.RId = int.Parse(newstr[0].Trim());
             model1.Grades = new List<StudentManagmentModel>();
-            model1.Remo_id = 1002;
+            model1.Remo_id = "1002";
 
 
             //构造学生信息字典

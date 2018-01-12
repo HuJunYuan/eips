@@ -79,6 +79,7 @@
     <Compile Include="IentorService.cs" />
     <Compile Include="IGradeService.cs" />
     <Compile Include="ILessonInfoService.cs" />
+    <Compile Include="ILocalService.cs" />
     <Compile Include="Impl\AppCodeMasterService.cs" />
     <Compile Include="Impl\AppConfigService.cs" />
     <Compile Include="Impl\ClassroomService.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Impl\entorService.cs" />
     <Compile Include="Impl\GradeService.cs" />
     <Compile Include="Impl\LessonInfoService.cs" />
+    <Compile Include="Impl\LocalService.cs" />
     <Compile Include="Impl\RemoService.cs" />
     <Compile Include="IRemoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

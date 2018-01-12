@@ -78,6 +78,7 @@
     <Compile Include="dbo\Grade.cs" />
     <Compile Include="dbo\LessonInfo.cs" />
     <Compile Include="dbo\LessonSchedule.cs" />
+    <Compile Include="dbo\Local.cs" />
     <Compile Include="dbo\Remo.cs" />
     <Compile Include="pub\AppCodeMaster.cs" />
     <Compile Include="pub\AppConfig.cs" />

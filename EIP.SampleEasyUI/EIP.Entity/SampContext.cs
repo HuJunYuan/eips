@@ -96,6 +96,12 @@ namespace EIP.Entity
         ///</summary>
         public DbSet<Remo> Remo { get; set; }
 
+
+        /// <summary>
+        /// 用来记录地域相关属性
+        ///</summary>
+        public DbSet<Local> Local { get; set; }
+
         #endregion
 
 

@@ -100,6 +100,7 @@
     <Compile Include="entorServiceTest.cs" />
     <Compile Include="GradeServiceTest.cs" />
     <Compile Include="LessonInfoServiceTest.cs" />
+    <Compile Include="LocalServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoServiceTest.cs" />
   </ItemGroup>
