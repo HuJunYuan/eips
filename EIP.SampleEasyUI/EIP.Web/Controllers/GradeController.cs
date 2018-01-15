@@ -69,7 +69,7 @@ namespace EIP.Web.Controllers
         {
             return View("~/views/grade/RemolistForClassAndStuChoose.cshtml");
         }
-        
+
 
         /// <summary>
         /// 班级学生信息表列表
@@ -152,7 +152,7 @@ namespace EIP.Web.Controllers
         {
             var gradeService = this.GetService<IGradeService>();
 
-            if (gradeService.SaveGrade(model)>0)
+            if (gradeService.SaveGrade(model) > 0)
             {
                 //ShowMessage("I10010");
             }
@@ -181,9 +181,10 @@ namespace EIP.Web.Controllers
         {
             var gradeService = this.GetService<IGradeService>();
             gradeService.Bathremove(ids);
-         
+
             ShowMessage("I10030");
             return Json(null);
         }
+
     }
 }

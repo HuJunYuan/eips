@@ -91,5 +91,7 @@ namespace EIP.Service
         List<CountManAndWoman> QueryCountManAndWomanUseLike(QueryModel model, out int totalCount);
 
         void Bathremove(int[] ids);
+
+
     }
 }

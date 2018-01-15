@@ -1,0 +1,31 @@
+﻿@model EIP.Entity.Local
+
+@{
+    Layout = null;
+}
+@section head{
+}
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="doSave()">保存</a>
+</div>
+<form id="form_Local" class="easyui-form" method="post" data-options="">
+        
+            <!--记录地域表中的编号-->
+            @Html.HiddenFor(p => p.LocalID)    
+        
+            <!--当前地域记录的父级LocalID-->
+            @Html.HiddenFor(p => p.ParentId)    
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.LocalNum, new TextBox() { Label = "地域编号 ：", Style = "width:40%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.LocalName, new TextBox() { Label = "地域名 ：", Style = "width:40%;" })
+            </div>
+
+</form>

@@ -94,10 +94,38 @@ namespace EIP.Service
 
             return model.LocalID;
         }
-		#endregion
+
+        /// <summary>
+        /// 获取地域树
+        /// </summary>
+        /// <param name="id"></param>
+        public List<TreeDataModel> Querylocal(int? id)
+        {
+            if (!id.HasValue)
+            {
+                id= 0;
+            }
+          return   this.localRepository.LoadEntities(p => p.ParentId == id.Value).Select(p=>new TreeDataModel {
+                Id=p.LocalID.ToString(),
+                Text=p.LocalName,
+                State= "closed",
+            }).ToList();
+        }
+
+        
+
+        /// <summary>
+        /// 获取地域信息
+        /// </summary>
+        /// <param name="id"></param>
+        public Local QuerylocalById(int? id)
+        {
+            return this.Find<Local>(id);
+        }
+        #endregion
 
         #region private method
 
-		#endregion
+        #endregion
     }
 }

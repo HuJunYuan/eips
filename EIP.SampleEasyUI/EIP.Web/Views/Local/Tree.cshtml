@@ -1,0 +1,70 @@
+﻿@model EIP.Entity.Local
+@{
+
+    Layout = "~/views/shared/_layout.cshtml";
+}
+
+@section head{
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+}
+
+
+
+<div id="TreeList" class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'west',title:'地域',split:true" style="width:20%; background:#DBCBB8;">
+        <ul id="Tree" class="easyui-tree"></ul>
+    </div>
+    <div id="TreeInFo" data-options="region:'center',title:'详情'" style="padding:5px;background:#BFDBB8;">
+    </div>
+</div>
+
+<div id="dlg_local" class="easyui-dialog" title="地域信息编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true">
+    Loading...
+</div>
+
+
+<script>
+    $('#Tree').tree({
+        url: '/Local/querylocaltree',
+        onClick: function (node) {
+            $("#TreeInFo").panel("refresh", "/Local/query_local_by_id?id=" + node.id);
+        }
+    });
+    // 表单验证
+    function validate() {
+        // 验证
+        var isValid = $("#localinfo").form("validate");
+        if (!isValid) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        return true;
+    }
+
+    //保存
+    function doSave() {
+        debugger;
+
+        // 表单数据提交
+        var formData = $("#form_Local").form("getData");
+        debugger;
+        App.action(App.getUrl("/Local/save"), formData,
+            function (data) {
+                $("#Tree").tree("refresh");
+            });
+        $("#TreeList").layout("reload");
+    }
+
+    function doAdd() {
+
+    }
+
+    function doDel() {
+        // 表单数据提交
+        var formData = $("#form_Local").form("getData");
+        App.action(App.getUrl("/Local/remove?localID=" + formData.LocalID));
+        window.open("~/Local/tree");
+    }
+
+</script>

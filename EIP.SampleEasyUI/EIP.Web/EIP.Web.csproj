@@ -192,6 +192,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GradeController.cs" />
     <Compile Include="Controllers\LessonInfoController.cs" />
+    <Compile Include="Controllers\LocalController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\IconSelectController.cs" />
     <Compile Include="Controllers\CountManAndWomanController.cs" />
@@ -920,6 +921,12 @@
     <Content Include="Views\Grade\ClassAndStudentChoose.cshtml" />
     <Content Include="Views\Grade\RemolistForClassAndStuChoose.cshtml" />
     <Content Include="Views\Remo\AddClassAndStudents.cshtml" />
+    <Content Include="Views\Local\Tree.cshtml" />
+    <Content Include="Views\Home\form.cshtml" />
+    <Content Include="Views\Local\detail.cshtml" />
+    <Content Include="Views\Local\form.cshtml" />
+    <Content Include="Views\Local\list.cshtml" />
+    <Content Include="Views\Local\localinfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

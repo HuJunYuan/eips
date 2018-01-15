@@ -36,5 +36,18 @@ namespace EIP.Service
         /// <param name="model">用来记录地域相关属性信息</param>
         /// <returns>处理是否成功</returns>
         int SaveLocal(Local model);
+
+
+        /// <summary>
+        /// 获取地域树
+        /// </summary>
+        /// <param name="id"></param>
+        List<TreeDataModel> Querylocal(int? id);
+
+        /// <summary>
+        /// 获取地域信息
+        /// </summary>
+        /// <param name="id"></param>
+        Local QuerylocalById(int? id);
     }
 }

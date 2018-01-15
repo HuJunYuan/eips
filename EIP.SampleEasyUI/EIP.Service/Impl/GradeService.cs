@@ -251,7 +251,7 @@ namespace EIP.Service
 
                     //执行成功，记录操作的学生的SId
                     if (grade.SId > 0)
-                        mdex = mdex + grade.SId.ToString() + " "; 
+                        mdex = mdex + grade.SId.ToString() + " ";
                 }
             }
 
@@ -269,6 +269,9 @@ namespace EIP.Service
                 gradeservice.LogicDelete<Grade>(id);
             }
         }
+
+
+       
         #endregion
 
         #region private method

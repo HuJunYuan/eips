@@ -1,0 +1,29 @@
+﻿@model EIP.Entity.Local
+
+@{
+    Layout = null;
+}
+@section head{
+}
+<form id="form_local" class="easyui-form" method="post" data-options="">
+        
+            <!--地域名-->
+            @Html.HiddenFor(p => p.LocalID)    
+        
+            <!--地域编号-->
+            @Html.HiddenFor(p => p.ParentId)    
+
+        
+            <div class="form-item">
+             @Html.CLTextBoxFor(p => p.LocalName, new TextBox() { Label = "地域名：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+               @Html.CLTextBoxFor(p => p.LocalNum, new TextBox() { Label = "地域编号 ：", Style = "width:90%;" })
+            </div>
+
+            
+</form>
+<script type="text/javascript">
+</script>
