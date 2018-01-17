@@ -77,7 +77,10 @@ namespace EIP.Repository
             //去除特殊字符
             str[0] = EncodeStr(str[0]);
             searchKey = str[1];
-            string sql = "select Grade.*,Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag=0  and Grade."+str[0]+ " like "+"@p0";
+            //string sql = "select Grade.*,Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag=0  and Grade."+str[0]+ " like "+"@p0";
+            //string sql = "select T.*, Local.LocalName from(select Grade.*,Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade." + str[0] + " like " + "@p0) as T left join Local on T.Other = Local.LocalNum";
+            string sql = "select T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade." + str[0] + " like " + "@p0) as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum";
+
 
             //分页查询必须要有排序字段
             model.SortField = string.IsNullOrEmpty(model.SortField) ? "SId" : model.SortField;

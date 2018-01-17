@@ -81,7 +81,7 @@ namespace EIP.Entity
         public int? RId { get; set; }
     
         /// <summary>
-        /// 备注
+        /// 用来存储学生家庭所在地域ID
         ///    
         /// </summary>
         [MaxLength(16)]
