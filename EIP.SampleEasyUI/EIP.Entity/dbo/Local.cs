@@ -46,6 +46,14 @@ namespace EIP.Entity
         ///    
         /// </summary>
         [Required]
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
+
+        /// <summary>
+        /// 当前地域记录的行政等级
+        ///    
+        /// </summary>
+        [Required]
+        public int? admin_level { get; set; }
+        
     }
 }

@@ -11,21 +11,25 @@
     <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="doSave()">保存</a>
 </div>
 <form id="form_Local" class="easyui-form" method="post" data-options="">
-        
-            <!--记录地域表中的编号-->
-            @Html.HiddenFor(p => p.LocalID)    
-        
-            <!--当前地域记录的父级LocalID-->
-            @Html.HiddenFor(p => p.ParentId)    
 
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.LocalNum, new TextBox() { Label = "地域编号 ：", Style = "width:40%;" })
-            </div>
+    <!--记录地域表中的编号-->
+    @Html.HiddenFor(p => p.LocalID)
 
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.LocalName, new TextBox() { Label = "地域名 ：", Style = "width:40%;" })
-            </div>
+    <!--当前地域记录的父级LocalID-->
+    @Html.HiddenFor(p => p.ParentId)
 
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.LocalNum, new TextBox() { Label = "地域编号 ：", Style = "width:40%;" })
+
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.LocalName, new TextBox() { Label = "地域名 ：", Style = "width:40%;" })
+    </div>
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.admin_level, new TextBox() { Label = "行政等级 ：", Style = "width:40%;" })
+    </div>
 </form>

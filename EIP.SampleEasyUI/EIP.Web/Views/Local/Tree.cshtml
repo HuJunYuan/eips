@@ -14,7 +14,7 @@
     <div data-options="region:'west',title:'地域',split:true" style="width:20%; background:#DBCBB8;">
         <ul id="Tree" class="easyui-tree"></ul>
     </div>
-    <div id="TreeInFo" data-options="region:'center',title:'详情'" style="padding:5px;background:#BFDBB8;">
+    <div id="TreeInfo" data-options="region:'center',title:'详情'" style="padding:5px;background:#BFDBB8;">
     </div>
 </div>
 
@@ -24,11 +24,86 @@
 </div>
 
 
+<div id="mm" class="easyui-menu" style="width:120px;">
+    <div data-options="name:'new',iconCls:'icon-add'">新建</div>
+    <div id="editMenu" data-options="name:'edit',iconCls:'icon-save'">修改</div>
+    <div id="removeMenu" data-options="name:'remove',iconCls:'icon-remove'">删除</div>
+    <div data-options="name:'sep',iconCls:'icon-print',name:'menurefresh'">刷新</div>
+</div>
+
 <script>
+    //面板相关操作
+    $("#TreeList").bind('contextmenu', function (e) {
+        $('#TreeList').menu("disableItem", $("#removeMenu"));
+        $('#TreeList').menu("disableItem", $("#editMenu"));
+        e.preventDefault();
+        $('#mm').menu('show', {
+            left: e.pageX,
+            top: e.pageY
+        });
+    });
+    //菜单相关组件
+    function menuAdd() {
+        debugger;
+        var node = $('#Tree').tree("getSelected");
+        if (node == null)
+            $("#TreeInfo").panel("refresh", "/Local/load_add_local_form?id=" + 0);
+        else {
+            $("#TreeInfo").panel("refresh", "/Local/load_add_local_form?id=" + node.id);
+        }
+               
+    }
+    function menuedit() {
+
+    }
+    function menuRemove() {
+        doDel();
+
+        
+    }
+    function menuRefresh() {
+        window.location.reload();
+
+
+    }
+
+
+    $("#mm").menu({
+        onClick: function (item) {
+            switch (item.name) {
+                case "new":
+                    menuAdd();
+                    break;
+                case "edit":
+                    menuedit();
+                    break;
+                case "remove":
+                    menuRemove();
+                    break;
+                case "menurefresh":
+                    menuRefresh();
+                    break;
+                default:
+                    menuRefresh();
+            }
+        }
+    });
+
+
+    //树的相关操作
     $('#Tree').tree({
         url: '/Local/querylocaltree',
         onClick: function (node) {
-            $("#TreeInFo").panel("refresh", "/Local/query_local_by_id?id=" + node.id);
+            $("#TreeInfo").panel("refresh", "/Local/query_local_by_id?id=" + node.id);
+        },
+        onContextMenu: function (e, node) {
+            $('#TreeList').menu("enableItem", $("#removeMenu"));
+            $('#TreeList').menu("enableItem", $("#editMenu"));
+            e.preventDefault();
+            $('#mm').menu('show', {
+                left: e.pageX,
+                top: e.pageY
+            });
         }
     });
     // 表单验证
@@ -51,9 +126,9 @@
         debugger;
         App.action(App.getUrl("/Local/save"), formData,
             function (data) {
-                $("#Tree").tree("refresh");
+                $("#Tree").tree("reload");
             });
-        $("#TreeList").layout("reload");
+        $("#Tree").tree("reload");
     }
 
     function doAdd() {
@@ -64,7 +139,7 @@
         // 表单数据提交
         var formData = $("#form_Local").form("getData");
         App.action(App.getUrl("/Local/remove?localID=" + formData.LocalID));
-        window.open("~/Local/tree");
+        $("#Tree").tree("reload");
     }
 
 </script>

@@ -31,7 +31,19 @@ namespace EIP.Web.Controllers
         {
             return View("~/views/local/list.cshtml");
         }
+        
 
+        /// <summary>
+        /// 用来记录地域相关属性列表
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("load_add_local_form")]
+        public ActionResult loadAddLocalForm(int? id)
+        {
+            var entity = new Local();
+            entity.ParentId = id;
+            return View("~/views/local/localinfo.cshtml", entity);
+        }
         /// <summary>
         /// 查询用来记录地域相关属性列表
         /// </summary>
